@@ -20,8 +20,29 @@ public class BasicTurret : Turret
     {
         if (target == null) return; // No target, do nothing
 
-        turretActivate();
+        turretAimActivate();
 
+        // Rate of fire
+        if (fireCountdown <= 0)
+        {
+            turretFire();
+            fireCountdown = 1f / fireRate;
+        }
+        fireCountdown -= Time.deltaTime;
+
+
+    }
+
+    void turretFire()
+    {
+        Debug.Log("Fire!");
+        GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
     }
 
     void UpdateTarget()
@@ -59,7 +80,7 @@ public class BasicTurret : Turret
     }
 
     // Smooth turn towards target enemy
-    void turretActivate()
+    void turretAimActivate()
     {
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
