@@ -115,4 +115,6 @@ MonoBehaviour:
   sizeOfNodes: 4
   distancebwNodes: 0.5
   type1: 1
-  type2: 0
+  type2: 1
+  hoverColor: {r: 0.6273585, g: 0.8271538, b: 1, a: 1}
+  turretOffset: {x: 0, y: 0.5, z: 0}
