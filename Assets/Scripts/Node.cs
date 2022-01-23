@@ -52,7 +52,7 @@ public class Node : MonoBehaviour
         if (turret != null)
         {
             // For now, if a turret exist at this node, remove the turret.
-            Debug.Log("CAN'T BUILD THERE!");
+            Destroy(turret);
             return;
         }
 
