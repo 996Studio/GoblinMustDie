@@ -1072,6 +1072,8 @@ MonoBehaviour:
   scrollSpeed: 5
   minYPos: 30
   maxYPos: 100
+  zoomOutMin: 0
+  zoomOutMax: 0
 --- !u!1001 &164799912
 PrefabInstance:
   m_ObjectHideFlags: 0
