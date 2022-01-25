@@ -11,7 +11,14 @@ public class EnemyBase : MonoBehaviour
 
     private int maxHP;
     private int curHP;
+    private int atk;
     
+    public int Atk
+    {
+        get => atk;
+        set => atk = value;
+    }
+
     public bool isDead = false;
     
     private void Awake()
@@ -26,6 +33,7 @@ public class EnemyBase : MonoBehaviour
     {
         maxHP = 100;
         curHP = 100;
+        atk = 10;
         agent.speed = 3.5f;
         agent.angularSpeed = 120f;
         agent.acceleration = 8f;
@@ -33,7 +41,7 @@ public class EnemyBase : MonoBehaviour
 
     void Start()
     {
-        //agent.SetDestination();
+        agent.SetDestination(MotherBase.Instance.transform.position);
     }
 
     public void TakeDamage(int dmg)
@@ -56,10 +64,5 @@ public class EnemyBase : MonoBehaviour
     public void DeathEvent()
     {
         //Placeholder for animation event
-    }
-
-    void Update()
-    {
-        
     }
 }
