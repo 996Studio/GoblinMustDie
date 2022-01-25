@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class MotherBase : MonoBehaviour
     
     void Awake()
     {
+        instance = this;
         curHP = 100;
         maxHP = 100;
     }
@@ -39,5 +41,10 @@ public class MotherBase : MonoBehaviour
         }
         
         UpdateHp(curHP, maxHP);
+    }
+
+    private void OnDestroy()
+    {
+        instance = null;
     }
 }
