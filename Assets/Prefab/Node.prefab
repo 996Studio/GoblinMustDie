@@ -115,4 +115,4 @@ MonoBehaviour:
   sizeOfNodes: 4
   distancebwNodes: 0.5
   type1: 1
-  type2: 0
+  type2: 1

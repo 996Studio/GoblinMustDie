@@ -34,7 +34,7 @@ public class SpawnPoint : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        EnemyBase enemy = Instantiate(enemySpawnList[curSpawnID], this.transform.position, Quaternion.identity);
+        EnemyBase enemy = Instantiate(enemySpawnList[curSpawnID], transform.position, Quaternion.identity);
         enemy.InitInfo();
 
         curEnemyNum--;
@@ -55,4 +55,6 @@ public class SpawnPoint : MonoBehaviour
     {
         return curEnemyNum == 0 && maxWave == 0;
     }
+    
+    
 }

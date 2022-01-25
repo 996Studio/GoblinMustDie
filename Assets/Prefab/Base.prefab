@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3581623166410516729}
   m_Layer: 0
   m_Name: Base
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2737625, y: 1, z: 1}
-  m_Center: {x: 0.13688138, y: 0, z: 0}
+  m_Size: {x: 1.2737625, y: 1, z: 2.0212903}
+  m_Center: {x: 0.13688135, y: 0, z: 0.0133571625}
 --- !u!114 &3581623166410516729
 MonoBehaviour:
   m_ObjectHideFlags: 0

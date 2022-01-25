@@ -47,4 +47,15 @@ public class MotherBase : MonoBehaviour
     {
         instance = null;
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Console.WriteLine("Death");
+            
+            TakeDamage(other.gameObject.GetComponent<EnemyBase>().Atk);
+            other.gameObject.GetComponent<EnemyBase>().Death();
+        }
+    }
 }
