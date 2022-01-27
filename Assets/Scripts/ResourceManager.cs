@@ -59,3 +59,9 @@ public class ResourceManager
         rock += number;
     }
 }
+public enum ResourceType
+{
+    COIN,
+    WOOD,
+    ROCK
+}
