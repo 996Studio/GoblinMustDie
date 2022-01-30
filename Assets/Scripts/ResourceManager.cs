@@ -7,18 +7,20 @@ public class ResourceManager
 {
     private static ResourceManager instance;
     
-    private float coin;
-    private float wood;
-    private float rock;
+    private int coin;
+    private int wood;
+    private int rock;
 
-    private ResourceManager()
-    {
-        
-    }
+    // private ResourceManager()
+    // {
+    //     coin = 0;
+    //     wood = 0;
+    //     rock = 0;
+    // }
 
     public static ResourceManager Instance()
     {
-        if (instance != null)
+        if (instance == null)
         {
             instance = new ResourceManager();
         }
@@ -26,35 +28,35 @@ public class ResourceManager
         return instance;
     }
 
-    public float Coin
+    public int Coin
     {
         get { return coin; }
         set { coin = value; }
     }
 
-    public float Wood
+    public int Wood
     {
         get { return wood; }
         set { wood = value; }
     }
 
-    public float Rock
+    public int Rock
     {
         get { return rock; }
         set { rock = value; }
     }
 
-    public void ChangeCoin(float number)
+    public void ChangeCoin(int number)
     {
         coin += number;
     }
 
-    private void ChangeWood(float number)
+    private void ChangeWood(int number)
     {
         wood += number;
     }
 
-    private void ChangeRock(float number)
+    private void ChangeRock(int number)
     {
         rock += number;
     }
