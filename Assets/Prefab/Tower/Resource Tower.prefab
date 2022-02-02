@@ -53,7 +53,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8009960319250632761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c40027982a518f4c877ed8b22c18b9d, type: 3}
   m_Name: 
@@ -228,9 +228,13 @@ MonoBehaviour:
   fireCountdown: 0
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 0}
-  timeToSpawn: 5
   resourcetoSpawn: 1
-  resourceSpawnPoint: {fileID: 8010359733997814502}
+  resourceSpawnPoint: {fileID: 8010359733997814501}
+  woodPrefab: {fileID: 8570090112277120720, guid: 5fb6982c7cd71fa47ba93977e918f3be,
+    type: 3}
+  crytalPrefab: {fileID: 0}
+  timeToSpawn: 5
+  initialSpawnTime: 2
 --- !u!1 &8010042036392212297
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8010359733997814501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.629, z: 0}
+  m_LocalPosition: {x: 0, y: 2.929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -350,7 +354,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8010782716481713229}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c38968fa289f83c4bb374de48ee8ef8f, type: 3}
   m_Name: 
