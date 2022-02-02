@@ -9,9 +9,12 @@ enum TowerType
 {
     //place holder 
     NULL,
+    BASIC,
     FIRE,
     WATER,
     ICE,
     THUNER,
-    RESOURCE
+    WOODEN,
+    CRYSTAL,
+    BOOST
 }

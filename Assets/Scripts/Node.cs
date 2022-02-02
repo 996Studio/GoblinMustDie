@@ -9,20 +9,20 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    [Header("Nodes")] 
-    [Range(1,10)]
+    [Header("Nodes")]
+    [Range(1, 10)]
     public int numberOfRow = 5;
-    [Range(1,10)]
+    [Range(1, 10)]
     public int numberOfColum = 5;
     [Range(1, 4)] public float sizeOfNodes = 4.0f;
     [Range(1, 4)] public float distancebwNodes = 0.5f;
 
-    
-    [Header("NodeType")] 
+
+    [Header("NodeType")]
     [SerializeField]
-    NodeType type1;
+    NodeType nodeType;
     [SerializeField]
-    TowerType type2;
+    TowerType towerType;
 
     public Color hoverColor;
 
@@ -31,9 +31,9 @@ public class Node : MonoBehaviour
     private GameObject turret;
     public Vector3 turretOffset;
 
-    
+    public int towerIndex = 0;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +44,7 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseDown()
@@ -57,8 +57,7 @@ public class Node : MonoBehaviour
         }
 
         // Build a turret
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
+        BuildTower();
     }
 
     // Keyboard input for testing
@@ -71,6 +70,34 @@ public class Node : MonoBehaviour
         rend.material.color = originColor;
     }
 
-    
+    private void BuildTower()
+    {
+        //switch (towerIndex)
+        //{
+        //    case 0:
+        //        break;
+        //    case 1:
+        //        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        //        turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
+        //        return;
+        //    case 2:
+
+        //    case 3:
+
+        //    case 4:
+
+        //    case 5:
+
+        //    case 6:
+
+        //    case 7:
+
+        //    case 8:
+        //}
+
+        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
+        towerIndex = 1;
+    }
 }
 

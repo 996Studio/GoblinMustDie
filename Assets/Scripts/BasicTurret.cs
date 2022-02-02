@@ -35,7 +35,6 @@ public class BasicTurret : Turret
 
     void turretFire()
     {
-        Debug.Log("Fire!");
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
