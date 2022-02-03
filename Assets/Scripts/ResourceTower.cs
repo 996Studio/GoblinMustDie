@@ -14,13 +14,15 @@ public class ResourceTower : Turret
     public GameObject woodPrefab;
     public GameObject crytalPrefab;
     public int timeToSpawn;
-    private bool bResourceIsUp;
+    public bool bResourceIsUp;
     public float initialSpawnTime = 0.0f;
+    public Vector3 resourceOffset = new Vector3(0,2,0);
     
     // Start is called before the first frame update
     void Start()
     {
         bResourceIsUp = false;
+        woodPrefab.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class ResourceTower : Turret
         {
             initialSpawnTime += timeToSpawn;
             Debug.Log("Spawn Resource");
-            Instantiate(woodPrefab, resourceSpawnPoint.transform);
+            woodPrefab.SetActive(true);
             bResourceIsUp = true;
         }
     }

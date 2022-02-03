@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.XR.Oculus.Input;
 using UnityEngine;
 
-public abstract class Resource : MonoBehaviour
+public class Resource : MonoBehaviour
 {
     public Vector3 RotationSpeed;
 
@@ -15,31 +16,39 @@ public abstract class Resource : MonoBehaviour
     protected Renderer rend;
 
     protected Color originColor;
-    // Start is called before the first frame update
-    void Start()
+
+    protected ResourceTower tower;
+
+    private void Awake()
     {
         rend = GetComponent<Renderer>();
         originColor = rend.material.color;
+        tower = GetComponentInParent<ResourceTower>();
     }
-
-    // Update is called once per frame
+    void Start()
+    {
+        
+    }
     void Update()
     {
         
     }
-
-    public abstract void CollectResource();
-
-    /*public abstract void OnMouseEnter();
-    
-    public abstract void OnMouseExit();*/
-    
-    /*public void OnMouseEnter()
+    public virtual void OnMouseDown()
+    {
+        Debug.Log("Clicked");
+        CollectResource();
+    }
+    public virtual void CollectResource()
+    {
+        this.gameObject.SetActive(false);
+        tower.bResourceIsUp = false;
+    }
+    public virtual void OnMouseEnter()
     {
         rend.material.color = hoverColor;
     }
-    public void OnMouseExit()
+    public virtual void OnMouseExit()
     {
         rend.material.color = originColor;
-    }*/
+    }
 }

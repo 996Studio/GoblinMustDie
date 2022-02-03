@@ -18,7 +18,7 @@ public class ResourceManager
 
     public static ResourceManager Instance()
     {
-        if (instance != null)
+        if (instance == null)
         {
             instance = new ResourceManager();
         }
