@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ResourceManager
+public class ResourceManager 
 {
     private static ResourceManager instance;
     
@@ -18,7 +18,7 @@ public class ResourceManager
 
     public static ResourceManager Instance()
     {
-        if (instance != null)
+        if (instance == null)
         {
             instance = new ResourceManager();
         }
@@ -47,6 +47,7 @@ public class ResourceManager
     public void ChangeCoin(float number)
     {
         coin += number;
+        Debug.Log(coin);
     }
 
     private void ChangeWood(float number)

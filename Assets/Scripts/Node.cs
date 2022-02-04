@@ -44,7 +44,7 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnMouseDown()
@@ -53,6 +53,8 @@ public class Node : MonoBehaviour
         {
             // For now, if a turret exist at this node, remove the turret.
             Destroy(turret);
+            towerIndex = 0;
+            ResourceManager.Instance().ChangeCoin(5);
             return;
         }
 
@@ -98,6 +100,7 @@ public class Node : MonoBehaviour
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
         towerIndex = 1;
+        ResourceManager.Instance().ChangeCoin(-10);
     }
 }
 
