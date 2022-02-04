@@ -7,9 +7,6 @@ using UnityEngine;
 
 public class BasicTurret : Turret
 {
-    
-
-
     void Start()
     {
         // Invoke target function, start from 0s, and repeat every 0.5s.
