@@ -51,18 +51,21 @@ public class NodeList : MonoBehaviour
     {
         foreach (Node _node in nodes)
         {
-            Debug.Log(_node + " --- " + _node.towerIndex.ToString());
             Lv1.Add(_node.towerIndex);
+            Debug.Log(_node + " --- " + _node.towerIndex.ToString());
         }
     }
 
     public void LoadData(List<int> x)
     {
-        for(int i = 0; i < x.Count; i++)
+        for(int i = 0; i < nodes.Count; i++)
         {
-            if (x[i] != 0)
+            if (Lv1[i] == 1)
             {
-                bm.BuildTower();
+                //nodes[i].gameObject.transform.position
+                bm.BuildTower2(nodes[i]);
+                //nodes[i].turret = BuildManager.instance.thisTurret;
+                //nodes[i].towerIndex = 1;
             }
         }
     }

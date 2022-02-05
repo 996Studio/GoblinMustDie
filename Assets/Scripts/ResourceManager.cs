@@ -47,7 +47,6 @@ public class ResourceManager
     public void ChangeCoin(float number)
     {
         coin += number;
-        Debug.Log(coin);
     }
 
     private void ChangeWood(float number)

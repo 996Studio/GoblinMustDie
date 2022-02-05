@@ -15,9 +15,18 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
+    [Header("Tower Prefabs")]
     public GameObject standardTurretPrefab;
-    private GameObject turretToBuild;
+    public GameObject resourceTurretPrefab;
+
+    public GameObject turretToBuild;
+
     public NodeList nodeList;
+    public Vector3 turretOffset;
+    public int towerIndex = 0;
+    public int buildTowerIndex;
+
+    public GameObject thisTurret;
 
     private void Start()
     {
@@ -26,22 +35,28 @@ public class BuildManager : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    Debug.Log("SAVING");
-        //    int[] data = nodeList.LoopThroughList();
-        //    print("?");
-        //}
-        //if (Input.GetKeyDown(KeyCode.L))
-        //{
-        //    Debug.Log("LOADING");
-
-        //}
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("--Selected Tower 1--");
+            turretToBuild = standardTurretPrefab;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Debug.Log("--Selected Tower 5--");
+            turretToBuild = resourceTurretPrefab;
+        }
     }
 
     public GameObject GetTurretToBuild()
     {
         return turretToBuild;
+    }
+
+    public void RemoveTower(GameObject tower)
+    {
+        Destroy(tower);
+        towerIndex = 0;
+        ResourceManager.Instance().ChangeCoin(5);
     }
 
     public void BuildTower()
@@ -71,7 +86,27 @@ public class BuildManager : MonoBehaviour
 
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         GameObject turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
-        //towerIndex = 1;
+        towerIndex = 1;
+        ResourceManager.Instance().ChangeCoin(-10);
+    }
+
+    public void BuildTower2(Node thisNode)
+    {
+        switch(buildTowerIndex)
+        {
+            case 1:
+
+                break;
+            case 5:
+
+                break;
+        }
+
+        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        thisTurret = (GameObject)Instantiate(turretToBuild, thisNode.transform.position + turretOffset, thisNode.transform.rotation);
+        thisTurret.transform.parent = thisNode.gameObject.transform;
+        thisNode.turret = BuildManager.instance.thisTurret;
+        towerIndex = 1;
         ResourceManager.Instance().ChangeCoin(-10);
     }
 }
