@@ -14958,6 +14958,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 855099569823032774, guid: 8360e660a5f8bb04dafc04c87be91e6d,
         type: 3}
+      propertyPath: hoverColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 855099569823032774, guid: 8360e660a5f8bb04dafc04c87be91e6d,
+        type: 3}
+      propertyPath: hoverColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 855099569823032774, guid: 8360e660a5f8bb04dafc04c87be91e6d,
+        type: 3}
+      propertyPath: hoverColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 855099569823032774, guid: 8360e660a5f8bb04dafc04c87be91e6d,
+        type: 3}
       propertyPath: ResourceAmount
       value: 50
       objectReference: {fileID: 0}

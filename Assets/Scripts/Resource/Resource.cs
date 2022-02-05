@@ -19,6 +19,12 @@ public class Resource : MonoBehaviour
 
     protected ResourceTower tower;
 
+    public ResourceType resourceType;
+
+    public delegate void GatherResourceAction(ResourceType type, int amount); 
+    public static event GatherResourceAction gatherResourceEvent;
+    
+    
     private void Awake()
     {
         rend = GetComponent<Renderer>();
@@ -36,13 +42,31 @@ public class Resource : MonoBehaviour
     public virtual void OnMouseDown()
     {
         Debug.Log("Clicked");
-        CollectResource();
+        CollectResource(resourceType, ResourceAmount);
     }
-    public virtual void CollectResource()
+    public void CollectResource(ResourceType type, int amount)
     {
         this.gameObject.SetActive(false);
+        switch (type)
+        {
+            case ResourceType.WOOD:
+                ResourceManager.Instance().Wood += ResourceAmount;
+                Debug.Log("Wood: "+ ResourceManager.Instance().Wood);
+                break;
+            case ResourceType.ROCK:
+                break;
+            default:
+                break;
+        }
+        
+        if (gatherResourceEvent != null)
+        {
+            gatherResourceEvent(type, amount);
+        }
+        
         tower.bResourceIsUp = false;
     }
+    
     public virtual void OnMouseEnter()
     {
         rend.material.color = hoverColor;

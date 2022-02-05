@@ -97,5 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: {x: 0, y: 90, z: 0}
-  ResourceAmount: 0
+  ResourceAmount: 50
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  resourceType: 1

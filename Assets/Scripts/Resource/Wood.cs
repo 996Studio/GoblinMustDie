@@ -17,10 +17,5 @@ public class Wood : Resource
         transform.Rotate(RotationSpeed * Time.deltaTime);
     }
 
-    public override void CollectResource()
-    {
-        ResourceManager.Instance().Wood += ResourceAmount;
-        Debug.Log("You have: " + ResourceManager.Instance().Wood + " wood.");
-        base.CollectResource();
-    }
+    
 }
