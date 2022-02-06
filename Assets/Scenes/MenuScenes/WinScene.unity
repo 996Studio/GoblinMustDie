@@ -1271,22 +1271,22 @@ MonoBehaviour:
   sounds:
   - name: Click
     clip: {fileID: 8300000, guid: a976651f438548b42ab3f6feff1cad99, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Lost
     clip: {fileID: 8300000, guid: 976b277c537762b42b5a7e6f949338d0, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   music:
   - name: GameOver
     clip: {fileID: 8300000, guid: a7652af720eaa5143800694c386705cd, type: 3}
-    volume: 0
-    pitch: 0
-    loop: 0
+    volume: 0.2
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &2114654184
 Transform:
