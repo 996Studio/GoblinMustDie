@@ -6,10 +6,10 @@ using UnityEngine;
 public class ResourceManager 
 {
     private static ResourceManager instance;
-    
-    private float coin;
-    private float wood;
-    private float rock;
+
+    private int coin = 10000;
+    private int wood;
+    private int rock;
 
     private ResourceManager()
     {
@@ -26,36 +26,36 @@ public class ResourceManager
         return instance;
     }
 
-    public float Coin
+    public int Coin
     {
         get { return coin; }
         set { coin = value; }
     }
 
-    public float Wood
+    public int Wood
     {
         get { return wood; }
         set { wood = value; }
     }
 
-    public float Rock
+    public int Rock
     {
         get { return rock; }
         set { rock = value; }
     }
 
-    public void ChangeCoin(float number)
+    public void ChangeCoin(int number)
     {
         coin += number;
         Debug.Log(coin);
     }
 
-    private void ChangeWood(float number)
+    public void ChangeWood(int number)
     {
         wood += number;
     }
 
-    private void ChangeRock(float number)
+    public void ChangeRock(int number)
     {
         rock += number;
     }

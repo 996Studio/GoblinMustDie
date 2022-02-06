@@ -5,10 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum TowerType
+public enum TowerType
 {
     //place holder 
-    NULL,
+    NULL=0,
     BASIC,
     FIRE,
     WATER,
