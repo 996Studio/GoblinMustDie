@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c40027982a518f4c877ed8b22c18b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  twr: {fileID: 7976678713665253747}
+  twr: {fileID: 0}
   lockE: 0
   curTarget: {fileID: 0}
 --- !u!1 &8009974059463022381
@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 8014996421873984901}
   - component: {fileID: 8024719191690102405}
   - component: {fileID: 8034062298245969153}
-  - component: {fileID: 7976678713665253747}
   - component: {fileID: 8010359734326970484}
   m_Layer: 0
   m_Name: Resource Tower
@@ -183,31 +182,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7976678713665253747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8009992917416068197}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a682e4e961f99c0498ca12fad03ef8fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Catcher: 0
-  shootElement: {fileID: 8008881477029432217}
-  Towerbug: {fileID: 8010782716481713229}
-  LookAtObj: {fileID: 8008881477029432217}
-  bullet: {fileID: 1896718417264088, guid: fee99901520fcea4b94d5240880e5b07, type: 3}
-  DestroyParticle: {fileID: 1842692474500718, guid: faa216e7fb0fe8045ab064f8955a35d0,
-    type: 3}
-  impactNormal_2: {x: 0, y: 0, z: 0}
-  target: {fileID: 0}
-  dmg: 7
-  shootDelay: 1
-  anim_2: {fileID: 0}
-  TowerHp: {fileID: 0}
 --- !u!114 &8010359734326970484
 MonoBehaviour:
   m_ObjectHideFlags: 0
