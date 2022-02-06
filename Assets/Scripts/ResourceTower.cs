@@ -1,12 +1,8 @@
-// Source filename : Resource.cs
-// This is a script that controls the behaviour of each individual nodes 
-// Version 0.1 By Jing on 2022/1/27
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceTower : Turret
+public class ResourceTower : MonoBehaviour
 {
     [Header("Resource Tower")]
     public ResourceType resourcetoSpawn;
@@ -43,16 +39,5 @@ public class ResourceTower : Turret
             woodPrefab.SetActive(true);
             bResourceIsUp = true;
         }
-    }
-
-    
-    public override void turretUpgrade()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void turretDestroy()
-    {
-        throw new System.NotImplementedException();
     }
 }

@@ -8,7 +8,7 @@ public class NodeManager : MonoBehaviour
     public static NodeManager instance;
     
     public List<TowerBase> towerBaseList;
-    private List<NewNode> nodeList;
+    private List<Node> nodeList;
 
     public NodeManager Instance()
     {
@@ -28,9 +28,9 @@ public class NodeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nodeList = new List<NewNode>();
+        nodeList = new List<Node>();
 
-        NewNode[] nodes= FindObjectsOfType<NewNode>();
+        Node[] nodes= FindObjectsOfType<Node>();
         foreach (var node in nodes)
         {
             nodeList.Add(node);
@@ -43,7 +43,7 @@ public class NodeManager : MonoBehaviour
         
     }
 
-    public void BuildTower(TowerType type,NewNode node)
+    public void BuildTower(TowerType type,Node node)
     {
         if (ResourceManager.Instance().Coin < towerBaseList[(int)type - 1].CoinCost[0] ||
             ResourceManager.Instance().Wood < towerBaseList[(int)type - 1].WoodCost[0] ||
@@ -69,7 +69,7 @@ public class NodeManager : MonoBehaviour
         }
     }
 
-    public void SellTower(NewNode node)
+    public void SellTower(Node node)
     {
         Debug.Log("Sell tower");
         Destroy(node.Tower);
@@ -78,7 +78,7 @@ public class NodeManager : MonoBehaviour
             towerBaseList[0].RockGet[0]);
     }
 
-    public void LoadTower(NewNode node, TowerType type, int level)
+    public void LoadTower(Node node, TowerType type, int level)
     {
         switch (type)
         {

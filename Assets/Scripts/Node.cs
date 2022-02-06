@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewNode : MonoBehaviour
+public class Node : MonoBehaviour
 {
     [Header("NodeType")]
     [SerializeField] NodeType nodeType;
