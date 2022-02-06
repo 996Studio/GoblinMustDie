@@ -25,8 +25,10 @@ public class SaveManager : MonoBehaviour
         save.wood = ResourceManager.Instance().Wood;
         save.rock = ResourceManager.Instance().Rock;
 
+        save.towerTypeList = new List<TowerType>();
+        save.levelList = new List<int>();
 
-        save.towerNum = 0;
+        save.nodeNum = 0;
         foreach (var node in NodeManager.instance.NodeList)
         {
             Debug.Log(node.TowerType);
@@ -40,7 +42,7 @@ public class SaveManager : MonoBehaviour
                 save.levelList.Add(node.Tower.GetComponent<BaseTower>().Level);
             }
 
-            save.towerNum++;
+            save.nodeNum++;
         }
         return save;
     }
@@ -67,14 +69,15 @@ public class SaveManager : MonoBehaviour
             ResourceManager.Instance().Coin = save.coin;
             ResourceManager.Instance().Wood = save.wood;
             ResourceManager.Instance().Rock = save.rock;
+            HUDManager.instance.UpdateResourceText(ResourceType.ALL);
 
-            for (int i = 0; i < save.towerNum - 1; i++)
+            for (int i = 0; i < save.nodeNum - 1; i++)
             {
                 NodeManager.instance.LoadTower(NodeManager.instance.NodeList[i], save.towerTypeList[i],
                     save.levelList[i]);
             }
 
-            Debug.Log("Load" + ResourceManager.Instance().Coin);
+            //Debug.Log("Load" + ResourceManager.Instance().Coin);
         }
         else
         {

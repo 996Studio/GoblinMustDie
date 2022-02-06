@@ -9,9 +9,7 @@ public class MotherBase : MonoBehaviour
     private int maxHP;
 
     private bool isDead;
-
-    public delegate void UpdateLiveNumAction(int number); 
-    public static event UpdateLiveNumAction updateLiveNumEvent;
+    
     
     private static MotherBase instance;
     public static MotherBase Instance => instance;
@@ -35,6 +33,7 @@ public class MotherBase : MonoBehaviour
         this.maxHP = maxHp;
         
         //Update UI info later
+        HUDManager.instance.UpdateEnemyText(this.curHP);
     }
 
     public void TakeDamage(int dmg)
@@ -50,11 +49,6 @@ public class MotherBase : MonoBehaviour
             isDead = true;
         }
 
-        if (updateLiveNumEvent != null)
-        {
-            updateLiveNumEvent(curHP);
-        }
-        
         UpdateHp(curHP, maxHP);
     }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
@@ -48,6 +49,11 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         Debug.Log("On mouse down");
         if (nodeType == NodeType.PATH)
         {
@@ -66,17 +72,27 @@ public class Node : MonoBehaviour
         if (tower == null && towerType == TowerType.NULL)
         {
             NodeManager.instance.BuildTower(TowerType.BASIC, this);
-            FindObjectOfType<AudioManager>().Play("BowTowerBuild");
+            AudioManager.instance.Play(SoundType.SFX,"BowTowerBuild");
         }
     }
 
     // Keyboard input for testing
     private void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         rend.material.color = hoverColor;
     }
     private void OnMouseExit()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         rend.material.color = originColor;
     }
 }

@@ -9,24 +9,20 @@ public class NodeManager : MonoBehaviour
     
     public List<TowerBase> towerBaseList;
     private List<Node> nodeList;
+    
 
     public List<Node> NodeList
     {
         get { return nodeList; }
     }
 
-    public NodeManager Instance()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-
-        return instance;
-    }
-
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.Log("More than one NodeManager in scene!");
+        }
+        
         instance = this;
     }
 
@@ -50,7 +46,7 @@ public class NodeManager : MonoBehaviour
 
     public void BuildTower(TowerType type,Node node)
     {
-        Debug.Log(type);
+        //Debug.Log(type);
         if (ResourceManager.Instance().Coin < towerBaseList[(int)type - 1].CoinCost[0] ||
             ResourceManager.Instance().Wood < towerBaseList[(int)type - 1].WoodCost[0] ||
             ResourceManager.Instance().Rock < towerBaseList[(int)type - 1].RockCost[0])
@@ -58,8 +54,8 @@ public class NodeManager : MonoBehaviour
             Debug.Log("need more coin");
             return;
         }
-        
-        Debug.Log("Build tower");
+
+        //Debug.Log("Build tower");
         switch (type)
         {
             case TowerType.BASIC:
@@ -84,6 +80,8 @@ public class NodeManager : MonoBehaviour
             }
             default: break;
         }
+
+        HUDManager.instance.UpdateResourceText(ResourceType.ALL);
     }
 
     public void SellTower(Node node)
@@ -105,6 +103,9 @@ public class NodeManager : MonoBehaviour
             }
             default: break;
         }
+        
+        HUDManager.instance.UpdateResourceText(ResourceType.ALL);
+        
         Destroy(node.Tower);
         node.TowerType = TowerType.NULL;
         
@@ -112,6 +113,24 @@ public class NodeManager : MonoBehaviour
 
     public void LoadTower(Node node, TowerType type, int level)
     {
+        if (node.TowerType == type)
+        {
+            if (node.Tower != null && node.Tower.GetComponent<BaseTower>().Level != level)
+            {
+                
+            }
+            else
+            {
+                return;
+            }
+        }
+        else if (node.Tower != null)
+        {
+            Debug.Log("Destroy tower");
+            Destroy(node.Tower);
+            node.TowerType = TowerType.NULL;
+        }
+        
         switch (type)
         {
             case TowerType.BASIC:
@@ -127,7 +146,7 @@ public class NodeManager : MonoBehaviour
             {
                 node.Tower = Instantiate(towerBaseList[1].TowerPrefab,
                     node.transform.position + towerBaseList[1].TowerBuildOffset, Quaternion.identity);
-                node.TowerType = TowerType.BASIC;
+                node.TowerType = TowerType.WOODEN;
                 node.Tower.GetComponent<ResourceTower>().Level = level;
                 Debug.Log("Load wooden tower");
                 break;

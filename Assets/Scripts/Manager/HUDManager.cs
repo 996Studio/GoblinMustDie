@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class HUDManager : MonoBehaviour
 {
+    public static HUDManager instance;
+    
     [Header("Resource")]
     public TMP_Text coinText;
     public TMP_Text crystalText;
@@ -13,6 +15,16 @@ public class HUDManager : MonoBehaviour
 
     public TMP_Text enemyText;
     public TMP_Text liveText;
+    
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.Log("More than one HUDManager in scene!");
+        }
+        
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +32,6 @@ public class HUDManager : MonoBehaviour
         UpdateCoinText(ResourceManager.Instance().Coin);
         UpdateCrystalText(ResourceManager.Instance().Wood);
         UpdateDiamondText(ResourceManager.Instance().Rock);
-
-        Resource.gatherResourceEvent += UpdateResourceText;
-        SpawnPoint.updateEnemyNumEvent += UpdateEnemyText;
-        MotherBase.updateLiveNumEvent += UpdateLiveText;
     }
 
     // Update is called once per frame
@@ -39,11 +47,20 @@ public class HUDManager : MonoBehaviour
 
     public void UpdateResourceText(ResourceType type)
     {
+        Debug.Log($"Update {type}");
         switch (type)
         {
-            case ResourceType.GOLD:
+            case ResourceType.ALL:
             {
                 coinText.text = ResourceManager.Instance().Coin.ToString();
+                crystalText.text = ResourceManager.Instance().Wood.ToString();
+                diamondText.text = ResourceManager.Instance().Rock.ToString();
+                break;
+            }
+            case ResourceType.COIN:
+            {
+                coinText.text = ResourceManager.Instance().Coin.ToString();
+                Debug.Log($"coin {ResourceManager.Instance().Coin}");
                 break;
             }
             case ResourceType.WOOD:

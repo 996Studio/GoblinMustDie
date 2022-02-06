@@ -16,8 +16,6 @@ public class SpawnPoint : MonoBehaviour
     public float waveInterval;
     public float firstWaveDelay;
     
-    public delegate void UpdateEnemyNumAction(int number); 
-    public static event UpdateEnemyNumAction updateEnemyNumEvent;
 
     public int CurEnemyNum
     {
@@ -35,10 +33,7 @@ public class SpawnPoint : MonoBehaviour
         curSpawnID = Random.Range(0, enemySpawnList.Count);
         curEnemyNum = enemyNumPerWave;
 
-        if (updateEnemyNumEvent != null)
-        {
-            updateEnemyNumEvent(curEnemyNum);
-        }
+        HUDManager.instance.UpdateEnemyText(curEnemyNum);
         
         SpawnEnemy();
 
@@ -51,10 +46,7 @@ public class SpawnPoint : MonoBehaviour
         enemy.InitInfo();
 
         curEnemyNum--;
-        if (updateEnemyNumEvent != null)
-        {
-            updateEnemyNumEvent(curEnemyNum);
-        }
+        HUDManager.instance.UpdateEnemyText(curEnemyNum);
 
         if (curEnemyNum == 0)
         {

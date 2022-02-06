@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.XR.Oculus.Input;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Resource : MonoBehaviour
 {
@@ -21,10 +22,7 @@ public class Resource : MonoBehaviour
 
     public ResourceType resourceType;
 
-    public delegate void GatherResourceAction(ResourceType type); 
-    public static event GatherResourceAction gatherResourceEvent;
-    
-    
+
     private void Awake()
     {
         rend = GetComponent<Renderer>();
@@ -41,11 +39,18 @@ public class Resource : MonoBehaviour
     }
     public virtual void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         Debug.Log("Clicked");
         CollectResource(resourceType, ResourceAmount);
     }
+    
     public void CollectResource(ResourceType type, int amount)
     {
+        Debug.Log($"Collect {type} {amount}");
         this.gameObject.SetActive(false);
         switch (type)
         {
@@ -59,20 +64,27 @@ public class Resource : MonoBehaviour
                 break;
         }
         
-        if (gatherResourceEvent != null)
-        {
-            gatherResourceEvent(type);
-        }
-        
+        HUDManager.instance.UpdateResourceText(type);
+
         tower.bResourceIsUp = false;
     }
     
     public virtual void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         rend.material.color = hoverColor;
     }
     public virtual void OnMouseExit()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         rend.material.color = originColor;
     }
 }

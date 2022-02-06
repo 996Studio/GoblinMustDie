@@ -26,8 +26,10 @@ public class AttackTower : BaseTower
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected  void Start()
     {
+        base.Start();
+        
         // Invoke target function, start from 0s, and repeat every 0.5s.
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
@@ -52,7 +54,7 @@ public class AttackTower : BaseTower
     {
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, fireLocation.position, fireLocation.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
-        FindObjectOfType<AudioManager>().Play("BowTowerFire");//BowTower fire sound
+        AudioManager.instance.Play(SoundType.SFX,"BowTowerFire");
 
         if (bullet != null)
         {

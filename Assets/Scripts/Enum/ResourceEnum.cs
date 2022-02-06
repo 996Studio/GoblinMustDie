@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum ResourceType
 {
-    GOLD,
+    ALL,
+    COIN,
     WOOD,
     ROCK
 }

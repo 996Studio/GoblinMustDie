@@ -8,7 +8,7 @@ public class SaveData
     public int wood;
     public int rock;
 
-    public int towerNum;
+    public int nodeNum;
     public List<TowerType> towerTypeList;
     public List<int> levelList;
 }

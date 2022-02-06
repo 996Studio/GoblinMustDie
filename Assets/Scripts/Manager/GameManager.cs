@@ -7,12 +7,11 @@ public class GameManager : MonoBehaviour
     private bool isPaused;
     public PauseMenu PauseMenu;
     private ResourceManager resourceManager;
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManager.instance.Play(SoundType.MUSIC,"BGM");
     }
 
     // Update is called once per frame

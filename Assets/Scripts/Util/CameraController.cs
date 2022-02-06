@@ -18,6 +18,8 @@ public class CameraController : MonoBehaviour
     public float scrollSpeed;
     public float minYPos;
     public float maxYPos;
+    public Vector2 minPos;
+    public Vector2 maxPos;
 
     [Header("Mobile")] 
     private Vector3 touchStart;
@@ -46,6 +48,9 @@ public class CameraController : MonoBehaviour
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPos.x, maxPos.x), transform.position.y,
+            Mathf.Clamp(transform.position.z, minPos.y, maxPos.y));
         
         //Zoom camera
         float scroll = Input.GetAxis("Mouse ScrollWheel");

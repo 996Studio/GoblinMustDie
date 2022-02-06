@@ -15,8 +15,9 @@ public class ResourceTower : BaseTower
     public Vector3 resourceOffset = new Vector3(0,2,0);
     
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
+        base.Start();
         bResourceIsUp = false;
         woodPrefab.SetActive(false);
     }
