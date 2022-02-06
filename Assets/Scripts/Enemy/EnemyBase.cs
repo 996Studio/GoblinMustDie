@@ -50,19 +50,23 @@ public class EnemyBase : MonoBehaviour
 
         if (curHP <= 0)
         {
+            
             Death();
         }
     }
 
     public void Death()
     {
+
         isDead = true;
         agent.isStopped = true;
+        //FindObjectOfType<AudioManager>().Play("EnemyDeath");
         Destroy(this);
     }
     
     public void DeathEvent()
     {
+        
         //Placeholder for animation event
     }
 }

@@ -52,6 +52,7 @@ public class AttackTower : BaseTower
     {
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, fireLocation.position, fireLocation.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        FindObjectOfType<AudioManager>().Play("BowTowerFire");//BowTower fire sound
 
         if (bullet != null)
         {
