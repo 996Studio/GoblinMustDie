@@ -1168,19 +1168,19 @@ MonoBehaviour:
   sounds:
   - name: BowTowerFire
     clip: {fileID: 8300000, guid: c6a492ab07798cb43abea3a89a369478, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: BGM
     clip: {fileID: 8300000, guid: 6a759ba7ee779b845921200bf59b3693, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: BowTowerBuild
     clip: {fileID: 8300000, guid: 2db30dac22af2f54e818a286d85937a7, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
