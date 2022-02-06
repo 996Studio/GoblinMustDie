@@ -7,19 +7,11 @@ public class NodeList : MonoBehaviour
     public List<Node> nodes;
     public List<int> Lv1 = new List<int>();
 
-    public BuildManager bm;
-    
-    //public int[] LevelOneNodeData = new int[33];
-    public List<int> x;
+    public BuildManager buildManager;
     
     void Start()
     {
-        //print(LevelOneNodeData.Length);
-        
-        for (int i = 0; i < 33; i++)
-        {
-            x.Add(1);
-        }
+
     }
     void Update()
     {
@@ -29,44 +21,43 @@ public class NodeList : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            LoadData(x);
+            LoadData();
         }
-    }
-    public void LoopThroughList()
-    {
-        //for (int i = 0; i < nodes.Count; i++)
-        //{
-        //    LevelOneNodeData[i] = nodes[i].towerIndex;
-        //    Debug.Log("Node: " + i + "    Status: " + LevelOneNodeData[i]);
-        //}
-
-        //foreach (Node _node in nodes)
-        //{
-        //    Debug.Log(_node + "    " + _node.towerIndex.ToString());
-        //    Lv1.Add(_node.towerIndex);
-        //}
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            //print(Lv1[0]);
+        }
     }
 
     public void SaveData()
     {
+        Lv1.Clear();
+
         foreach (Node _node in nodes)
         {
             Lv1.Add(_node.towerIndex);
             Debug.Log(_node + " --- " + _node.towerIndex.ToString());
+            
         }
     }
 
-    public void LoadData(List<int> x)
+    public void LoadData()
     {
-        for(int i = 0; i < nodes.Count; i++)
+        for (int i = 0; i < nodes.Count; i++)
         {
             if (Lv1[i] == 1)
             {
-                //nodes[i].gameObject.transform.position
-                bm.BuildTower2(nodes[i]);
-                //nodes[i].turret = BuildManager.instance.thisTurret;
-                //nodes[i].towerIndex = 1;
+                buildManager.BuildTower2(nodes[i]);
             }
+        }
+    }
+
+    public void rebuildLevel()
+    {
+        foreach (Node _node in nodes)
+        {
+            
+
         }
     }
 }

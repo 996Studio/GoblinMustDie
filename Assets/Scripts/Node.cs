@@ -60,7 +60,6 @@ public class Node : MonoBehaviour
         // Build a turret
         buildManager.BuildTower2(this);
         turret = BuildManager.instance.thisTurret;
-        towerIndex = 1;
     }
 
     // Keyboard input for testing
@@ -72,45 +71,6 @@ public class Node : MonoBehaviour
     {
         rend.material.color = originColor;
     }
-
-    //private void BuildTower()
-    //{
-    //    //switch (towerIndex)
-    //    //{
-    //    //    case 0:
-    //    //        break;
-    //    //    case 1:
-    //    //        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-    //    //        turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
-    //    //        return;
-    //    //    case 2:
-
-    //    //    case 3:
-
-    //    //    case 4:
-
-    //    //    case 5:
-
-    //    //    case 6:
-
-    //    //    case 7:
-
-    //    //    case 8:
-    //    //}
-
-    //    GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-    //    turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
-    //    towerIndex = 1;
-    //    ResourceManager.Instance().ChangeCoin(-10);
-    //}
-
-    //private void BuildTower(GameObject thisNode)
-    //{
-    //    GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-    //    turret = (GameObject)Instantiate(turretToBuild, thisNode.transform.position + turretOffset, thisNode.transform.rotation);
-    //    towerIndex = 1;
-    //    ResourceManager.Instance().ChangeCoin(-10);
-    //}
 
 }
 

@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95982b1e41510d445a539ebcb2f97dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panSpeed: 1
+  panSpeed: 2
   panBorderThickness: 100
   scrollSpeed: 5
   minYPos: 30
@@ -3639,8 +3639,7 @@ MonoBehaviour:
   - {fileID: 1342825554}
   - {fileID: 1035441913}
   Lv1: 
-  bm: {fileID: 812929973}
-  x: 
+  buildManager: {fileID: 812929973}
 --- !u!114 &1342825554 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8015459323237590836, guid: 5ff364ebe3ff59942b339b16e43e4c46,

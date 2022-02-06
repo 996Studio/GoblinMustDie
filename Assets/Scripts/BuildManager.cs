@@ -38,13 +38,21 @@ public class BuildManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("--Selected Tower 1--");
+            buildTowerIndex = 1;
             turretToBuild = standardTurretPrefab;
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("--Selected Tower 5--");
+            buildTowerIndex = 5;
             turretToBuild = resourceTurretPrefab;
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            RemoveAllTower();
+            RebuildLevel();
+        }
+        
     }
 
     public GameObject GetTurretToBuild()
@@ -59,54 +67,76 @@ public class BuildManager : MonoBehaviour
         ResourceManager.Instance().ChangeCoin(5);
     }
 
-    public void BuildTower()
-    {
-        //switch (towerIndex)
-        //{
-        //    case 0:
-        //        break;
-        //    case 1:
-        //        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        //        turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
-        //        return;
-        //    case 2:
-
-        //    case 3:
-
-        //    case 4:
-
-        //    case 5:
-
-        //    case 6:
-
-        //    case 7:
-
-        //    case 8:
-        //}
-
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        GameObject turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
-        towerIndex = 1;
-        ResourceManager.Instance().ChangeCoin(-10);
-    }
+    //public void BuildTower()
+    //{
+    //    GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+    //    GameObject turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
+    //    towerIndex = 1;
+    //    ResourceManager.Instance().ChangeCoin(-10);
+    //}
 
     public void BuildTower2(Node thisNode)
     {
-        switch(buildTowerIndex)
+        switch (buildTowerIndex)
         {
             case 1:
-
+                WhichTowerToBuild(buildTowerIndex, thisNode);
+                ResourceManager.Instance().ChangeCoin(-10);
                 break;
             case 5:
-
+                WhichTowerToBuild(buildTowerIndex, thisNode);
+                ResourceManager.Instance().ChangeCoin(-30);
                 break;
         }
+    }
 
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        thisTurret = (GameObject)Instantiate(turretToBuild, thisNode.transform.position + turretOffset, thisNode.transform.rotation);
-        thisTurret.transform.parent = thisNode.gameObject.transform;
-        thisNode.turret = BuildManager.instance.thisTurret;
-        towerIndex = 1;
-        ResourceManager.Instance().ChangeCoin(-10);
+    private void WhichTowerToBuild(int selectedTower, Node _node)
+    {
+        if (selectedTower == 0) return;
+
+        else if (selectedTower == 1)
+        {
+            turretToBuild = standardTurretPrefab;
+        }
+        else if (selectedTower == 5)
+        {
+            turretToBuild = resourceTurretPrefab;
+        }
+
+        GameObject turretToBuild2 = BuildManager.instance.GetTurretToBuild();
+        thisTurret = (GameObject)Instantiate(turretToBuild2, _node.transform.position + turretOffset, _node.transform.rotation);
+        thisTurret.transform.parent = _node.gameObject.transform;
+        _node.turret = BuildManager.instance.thisTurret;
+        _node.towerIndex = selectedTower;
+    }
+
+    public void RemoveAllTower()
+    {
+        foreach (Node _node in nodeList.nodes)
+        {
+            if (_node.turret != null)
+            {
+                Destroy(_node.turret);
+            }
+        }
+    }
+
+    public void RebuildLevel()
+    {
+        for (int i = 0; i < nodeList.Lv1.Count; i++)
+        {
+            if (nodeList.Lv1[i] == 0)
+            {
+                return;
+            }
+            else if (nodeList.Lv1[i] == 1)
+            {
+                WhichTowerToBuild(nodeList.Lv1[i], nodeList.nodes[i]);
+            }
+            else if (nodeList.Lv1[i] == 5)
+            {
+                WhichTowerToBuild(nodeList.Lv1[i], nodeList.nodes[i]);
+            }
+        }
     }
 }
