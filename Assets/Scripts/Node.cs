@@ -57,6 +57,7 @@ public class Node : MonoBehaviour
             return;
         }
 
+        FindObjectOfType<AudioManager>().Play("BowTowerBuild");
         // Build a turret
         NodeManager.instance.BuildTower(TowerType.BASIC, this);
     }
