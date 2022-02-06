@@ -83,8 +83,12 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        
+        if (nodeType == NodeType.PATH)
+                {
+                    return;
+                }
         rend.material.color = hoverColor;
+        
     }
     private void OnMouseExit()
     {
@@ -92,7 +96,10 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        
+        if (nodeType == NodeType.PATH)
+                {
+                    return;
+                }
         rend.material.color = originColor;
     }
 }
