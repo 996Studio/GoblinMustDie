@@ -57,11 +57,10 @@ public class EnemyBase : MonoBehaviour
 
     public void Death()
     {
-
         isDead = true;
         agent.isStopped = true;
         //FindObjectOfType<AudioManager>().Play("EnemyDeath");
-        Destroy(this);
+        Destroy(this.gameObject);
     }
     
     public void DeathEvent()
