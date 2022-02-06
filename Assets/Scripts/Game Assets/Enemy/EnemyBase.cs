@@ -33,7 +33,7 @@ public class EnemyBase : MonoBehaviour
     {
         maxHP = 100;
         curHP = 100;
-        atk = 10;
+        atk = 1;
         agent.speed = 3.5f;
         agent.angularSpeed = 120f;
         agent.acceleration = 8f;
@@ -50,7 +50,6 @@ public class EnemyBase : MonoBehaviour
 
         if (curHP <= 0)
         {
-            
             Death();
         }
     }
@@ -59,7 +58,10 @@ public class EnemyBase : MonoBehaviour
     {
         isDead = true;
         agent.isStopped = true;
-        //FindObjectOfType<AudioManager>().Play("EnemyDeath");
+        
+        AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
+        
+        Debug.Log(MotherBase.Instance.killCount);
         Destroy(this.gameObject);
     }
     

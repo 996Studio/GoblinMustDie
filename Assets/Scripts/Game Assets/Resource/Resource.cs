@@ -65,6 +65,7 @@ public class Resource : MonoBehaviour
         }
         
         HUDManager.instance.UpdateResourceText(type);
+        AudioManager.instance.Play(SoundType.SFX, "Ding");
 
         tower.bResourceIsUp = false;
     }

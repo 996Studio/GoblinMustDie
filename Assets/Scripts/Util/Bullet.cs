@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
     {
         GameObject effectInstance = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectInstance, 2f);
-
+        
         if (target != null)
         {
             Destroy(gameObject, SecondsBeforeDestroy);
@@ -58,6 +58,11 @@ public class Bullet : MonoBehaviour
         }
 
         Destroy(target.gameObject);
+        
+        //Temporary code to be modified later
+        AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
+        MotherBase.Instance.killCount++;
+        Debug.Log(MotherBase.Instance.killCount);
         //StartCoroutine(WaitBeforeDestroy());
     }
 

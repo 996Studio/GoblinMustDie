@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScenes/LoseScene.unity
     guid: 2cf3654d0b0c4c84094ee2b801866ab0
+  - enabled: 1
+    path: Assets/Scenes/MenuScenes/WinScene 1.unity
+    guid: 8058b58e2aa6e5843b21d24680680796
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 13cabedfdf9529a43884a40c9b404f62,
       type: 2}

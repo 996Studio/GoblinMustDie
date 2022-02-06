@@ -96,6 +96,11 @@ public class AudioManager : MonoBehaviour
             default: break;
         }
     }
+
+    public void PlayClickSound()
+    {
+        Play(SoundType.SFX,"Click");
+    }
 }
 
 public enum SoundType

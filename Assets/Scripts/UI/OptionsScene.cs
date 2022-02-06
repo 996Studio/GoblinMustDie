@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class OptionsScene : MonoBehaviour
 {
-    public GameObject pauseMenu;
-
     public Slider musicVolumeSlider;
     public Slider soundVolumeSlider;
 
@@ -24,17 +20,7 @@ public class PauseMenu : MonoBehaviour
         SetMusicVolume();
         SetSoundVolume();
     }
-
-    public void ShowPauseMenu()
-    {
-        pauseMenu.gameObject.SetActive(true);
-    }
-
-    public void DestroyPauseMenu()
-    {
-        pauseMenu.gameObject.SetActive(false);
-    }
-
+    
     public void SetMusicVolume()
     {
         AudioManager.instance.ChangeVolume(SoundType.MUSIC, musicVolumeSlider.value);
@@ -45,9 +31,5 @@ public class PauseMenu : MonoBehaviour
         AudioManager.instance.ChangeVolume(SoundType.SFX, soundVolumeSlider.value);
     }
 
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("MenuScene");
-    }
-
+    
 }
