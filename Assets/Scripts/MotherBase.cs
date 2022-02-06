@@ -7,18 +7,25 @@ public class MotherBase : MonoBehaviour
 {
     private int curHP;
     private int maxHP;
+
     private bool isDead;
 
     private static MotherBase instance;
     public static MotherBase Instance => instance;
     
+    public int CurHp
+    {
+        get => curHP;
+        set => curHP = value;
+    }
+    
     void Awake()
     {
         instance = this;
-        curHP = 100;
-        maxHP = 100;
+        curHP = 300;
+        maxHP = 300;
     }
-    
+
     public void UpdateHp(int hp, int maxHp)
     {
         this.curHP = hp;
@@ -52,8 +59,6 @@ public class MotherBase : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Console.WriteLine("Death");
-            
             TakeDamage(other.gameObject.GetComponent<EnemyBase>().Atk);
             other.gameObject.GetComponent<EnemyBase>().Death();
         }

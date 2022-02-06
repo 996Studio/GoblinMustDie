@@ -56,9 +56,10 @@ public class EnemyBase : MonoBehaviour
 
     public void Death()
     {
+        Debug.Log("death");
         isDead = true;
         agent.isStopped = true;
-        Destroy(this);
+        Destroy(gameObject);
     }
     
     public void DeathEvent()
