@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ResourceManager
+public class ResourceManager 
 {
     private static ResourceManager instance;
-    
-    private int coin;
+
+    private int coin = 10000;
     private int wood;
     private int rock;
 
-    // private ResourceManager()
-    // {
-    //     coin = 0;
-    //     wood = 0;
-    //     rock = 0;
-    // }
+    private ResourceManager()
+    {
+        
+    }
 
     public static ResourceManager Instance()
     {
@@ -49,14 +47,15 @@ public class ResourceManager
     public void ChangeCoin(int number)
     {
         coin += number;
+        Debug.Log(coin);
     }
 
-    private void ChangeWood(int number)
+    public void ChangeWood(int number)
     {
         wood += number;
     }
 
-    private void ChangeRock(int number)
+    public void ChangeRock(int number)
     {
         rock += number;
     }

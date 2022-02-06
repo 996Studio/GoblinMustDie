@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-// 1. find target
-// 2. Rotate to target
-
-public class BasicTurret : Turret
+public class AttackTower : BaseTower
 {
+    [Header("Attributes")] 
+    protected float attackRange = 10.0f;
+    protected float attack;
+    protected float defence;
+    [SerializeField] protected GameObject bulletPrefab;
+    protected float fireRate = 1.0f;
+    [SerializeField] protected Transform fireLocation;
+    [SerializeField] protected Transform Rotator;
+    protected float turnSpeed = 10.0f;
+    
+
+    protected float fireCounter;
+    private Transform target;
+
+    public Transform Target
+    {
+        get { return target; }
+        set { target = value; }
+    }
+
+    // Start is called before the first frame update
     void Start()
     {
         // Invoke target function, start from 0s, and repeat every 0.5s.
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (target == null) return; // No target, do nothing
@@ -20,20 +40,17 @@ public class BasicTurret : Turret
         turretAimActivate();
 
         // Rate of fire
-        if (fireCountdown <= 0)
+        if (fireCounter <= 0)
         {
             turretFire();
-            fireCountdown = 1f / fireRate;
+            fireCounter = 1f / fireRate;
         }
-        fireCountdown -= Time.deltaTime;
-
-
+        fireCounter -= Time.deltaTime;
     }
 
-    void turretFire()
+    protected void turretFire()
     {
-        Debug.Log("Fire!");
-        GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, fireLocation.position, fireLocation.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
@@ -42,10 +59,10 @@ public class BasicTurret : Turret
         }
     }
 
-    void UpdateTarget()
+    protected void UpdateTarget()
     {
         // Array of all enemies
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         // Store the shortest enemy to this turret
         float shortestDistance = Mathf.Infinity;
@@ -65,7 +82,7 @@ public class BasicTurret : Turret
         }
 
         // Setting/Reset target
-        if (nearestEnemy != null && shortestDistance <= range)
+        if (nearestEnemy != null && shortestDistance <= attackRange)
         {
             target = nearestEnemy.transform;
         }
@@ -77,7 +94,7 @@ public class BasicTurret : Turret
     }
 
     // Smooth turn towards target enemy
-    void turretAimActivate()
+    protected void turretAimActivate()
     {
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
@@ -89,17 +106,6 @@ public class BasicTurret : Turret
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
-
-
-    public override void turretUpgrade()
-    {
-        
-    }
-
-    public override void turretDestroy()
-    {
-        
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
