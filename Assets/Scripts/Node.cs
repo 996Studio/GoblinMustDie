@@ -59,6 +59,7 @@ public class Node : MonoBehaviour
         // Build a turret
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + turretOffset, transform.rotation);
+        FindObjectOfType<AudioManager>().Play("BowTowerBuild");//Build Sound
     }
 
     // Keyboard input for testing

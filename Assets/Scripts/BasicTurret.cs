@@ -38,6 +38,7 @@ public class BasicTurret : Turret
         Debug.Log("Fire!");
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        FindObjectOfType<AudioManager>().Play("BowTowerFire");//BowTower fire sound
 
         if (bullet != null)
         {

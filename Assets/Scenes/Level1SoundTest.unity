@@ -3339,10 +3339,22 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: BGM
-    clip: {fileID: 8300000, guid: afdc5e765e683ef49857f473bf23d6ed, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 4420fd56940f546499a8cd713c1ebc12, type: 3}
+    volume: 0.05
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: BowTowerFire
+    clip: {fileID: 8300000, guid: c6a492ab07798cb43abea3a89a369478, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BowTowerBuild
+    clip: {fileID: 8300000, guid: 2db30dac22af2f54e818a286d85937a7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1883269291
 Transform:
