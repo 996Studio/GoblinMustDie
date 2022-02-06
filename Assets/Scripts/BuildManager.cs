@@ -131,11 +131,11 @@ public class BuildManager : MonoBehaviour
             }
             else if (nodeList.Lv1[i] == 1)
             {
-                WhichTowerToBuild(nodeList.Lv1[i], nodeList.nodes[i]);
+                WhichTowerToBuild(1, nodeList.nodes[i]);
             }
             else if (nodeList.Lv1[i] == 5)
             {
-                WhichTowerToBuild(nodeList.Lv1[i], nodeList.nodes[i]);
+                WhichTowerToBuild(5, nodeList.nodes[i]);
             }
         }
     }
