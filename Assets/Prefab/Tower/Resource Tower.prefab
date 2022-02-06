@@ -217,26 +217,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8009992917416068197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab4272edd2cd5424da491385741ca5e9, type: 3}
+  m_Script: {fileID: 11500000, guid: c739eb141081e3d4a965ee9f5b1e985d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  range: 0
-  enemyTag: Enemy
-  Rotator: {fileID: 0}
-  turnSpeed: 10
-  fireRate: 1
-  fireCountdown: 0
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
-  resourcetoSpawn: 1
-  resourceSpawnPoint: {fileID: 8010359733997814501}
+  resourcetoSpawn: 0
+  resourceSpawnPoint: {fileID: 0}
   woodPrefab: {fileID: 2572413215964224612}
   crytalPrefab: {fileID: 0}
-  timeToSpawn: 5
+  timeToSpawn: 2
   bResourceIsUp: 0
-  initialSpawnTime: 2
-  resourceOffset: {x: 0, y: 5, z: 0}
+  initialSpawnTime: 1
+  resourceOffset: {x: 0, y: 2, z: 0}
 --- !u!1 &8010042036392212297
 GameObject:
   m_ObjectHideFlags: 0
