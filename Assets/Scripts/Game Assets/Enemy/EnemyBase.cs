@@ -68,6 +68,7 @@ public class EnemyBase : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         curHP -= dmg;
+        //Debug.Log(curHP);
 
         if (curHP <= 0)
         {

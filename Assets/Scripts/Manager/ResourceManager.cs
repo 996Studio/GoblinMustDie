@@ -8,8 +8,8 @@ public class ResourceManager
     private static ResourceManager instance;
 
     private int coin = 10000;
-    private int wood;
-    private int rock;
+    private int wood=10000;
+    private int rock=10000;
 
     private ResourceManager()
     {

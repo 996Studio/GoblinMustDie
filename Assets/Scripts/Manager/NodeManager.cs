@@ -9,8 +9,9 @@ public class NodeManager : MonoBehaviour
     
     public List<TowerBase> towerBaseList;
     private List<Node> nodeList;
-    
 
+    private const int MAXTOWERLEVEL = 3;
+    
     public List<Node> NodeList
     {
         get { return nodeList; }
@@ -60,6 +61,7 @@ public class NodeManager : MonoBehaviour
         node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[0],
             node.transform.position + towerBaseList[(int)type - 1].TowerBuildOffset, Quaternion.identity);
         node.TowerType = type;
+        node.Tower.GetComponent<BaseTower>().Level = 1;
         ChangeResource(-towerBaseList[(int)type - 1].CoinCost[0], -towerBaseList[(int)type - 1].WoodCost[0],
             -towerBaseList[0].RockCost[(int)type - 1]);
         SetTowerData(node);
@@ -71,6 +73,12 @@ public class NodeManager : MonoBehaviour
     public void UpgradeTower(Node node)
     {
         int level = node.Tower.GetComponent<BaseTower>().Level;
+        if (level >= MAXTOWERLEVEL)
+        {
+            Debug.Log("Tower reaches max level");
+            return;
+        }
+
         if (ResourceManager.Instance().Coin < towerBaseList[(int)node.TowerType - 1].CoinCost[level] ||
             ResourceManager.Instance().Wood < towerBaseList[(int)node.TowerType - 1].WoodCost[level] ||
             ResourceManager.Instance().Rock < towerBaseList[(int)node.TowerType - 1].RockCost[level])
@@ -78,55 +86,22 @@ public class NodeManager : MonoBehaviour
             Debug.Log("need more resource");
             return;
         }
-        
-        Debug.Log("Upgrade tower");
-        Destroy(node.Tower);
-        node.Tower.GetComponent<BaseTower>().Level = level + 1;
-        node.Tower = Instantiate(towerBaseList[(int)TowerType.ARCHER].TowerPrefab[level - 1],
-            node.transform.position + towerBaseList[1].TowerBuildOffset, Quaternion.identity);
-        ChangeResource(-towerBaseList[(int)TowerType.ARCHER].CoinCost[level - 1],
-            -towerBaseList[(int)TowerType.ARCHER].WoodCost[level - 1],
-            -towerBaseList[(int)TowerType.ARCHER].RockCost[level - 1]);
-        SetTowerData(node);
 
-        // switch (node.TowerType)
-        // {
-        //     case TowerType.BASIC:
-        //     {
-        //         Destroy(node.Tower);
-        //         node.Tower = Instantiate(towerBaseList[(int)TowerType.BASIC].TowerPrefab[level - 1],
-        //             node.transform.position + towerBaseList[1].TowerBuildOffset, Quaternion.identity);
-        //         node.Tower.GetComponent<BaseTower>().Level = level + 1;
-        //         ChangeResource(-towerBaseList[(int)TowerType.BASIC].CoinCost[level],
-        //             -towerBaseList[(int)TowerType.BASIC].WoodCost[level],
-        //             -towerBaseList[(int)TowerType.BASIC].RockCost[level]);
-        //         break;
-        //     }
-        // }
+        Debug.Log("Upgrade tower level " + level);
+        Destroy(node.Tower);
+        node.Tower = Instantiate(towerBaseList[(int)node.TowerType - 1].TowerPrefab[level],
+            node.transform.position + towerBaseList[(int)node.TowerType - 1].TowerBuildOffset, Quaternion.identity);
+        node.Tower.GetComponent<BaseTower>().Level = level + 1;
+        ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level],
+            -towerBaseList[(int)node.TowerType - 1].WoodCost[level],
+            -towerBaseList[(int)node.TowerType - 1].RockCost[level]);
+        Debug.Log("Node level: " + node.Tower.GetComponent<BaseTower>().Level);
+        SetTowerData(node);
     }
 
     public void SellTower(Node node, int level)
     {
         Debug.Log("Sell " + node.TowerType);
-        
-        /*
-        switch (node.TowerType)
-        {
-            case TowerType.ARCHER:
-            {
-                ChangeResource(towerBaseList[0].CoinCost[0], towerBaseList[0].WoodCost[0],
-                    towerBaseList[0].RockCost[0]);
-                break;
-            }
-            case TowerType.WOODEN:
-            {
-                ChangeResource(towerBaseList[1].CoinCost[0], towerBaseList[1].WoodCost[0],
-                    towerBaseList[1].RockCost[0]);
-                break;
-            }
-            default: break;
-        }
-        */
 
         ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level - 1],
             -towerBaseList[(int)node.TowerType - 1].WoodCost[level - 1],
@@ -158,31 +133,7 @@ public class NodeManager : MonoBehaviour
             Destroy(node.Tower);
             node.TowerType = TowerType.NULL;
         }
-        /*
-        switch (type)
-        {
-            case TowerType.ARCHER:
-            {
-                node.Tower = Instantiate(towerBaseList[0].TowerPrefab[level - 1],
-                    node.transform.position + towerBaseList[0].TowerBuildOffset, Quaternion.identity);
-                node.TowerType = TowerType.ARCHER;
-                node.Tower.GetComponent<ArcherTower>().Level = level;
-                Debug.Log("Load archer");
-                break;
-            }
-            case TowerType.WOODEN:
-            {
-                node.Tower = Instantiate(towerBaseList[1].TowerPrefab[level - 1],
-                    node.transform.position + towerBaseList[1].TowerBuildOffset, Quaternion.identity);
-                node.TowerType = TowerType.WOODEN;
-                node.Tower.GetComponent<ResourceTower>().Level = level;
-                Debug.Log("Load wooden tower");
-                break;
-            }
-            default: break;
-        }
-        */
-        
+
         node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[0],
             node.transform.position + towerBaseList[(int)type - 1].TowerBuildOffset, Quaternion.identity);
         node.TowerType = type;
@@ -209,7 +160,8 @@ public class NodeManager : MonoBehaviour
             case TowerType.WATER:
             case TowerType.THUNDER:
             {
-                node.Tower.GetComponent<AttackTower>().SetAttackTowerData(towerBaseList[(int)node.TowerType], level);
+                node.Tower.GetComponent<AttackTower>()
+                    .SetAttackTowerData(towerBaseList[(int)node.TowerType - 1], level);
                 break;
             }
             case TowerType.WOODEN:

@@ -64,14 +64,15 @@ public class Node : MonoBehaviour
         if (tower != null && towerType != TowerType.NULL && towerType != TowerType.WOODEN)
         {
             // For now, if a turret exist at this node, remove the turret.
-            NodeManager.instance.SellTower(this, this.Tower.GetComponent<BaseTower>().Level);
+            //NodeManager.instance.SellTower(this, this.Tower.GetComponent<BaseTower>().Level);
+            NodeManager.instance.UpgradeTower(this);
             return;
         }
         
         // Build a turret
         if (tower == null && towerType == TowerType.NULL)
         {
-            NodeManager.instance.BuildTower(TowerType.ARCHER, this);
+            NodeManager.instance.BuildTower(TowerType.ICE, this);
             AudioManager.instance.Play(SoundType.SFX,"BowTowerBuild");
         }
     }
@@ -84,9 +85,9 @@ public class Node : MonoBehaviour
             return;
         }
         if (nodeType == NodeType.PATH)
-                {
-                    return;
-                }
+        {
+            return;
+        }
         rend.material.color = hoverColor;
         
     }
@@ -97,9 +98,9 @@ public class Node : MonoBehaviour
             return;
         }
         if (nodeType == NodeType.PATH)
-                {
-                    return;
-                }
+        {
+            return;
+        }
         rend.material.color = originColor;
     }
 }

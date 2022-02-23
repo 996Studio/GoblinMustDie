@@ -9657,7 +9657,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4843059319314552}
-  - component: {fileID: 114299808165517666}
   - component: {fileID: 65814495406494588}
   - component: {fileID: 43475613350146011}
   m_Layer: 0
@@ -9683,24 +9682,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114299808165517666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190723072478672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807a988a1765edd439007be8fbee2c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 5
-  target: {fileID: 0}
-  impactParticle: {fileID: 1817033411763414, guid: 7ef06a3740fe53e468d3a32ce9ccc985,
-    type: 3}
-  impactNormal: {x: 0, y: 0, z: 0}
-  twr: {fileID: 0}
 --- !u!65 &65814495406494588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9726,6 +9707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e71294a8071b34fbaae075899d4b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 20
+  SecondsBeforeDestroy: 2
   HitEffect: {fileID: 0}
   explosionRange: 3
   explosionDamage: 20

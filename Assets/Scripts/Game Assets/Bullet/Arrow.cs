@@ -13,7 +13,7 @@ public class Arrow : Bullet
     // Update is called once per frame
     void Update()
     {
-        
+        base.Update();
     }
     
     protected override void HitTarget()
@@ -39,5 +39,7 @@ public class Arrow : Bullet
         {
             enemy.TakeDamage(attack);
         }
+
+        isUsed = true;
     }
 }

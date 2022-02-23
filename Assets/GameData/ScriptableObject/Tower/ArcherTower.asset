@@ -32,6 +32,10 @@ MonoBehaviour:
     type: 3}
   attackInterval:
   - 1
+  - 1
+  - 1
   attackRange:
   - 6
-  attackValue: 0a000000
+  - 6
+  - 6
+  attackValue: 0a0000000a0000000a000000

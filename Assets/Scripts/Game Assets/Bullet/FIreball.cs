@@ -16,11 +16,12 @@ public class Fireball : Bullet
     // Update is called once per frame
     void Update()
     {
-        
+        base.Update();
     }
     
     protected override void HitTarget()
     {
+        Debug.Log("Hit Target");
         if (HitEffect != null)
         {
             GameObject effectInstance = (GameObject) Instantiate(HitEffect, transform.position, transform.rotation);
@@ -29,7 +30,6 @@ public class Fireball : Bullet
 
         if (target != null)
         {
-            
             Destroy(gameObject, SecondsBeforeDestroy);
         }
         else
@@ -50,9 +50,12 @@ public class Fireball : Bullet
                 if (tempEnemy != null)
                 {
                     tempEnemy.TakeDamage(explosionDamage);
+                    //Debug.Log("AOE to " + target);
                 }
             }
         }
+
+        isUsed = true;
     }
     
     private void OnDrawGizmosSelected()

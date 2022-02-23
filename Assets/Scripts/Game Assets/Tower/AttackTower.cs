@@ -75,7 +75,7 @@ public class AttackTower : BaseTower
         if (nearestEnemy != null && shortestDistance <= attackRange)
         {
             target = nearestEnemy.transform;
-            Debug.Log(target);
+            //Debug.Log(target);
         }
         else
         {
@@ -101,6 +101,7 @@ public class AttackTower : BaseTower
     
     public void SetAttackTowerData(TowerBase towerData, int level)
     {
+        Debug.Log(level);
         attack = towerData.AttackValue[level - 1];
         attackRange = towerData.AttackRange[level - 1];
         fireRate = towerData.AttackInterval[level - 1];

@@ -5,10 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     protected Transform target;
-    protected float speed = 70f;
-    protected float SecondsBeforeDestroy = 2f;
+    [SerializeField]protected float speed;
+    [SerializeField]protected float SecondsBeforeDestroy;
     protected int attack;
     [SerializeField]protected GameObject HitEffect;
+    protected bool isUsed = false;
 
     public int Attack
     {
@@ -22,7 +23,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         // If target is no longer available, destroy this bullet
         if (target == null)
@@ -31,12 +32,13 @@ public class Bullet : MonoBehaviour
             return;
         }
 
+        //Debug.Log($"From {transform.position} to {target.position}");
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;   // Constant speed
 
         // "dir.magnitude" is the current distance to the target
         // Basically means we want our bullet to hit, before move pass this target
-        if (dir.magnitude <= distanceThisFrame)
+        if (dir.magnitude <= distanceThisFrame && !isUsed)
         {
             HitTarget();
             return;

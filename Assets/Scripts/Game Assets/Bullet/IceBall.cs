@@ -5,7 +5,7 @@ using UnityEngine;
 public class Iceball : Bullet
 {
     public float freezeDuration;
-    public float freezeTimeScale;
+    public float freezeScale;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class Iceball : Bullet
     // Update is called once per frame
     void Update()
     {
-        
+        base.Update();
     }
     
     protected override void HitTarget()
@@ -41,6 +41,9 @@ public class Iceball : Bullet
         if (enemy != null)
         {
             enemy.TakeDamage(attack);
+            enemy.StartFreeze(freezeScale, freezeDuration);
         }
+
+        isUsed = true;
     }
 }

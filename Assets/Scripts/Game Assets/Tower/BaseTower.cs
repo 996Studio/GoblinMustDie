@@ -16,8 +16,7 @@ public class BaseTower : MonoBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
-        level = 1;
-        Debug.Log("Set level to 1");
+        
     }
 
     // Update is called once per frame

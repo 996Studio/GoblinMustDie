@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c01fffed914e198650966f707d7166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
+  SecondsBeforeDestroy: 2
   HitEffect: {fileID: 0}
   freezeDuration: 4
   freezeTimeScale: 0.2
