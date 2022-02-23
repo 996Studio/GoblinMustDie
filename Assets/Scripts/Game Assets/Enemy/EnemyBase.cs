@@ -13,6 +13,11 @@ public class EnemyBase : MonoBehaviour
     private int curHP;
     private int atk;
     
+    //Freeze Parameter
+    private float startTimescale;
+    private float startFixedDeltaTime;
+    private float freezeCounter;
+    
     public int Atk
     {
         get => atk;
@@ -42,6 +47,22 @@ public class EnemyBase : MonoBehaviour
     void Start()
     {
         agent.SetDestination(MotherBase.Instance.transform.position);
+
+        startTimescale = Time.timeScale;
+        startFixedDeltaTime = Time.fixedDeltaTime;
+    }
+
+    private void Update()
+    {
+        if (freezeCounter > 0.0f)
+        {
+            freezeCounter -= Time.deltaTime;
+            if (freezeCounter <= 0)
+            {
+                freezeCounter = 0.0f;
+                StopFreeze();
+            }
+        }
     }
 
     public void TakeDamage(int dmg)
@@ -69,5 +90,18 @@ public class EnemyBase : MonoBehaviour
     {
         
         //Placeholder for animation event
+    }
+
+    public void StartFreeze(float scale, float duration)
+    {
+        Time.timeScale = scale;
+        Time.fixedDeltaTime = startFixedDeltaTime * scale;
+        freezeCounter = duration;
+    }
+
+    public void StopFreeze()
+    {
+        Time.timeScale = startTimescale;
+        Time.fixedDeltaTime = startFixedDeltaTime;
     }
 }

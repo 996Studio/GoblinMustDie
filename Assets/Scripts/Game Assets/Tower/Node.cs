@@ -64,14 +64,14 @@ public class Node : MonoBehaviour
         if (tower != null && towerType != TowerType.NULL && towerType != TowerType.WOODEN)
         {
             // For now, if a turret exist at this node, remove the turret.
-            NodeManager.instance.SellTower(this);
+            NodeManager.instance.SellTower(this, this.Tower.GetComponent<BaseTower>().Level);
             return;
         }
         
         // Build a turret
         if (tower == null && towerType == TowerType.NULL)
         {
-            NodeManager.instance.BuildTower(TowerType.BASIC, this);
+            NodeManager.instance.BuildTower(TowerType.ARCHER, this);
             AudioManager.instance.Play(SoundType.SFX,"BowTowerBuild");
         }
     }

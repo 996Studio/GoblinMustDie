@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8034062298245969153}
   - component: {fileID: 8010359734326970484}
   m_Layer: 0
-  m_Name: Resource Tower
+  m_Name: WoodenTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

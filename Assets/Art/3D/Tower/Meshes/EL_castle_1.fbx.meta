@@ -1,54 +1,145 @@
 fileFormatVersion: 2
 guid: 53eaef1ebc6830d448bebd1419900243
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: Door_left
-    100002: Door_right
-    100004: EL_castle1
-    100006: //RootNode
-    100008: EL_castle_a
-    100010: EL_castle_b
-    100012: EL_castle_c
-    100014: EL_castle_d
-    100016: EL_castle_e
-    400000: Door_left
-    400002: Door_right
-    400004: EL_castle1
-    400006: //RootNode
-    400008: EL_castle_a
-    400010: EL_castle_b
-    400012: EL_castle_c
-    400014: EL_castle_d
-    400016: EL_castle_e
-    2100000: No Name
-    2300000: Door_left
-    2300002: Door_right
-    2300004: EL_castle1
-    2300006: EL_castle_a
-    2300008: EL_castle_b
-    2300010: EL_castle_c
-    2300012: EL_castle_d
-    2300014: EL_castle_e
-    3300000: Door_left
-    3300002: Door_right
-    3300004: EL_castle1
-    3300006: EL_castle_a
-    3300008: EL_castle_b
-    3300010: EL_castle_c
-    3300012: EL_castle_d
-    3300014: EL_castle_e
-    4300000: EL_castle_a
-    4300002: Door_right
-    4300004: EL_castle1
-    4300006: EL_castle_e
-    4300008: EL_castle_d
-    4300010: EL_castle_c
-    4300012: EL_castle_b
-    4300014: Door_left
-  externalObjects: {}
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Door_left
+  - first:
+      1: 100002
+    second: Door_right
+  - first:
+      1: 100004
+    second: EL_castle1
+  - first:
+      1: 100006
+    second: //RootNode
+  - first:
+      1: 100008
+    second: EL_castle_a
+  - first:
+      1: 100010
+    second: EL_castle_b
+  - first:
+      1: 100012
+    second: EL_castle_c
+  - first:
+      1: 100014
+    second: EL_castle_d
+  - first:
+      1: 100016
+    second: EL_castle_e
+  - first:
+      4: 400000
+    second: Door_left
+  - first:
+      4: 400002
+    second: Door_right
+  - first:
+      4: 400004
+    second: EL_castle1
+  - first:
+      4: 400006
+    second: //RootNode
+  - first:
+      4: 400008
+    second: EL_castle_a
+  - first:
+      4: 400010
+    second: EL_castle_b
+  - first:
+      4: 400012
+    second: EL_castle_c
+  - first:
+      4: 400014
+    second: EL_castle_d
+  - first:
+      4: 400016
+    second: EL_castle_e
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      23: 2300000
+    second: Door_left
+  - first:
+      23: 2300002
+    second: Door_right
+  - first:
+      23: 2300004
+    second: EL_castle1
+  - first:
+      23: 2300006
+    second: EL_castle_a
+  - first:
+      23: 2300008
+    second: EL_castle_b
+  - first:
+      23: 2300010
+    second: EL_castle_c
+  - first:
+      23: 2300012
+    second: EL_castle_d
+  - first:
+      23: 2300014
+    second: EL_castle_e
+  - first:
+      33: 3300000
+    second: Door_left
+  - first:
+      33: 3300002
+    second: Door_right
+  - first:
+      33: 3300004
+    second: EL_castle1
+  - first:
+      33: 3300006
+    second: EL_castle_a
+  - first:
+      33: 3300008
+    second: EL_castle_b
+  - first:
+      33: 3300010
+    second: EL_castle_c
+  - first:
+      33: 3300012
+    second: EL_castle_d
+  - first:
+      33: 3300014
+    second: EL_castle_e
+  - first:
+      43: 4300000
+    second: EL_castle_a
+  - first:
+      43: 4300002
+    second: Door_right
+  - first:
+      43: 4300004
+    second: EL_castle1
+  - first:
+      43: 4300006
+    second: EL_castle_e
+  - first:
+      43: 4300008
+    second: EL_castle_d
+  - first:
+      43: 4300010
+    second: EL_castle_c
+  - first:
+      43: 4300012
+    second: EL_castle_b
+  - first:
+      43: 4300014
+    second: Door_left
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 19c42bdc42798ae4895bd0eaed77f29f, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -57,6 +148,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -80,21 +172,33 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -102,10 +206,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -115,14 +222,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

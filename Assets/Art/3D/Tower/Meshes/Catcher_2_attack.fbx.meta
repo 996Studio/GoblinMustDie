@@ -1,119 +1,320 @@
 fileFormatVersion: 2
 guid: c67f8de9ee6c25d4ba04d963d845bc7c
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: Bottom_jaw
-    100002: //RootNode
-    100004: Cather_2_grp
-    100006: FE_catcher2_base
-    100008: FE_Catcher2_LookAt
-    100010: Head_locator
-    100012: ikHandle2
-    100014: joint10
-    100016: joint13
-    100018: joint3
-    100020: joint4
-    100022: joint5
-    100024: joint6
-    100026: joint7
-    100028: joint8
-    100030: joint9
-    100032: Joint_root
-    100034: nurbsCircle2
-    100036: nurbsCircle3
-    100038: polySurface100
-    100040: polySurface105
-    100042: polySurface66
-    100044: polySurface67
-    100046: polySurface68
-    100048: polySurface71
-    100050: polySurface73
-    100052: polySurface75
-    100054: polySurface76
-    100056: polySurface77
-    100058: polySurface78
-    100060: Top_jaw
-    400000: Bottom_jaw
-    400002: //RootNode
-    400004: Cather_2_grp
-    400006: FE_catcher2_base
-    400008: FE_Catcher2_LookAt
-    400010: Head_locator
-    400012: ikHandle2
-    400014: joint10
-    400016: joint13
-    400018: joint3
-    400020: joint4
-    400022: joint5
-    400024: joint6
-    400026: joint7
-    400028: joint8
-    400030: joint9
-    400032: Joint_root
-    400034: nurbsCircle2
-    400036: nurbsCircle3
-    400038: polySurface100
-    400040: polySurface105
-    400042: polySurface66
-    400044: polySurface67
-    400046: polySurface68
-    400048: polySurface71
-    400050: polySurface73
-    400052: polySurface75
-    400054: polySurface76
-    400056: polySurface77
-    400058: polySurface78
-    400060: Top_jaw
-    2100000: Catcher_2_mat
-    2300000: FE_catcher2_base
-    2300002: polySurface105
-    2300004: polySurface66
-    2300006: polySurface67
-    2300008: polySurface68
-    2300010: polySurface71
-    2300012: polySurface73
-    2300014: polySurface75
-    2300016: polySurface76
-    2300018: polySurface77
-    2300020: polySurface78
-    3300000: FE_catcher2_base
-    3300002: polySurface105
-    3300004: polySurface66
-    3300006: polySurface67
-    3300008: polySurface68
-    3300010: polySurface71
-    3300012: polySurface73
-    3300014: polySurface75
-    3300016: polySurface76
-    3300018: polySurface77
-    3300020: polySurface78
-    4300000: FE_catcher2_base
-    4300002: polySurface100
-    4300004: polySurface73
-    4300006: polySurface71
-    4300008: polySurface68
-    4300010: polySurface105
-    4300012: polySurface75
-    4300014: polySurface66
-    4300016: polySurface67
-    4300018: polySurface78
-    4300020: polySurface77
-    4300022: polySurface76
-    7400000: Cathcer_2_attack
-    9500000: //RootNode
-    13700000: polySurface100
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bottom_jaw
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: Cather_2_grp
+  - first:
+      1: 100006
+    second: FE_catcher2_base
+  - first:
+      1: 100008
+    second: FE_Catcher2_LookAt
+  - first:
+      1: 100010
+    second: Head_locator
+  - first:
+      1: 100012
+    second: ikHandle2
+  - first:
+      1: 100014
+    second: joint10
+  - first:
+      1: 100016
+    second: joint13
+  - first:
+      1: 100018
+    second: joint3
+  - first:
+      1: 100020
+    second: joint4
+  - first:
+      1: 100022
+    second: joint5
+  - first:
+      1: 100024
+    second: joint6
+  - first:
+      1: 100026
+    second: joint7
+  - first:
+      1: 100028
+    second: joint8
+  - first:
+      1: 100030
+    second: joint9
+  - first:
+      1: 100032
+    second: Joint_root
+  - first:
+      1: 100034
+    second: nurbsCircle2
+  - first:
+      1: 100036
+    second: nurbsCircle3
+  - first:
+      1: 100038
+    second: polySurface100
+  - first:
+      1: 100040
+    second: polySurface105
+  - first:
+      1: 100042
+    second: polySurface66
+  - first:
+      1: 100044
+    second: polySurface67
+  - first:
+      1: 100046
+    second: polySurface68
+  - first:
+      1: 100048
+    second: polySurface71
+  - first:
+      1: 100050
+    second: polySurface73
+  - first:
+      1: 100052
+    second: polySurface75
+  - first:
+      1: 100054
+    second: polySurface76
+  - first:
+      1: 100056
+    second: polySurface77
+  - first:
+      1: 100058
+    second: polySurface78
+  - first:
+      1: 100060
+    second: Top_jaw
+  - first:
+      4: 400000
+    second: Bottom_jaw
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: Cather_2_grp
+  - first:
+      4: 400006
+    second: FE_catcher2_base
+  - first:
+      4: 400008
+    second: FE_Catcher2_LookAt
+  - first:
+      4: 400010
+    second: Head_locator
+  - first:
+      4: 400012
+    second: ikHandle2
+  - first:
+      4: 400014
+    second: joint10
+  - first:
+      4: 400016
+    second: joint13
+  - first:
+      4: 400018
+    second: joint3
+  - first:
+      4: 400020
+    second: joint4
+  - first:
+      4: 400022
+    second: joint5
+  - first:
+      4: 400024
+    second: joint6
+  - first:
+      4: 400026
+    second: joint7
+  - first:
+      4: 400028
+    second: joint8
+  - first:
+      4: 400030
+    second: joint9
+  - first:
+      4: 400032
+    second: Joint_root
+  - first:
+      4: 400034
+    second: nurbsCircle2
+  - first:
+      4: 400036
+    second: nurbsCircle3
+  - first:
+      4: 400038
+    second: polySurface100
+  - first:
+      4: 400040
+    second: polySurface105
+  - first:
+      4: 400042
+    second: polySurface66
+  - first:
+      4: 400044
+    second: polySurface67
+  - first:
+      4: 400046
+    second: polySurface68
+  - first:
+      4: 400048
+    second: polySurface71
+  - first:
+      4: 400050
+    second: polySurface73
+  - first:
+      4: 400052
+    second: polySurface75
+  - first:
+      4: 400054
+    second: polySurface76
+  - first:
+      4: 400056
+    second: polySurface77
+  - first:
+      4: 400058
+    second: polySurface78
+  - first:
+      4: 400060
+    second: Top_jaw
+  - first:
+      21: 2100000
+    second: Catcher_2_mat
+  - first:
+      23: 2300000
+    second: FE_catcher2_base
+  - first:
+      23: 2300002
+    second: polySurface105
+  - first:
+      23: 2300004
+    second: polySurface66
+  - first:
+      23: 2300006
+    second: polySurface67
+  - first:
+      23: 2300008
+    second: polySurface68
+  - first:
+      23: 2300010
+    second: polySurface71
+  - first:
+      23: 2300012
+    second: polySurface73
+  - first:
+      23: 2300014
+    second: polySurface75
+  - first:
+      23: 2300016
+    second: polySurface76
+  - first:
+      23: 2300018
+    second: polySurface77
+  - first:
+      23: 2300020
+    second: polySurface78
+  - first:
+      33: 3300000
+    second: FE_catcher2_base
+  - first:
+      33: 3300002
+    second: polySurface105
+  - first:
+      33: 3300004
+    second: polySurface66
+  - first:
+      33: 3300006
+    second: polySurface67
+  - first:
+      33: 3300008
+    second: polySurface68
+  - first:
+      33: 3300010
+    second: polySurface71
+  - first:
+      33: 3300012
+    second: polySurface73
+  - first:
+      33: 3300014
+    second: polySurface75
+  - first:
+      33: 3300016
+    second: polySurface76
+  - first:
+      33: 3300018
+    second: polySurface77
+  - first:
+      33: 3300020
+    second: polySurface78
+  - first:
+      43: 4300000
+    second: FE_catcher2_base
+  - first:
+      43: 4300002
+    second: polySurface100
+  - first:
+      43: 4300004
+    second: polySurface73
+  - first:
+      43: 4300006
+    second: polySurface71
+  - first:
+      43: 4300008
+    second: polySurface68
+  - first:
+      43: 4300010
+    second: polySurface105
+  - first:
+      43: 4300012
+    second: polySurface75
+  - first:
+      43: 4300014
+    second: polySurface66
+  - first:
+      43: 4300016
+    second: polySurface67
+  - first:
+      43: 4300018
+    second: polySurface78
+  - first:
+      43: 4300020
+    second: polySurface77
+  - first:
+      43: 4300022
+    second: polySurface76
+  - first:
+      74: 7400000
+    second: Cathcer_2_attack
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: polySurface100
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -134,6 +335,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Cathcer_2_attack
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 55
       wrapMode: 0
@@ -172,21 +374,33 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -194,10 +408,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -207,14 +424,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -7,17 +7,16 @@ public class AttackTower : BaseTower
 {
     [Header("Attributes")] 
     protected float attackRange = 10.0f;
-    protected float attack;
+    protected int attack;
     protected float defence;
-    [SerializeField] protected GameObject bulletPrefab;
     protected float fireRate = 1.0f;
+    protected float turnSpeed = 10.0f;
+    [SerializeField] protected GameObject bulletPrefab;
     [SerializeField] protected Transform fireLocation;
     [SerializeField] protected Transform Rotator;
-    protected float turnSpeed = 10.0f;
-    
 
     protected float fireCounter;
-    private Transform target;
+    protected Transform target;
 
     public Transform Target
     {
@@ -26,34 +25,22 @@ public class AttackTower : BaseTower
     }
 
     // Start is called before the first frame update
-    protected  void Start()
+     protected  void Start()
     {
         base.Start();
-        
-        // Invoke target function, start from 0s, and repeat every 0.5s.
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
-        if (target == null) return; // No target, do nothing
-
-        turretAimActivate();
-
-        // Rate of fire
-        if (fireCounter <= 0)
-        {
-            turretFire();
-            fireCounter = 1f / fireRate;
-        }
-        fireCounter -= Time.deltaTime;
+        
     }
 
-    protected void turretFire()
+    protected void ShootBullet()
     {
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, fireLocation.position, fireLocation.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.Attack = this.attack;
         AudioManager.instance.Play(SoundType.SFX,"BowTowerFire");
 
         if (bullet != null)
@@ -93,7 +80,6 @@ public class AttackTower : BaseTower
         {
             target = null;
         }
-
     }
 
     // Smooth turn towards target enemy
@@ -110,5 +96,12 @@ public class AttackTower : BaseTower
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+    
+    public void SetAttackTowerData(TowerBase towerData, int level)
+    {
+        attack = towerData.AttackValue[level - 1];
+        attackRange = towerData.AttackRange[level - 1];
+        fireRate = towerData.AttackInterval[level - 1];
     }
 }

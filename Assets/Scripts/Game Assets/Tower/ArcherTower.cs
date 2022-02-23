@@ -7,8 +7,28 @@ using UnityEngine;
 [System.Serializable] 
 public class ArcherTower : AttackTower
 {
-    protected void Start()
+    private void Start()
     {
         base.Start();
+        
+        // Invoke target function, start from 0s, and repeat every 0.5s.
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    }
+
+    private void Update()
+    {
+        base.Update();
+        
+        if (target == null) return; // No target, do nothing
+
+        turretAimActivate();
+
+        // Rate of fire
+        if (fireCounter <= 0)
+        {
+            ShootBullet();
+            fireCounter = 1f / fireRate;
+        }
+        fireCounter -= Time.deltaTime;
     }
 }

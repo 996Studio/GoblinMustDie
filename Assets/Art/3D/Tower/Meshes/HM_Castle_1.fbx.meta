@@ -582,7 +582,12 @@ ModelImporter:
   - first:
       137: 13700008
     second: Flag_mesh_5
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert22
+    second: {fileID: 2100000, guid: 0317ed06d710cb246bebd99259f3bfb6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

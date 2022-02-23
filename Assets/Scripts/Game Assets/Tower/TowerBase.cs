@@ -5,8 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "tower",menuName = "Tower")]
 public class TowerBase : ScriptableObject
 {
-    [SerializeField] private GameObject towerPrefab;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private List<GameObject> towerPrefab;
     [SerializeField] private Vector3 towerBuildOffset;
     [SerializeField] private List<int> coinCost;
     [SerializeField] private List<int> woodCost;
@@ -14,8 +13,18 @@ public class TowerBase : ScriptableObject
     [SerializeField] private List<int> coinGet;
     [SerializeField] private List<int> woodGet;
     [SerializeField] private List<int> rockGet;
+    [SerializeField] private List<float> constructionTime;
+    [SerializeField] private List<float> upgradeTime;
+    
+    [Header("Attack Tower")]
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private List<float> attackInterval;
+    [SerializeField] private List<float> attackRange;
+    [SerializeField] private List<int> attackValue;
+    
 
-    public GameObject TowerPrefab
+
+    public List<GameObject> TowerPrefab
     {
         get { return towerPrefab; }
     }
@@ -53,6 +62,21 @@ public class TowerBase : ScriptableObject
     public List<int> RockGet
     {
         get { return rockGet; }
+    }
+
+    public List<float> AttackInterval
+    {
+        get { return attackInterval; }
+    }
+
+    public List<float> AttackRange
+    {
+        get { return attackRange; }
+    }
+
+    public List<int> AttackValue
+    {
+        get { return attackValue; }
     }
 
     // Start is called before the first frame update

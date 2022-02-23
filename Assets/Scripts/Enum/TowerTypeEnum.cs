@@ -9,12 +9,12 @@ public enum TowerType
 {
     //place holder 
     NULL=0,
-    BASIC,
-    WOODEN,
+    ARCHER,    
     FIRE,
     WATER,
     ICE,
-    THUNER,
+    THUNDER,
+    WOODEN,
     CRYSTAL,
     BOOST
 
