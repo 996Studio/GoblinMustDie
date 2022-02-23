@@ -69,7 +69,7 @@ public class CreateTowerUI : MonoBehaviour
     {
         print(selectNode);
 
-        NodeManager.instance.SellTower(selectNode, 1);
+        NodeManager.instance.SellTower(selectNode);
 
     }
 }
