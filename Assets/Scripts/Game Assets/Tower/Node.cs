@@ -15,7 +15,6 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color originColor;
     private GameObject tower;
-    
 
     public GameObject Tower
     {
@@ -35,11 +34,18 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         originColor = rend.material.color;
 
+        //CreateTowerUI.menuCall += showUI;
+
         if (towerType != TowerType.NULL)
         {
             NodeManager.instance.BuildTower(towerType, this);
         }
     }
+
+    //private void OnDisable()
+    //{
+    //    CreateTowerUI.menuCall -= showUI;
+    //}
 
     // Update is called once per frame
     void Update()
@@ -47,16 +53,24 @@ public class Node : MonoBehaviour
         
     }
 
+    //public void showUI()
+    //{
+    //    print("Menu called");
+    //}
+
     private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
+            //CreateTowerUI.instance.hidePanel();
+            Debug.Log("Nothing here");
             return;
         }
         
         Debug.Log("On mouse down");
         if (nodeType == NodeType.PATH)
         {
+            CreateTowerUI.instance.hidePanel();
             Debug.Log("Path return");
             return;
         }
@@ -65,15 +79,20 @@ public class Node : MonoBehaviour
         {
             // For now, if a turret exist at this node, remove the turret.
             //NodeManager.instance.SellTower(this, this.Tower.GetComponent<BaseTower>().Level);
-            NodeManager.instance.UpgradeTower(this);
+
+            CreateTowerUI.instance.showPanel();
+            CreateTowerUI.instance.selectNode = this;
             return;
         }
         
         // Build a turret
         if (tower == null && towerType == TowerType.NULL)
         {
-            NodeManager.instance.BuildTower(TowerType.ICE, this);
-            AudioManager.instance.Play(SoundType.SFX,"BowTowerBuild");
+            CreateTowerUI.instance.showPanel();
+            CreateTowerUI.instance.selectNode = this;
+
+            //NodeManager.instance.BuildTower(TowerType.ARCHER, this);
+            //AudioManager.instance.Play(SoundType.SFX,"BowTowerBuild");
         }
     }
 
