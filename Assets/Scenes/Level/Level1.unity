@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11884108, g: 0.18339348, b: 0.32976314, a: 1}
+  m_IndirectSpecularColor: {r: 0.1186102, g: 0.18309058, b: 0.32947806, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2520,8 +2520,8 @@ MonoBehaviour:
   maxWave: 2
   enemyNumPerWave: 5
   enemySpawnList:
-  - {fileID: 5724679487002536323, guid: 376f62f78c1960540a4701ad58d2ae9c, type: 3}
-  - {fileID: 8602224657192979231, guid: c481bd50533aa384d868a098fe05b7c1, type: 3}
+  - {fileID: 5263257154274970367, guid: c481bd50533aa384d868a098fe05b7c1, type: 3}
+  - {fileID: 6584788868843224280, guid: 262ff4262d91adc4a93452682da4ffec, type: 3}
   spawnedEnemy: []
   spawnInterval: 1
   waveInterval: 2

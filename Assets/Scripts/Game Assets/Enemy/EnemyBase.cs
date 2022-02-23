@@ -6,25 +6,38 @@ using UnityEngine.AI;
 
 public class EnemyBase : MonoBehaviour
 {
-    private Animator animator;
-    private NavMeshAgent agent;
+    [SerializeField]
+    protected Animator animator;
+    
+    [SerializeField]
+    protected NavMeshAgent agent;
 
-    private int maxHP;
-    private int curHP;
-    private int atk;
+    [SerializeField]
+    protected double maxHP;
+    
+    [SerializeField]
+    protected double curHP;
+    
+    [SerializeField]
+    protected int atk;
+
+    [SerializeField] protected float moveSpeed;
+    
+    protected bool isDead = false;
+    protected bool canTakeDamage;
     
     //Freeze Parameter
-    private float startTimescale;
-    private float startFixedDeltaTime;
     private float freezeCounter;
     
     public int Atk
     {
         get => atk;
-        set => atk = value;
     }
-
-    public bool isDead = false;
+    
+    public bool IsDead
+    {
+        get => isDead;
+    }
     
     private void Awake()
     {
@@ -32,37 +45,19 @@ public class EnemyBase : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     
-    //Init monster Info
-    //to be modified later by Jason data
-    public void InitInfo()
-    {
-        maxHP = 100;
-        curHP = 100;
-        atk = 1;
-        agent.speed = 3.5f;
-        agent.angularSpeed = 120f;
-        agent.acceleration = 8f;
-    }
-
     void Start()
     {
         agent.SetDestination(MotherBase.Instance.transform.position);
-
-        startTimescale = Time.timeScale;
-        startFixedDeltaTime = Time.fixedDeltaTime;
+    }
+    
+    protected virtual void Update()
+    {
+        FreezeTimer();
     }
 
-    private void Update()
+    public virtual void InitInfo()
     {
-        if (freezeCounter > 0.0f)
-        {
-            freezeCounter -= Time.deltaTime;
-            if (freezeCounter <= 0)
-            {
-                freezeCounter = 0.0f;
-                StopFreeze();
-            }
-        }
+        atk = 1;
     }
 
     public void TakeDamage(int dmg)
@@ -86,22 +81,33 @@ public class EnemyBase : MonoBehaviour
         Destroy(this.gameObject);
     }
     
-    public void DeathEvent()
+    //Placeholder for animation event
+    // public void DeathEvent()
+    // {
+    //     
+    // }
+
+    private void FreezeTimer()
     {
-        
-        //Placeholder for animation event
+        if (freezeCounter > 0.0f)
+        {
+            freezeCounter -= Time.deltaTime;
+            if (freezeCounter <= 0)
+            {
+                freezeCounter = 0.0f;
+                StopFreeze();
+            }
+        }
     }
 
-    public void StartFreeze(float scale, float duration)
+    public void StartFreeze(float freezeFactor, float duration)
     {
-        Time.timeScale = scale;
-        Time.fixedDeltaTime = startFixedDeltaTime * scale;
+        agent.speed *= freezeFactor;
         freezeCounter = duration;
     }
 
     public void StopFreeze()
     {
-        Time.timeScale = startTimescale;
-        Time.fixedDeltaTime = startFixedDeltaTime;
+        agent.speed = moveSpeed;
     }
 }

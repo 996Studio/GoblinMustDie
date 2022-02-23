@@ -106,7 +106,6 @@ public class MotherBase : MonoBehaviour
         {
             TakeDamage(other.gameObject.GetComponent<EnemyBase>().Atk);
             other.gameObject.GetComponent<EnemyBase>().Death();
-            //Debug.Log(curHP);
         }
     }
 }
