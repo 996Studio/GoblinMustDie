@@ -52,5 +52,23 @@ public class CreateTowerUI : MonoBehaviour
     public void buildBasicTower()
     {
         print(selectNode);
+        
+        NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
+        AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
+    }
+
+    public void upgradeTower()
+    {
+        print(selectNode);
+
+        NodeManager.instance.UpgradeTower(selectNode);
+    }
+
+    public void sellTower()
+    {
+        print(selectNode);
+
+        NodeManager.instance.SellTower(selectNode, 1);
+
     }
 }
