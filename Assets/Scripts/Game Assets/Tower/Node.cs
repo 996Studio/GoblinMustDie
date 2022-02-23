@@ -50,7 +50,7 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     //public void showUI()
@@ -62,7 +62,8 @@ public class Node : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            CreateTowerUI.instance.hidePanel();
+            //CreateTowerUI.instance.hidePanel();
+            Debug.Log("Nothing here");
             return;
         }
         

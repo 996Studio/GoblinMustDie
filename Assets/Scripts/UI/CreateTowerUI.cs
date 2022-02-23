@@ -42,6 +42,7 @@ public class CreateTowerUI : MonoBehaviour
     public void showPanel()
     {
         listPanel.SetActive(true);
+        
     }
 
     public void hidePanel()
