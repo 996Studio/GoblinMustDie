@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 510d2b8ff0eaa4a4486fb030dacfbd92
+guid: 33bafb545e8826440bf7b832b0df8a36
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Sword And Shield Walk
+    second: Walking
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Sword And Shield Walk
+      name: Walking
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 33
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -125,7 +125,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 9ff0dd098e27dbd43bf0ef8859f73593,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 07cb136486a49d14cb175dc29fd55547,
     type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
