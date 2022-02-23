@@ -21,9 +21,12 @@ public class Fireball : Bullet
     
     protected override void HitTarget()
     {
-        GameObject effectInstance = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectInstance, 2f);
-        
+        if (HitEffect != null)
+        {
+            GameObject effectInstance = (GameObject) Instantiate(HitEffect, transform.position, transform.rotation);
+            Destroy(effectInstance, 2f);
+        }
+
         if (target != null)
         {
             
@@ -50,5 +53,11 @@ public class Fireball : Bullet
                 }
             }
         }
+    }
+    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRange);
     }
 }

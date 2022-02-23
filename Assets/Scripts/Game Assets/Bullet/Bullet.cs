@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     protected float speed = 70f;
     protected float SecondsBeforeDestroy = 2f;
     protected int attack;
-    protected GameObject impactEffect;
+    [SerializeField]protected GameObject HitEffect;
 
     public int Attack
     {

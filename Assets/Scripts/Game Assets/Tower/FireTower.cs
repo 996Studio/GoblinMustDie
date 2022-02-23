@@ -21,8 +21,6 @@ public class FireTower : AttackTower
         
         if (target == null) return; // No target, do nothing
 
-        turretAimActivate();
-
         // Rate of fire
         if (fireCounter <= 0)
         {

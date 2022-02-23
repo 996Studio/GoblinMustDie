@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7563203313676508002}
   - component: {fileID: 2693406274566339532}
   - component: {fileID: 4633404861348941708}
-  - component: {fileID: 764362750318666559}
+  - component: {fileID: 2093158971249020130}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &764362750318666559
+--- !u!114 &2093158971249020130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2401533949506702978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b475213266cb44d947a43bfa6ef41d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5781f32de818f0943ac9dae33c6f7ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
-  SecondsBeforeDestroy: 2
-  impactEffect: {fileID: 7309794038509609867, guid: 2cfb28b7a5eb3e342b312656ec5e5d61,
-    type: 3}

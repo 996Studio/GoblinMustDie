@@ -75,6 +75,7 @@ public class AttackTower : BaseTower
         if (nearestEnemy != null && shortestDistance <= attackRange)
         {
             target = nearestEnemy.transform;
+            Debug.Log(target);
         }
         else
         {

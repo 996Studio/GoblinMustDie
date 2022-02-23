@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2265430774596140741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2821260161404024371}
+  - component: {fileID: 5357788835940121308}
+  m_Layer: 0
+  m_Name: Iceball_Lv2
+  m_TagString: Bullet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2821260161404024371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265430774596140741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2653120186944227617}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5357788835940121308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265430774596140741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c01fffed914e198650966f707d7166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitEffect: {fileID: 0}
+  freezeDuration: 3
+  freezeTimeScale: 0.4
+--- !u!1001 &2648375813027917585
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2821260161404024371}
+    m_Modifications:
+    - target: {fileID: 1691586572612692, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_Name
+      value: GB_sandglass_impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199775514376877624, guid: 7512ee71d98b7084a8235ca18e8e1770,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+--- !u!4 &2653120186944227617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4834578371536432, guid: 7512ee71d98b7084a8235ca18e8e1770,
+    type: 3}
+  m_PrefabInstance: {fileID: 2648375813027917585}
+  m_PrefabAsset: {fileID: 0}

@@ -56,7 +56,7 @@ public class NodeManager : MonoBehaviour
         }
 
         //Debug.Log("Build tower");
-        //Debug.Log($"type = {(int)type}");
+        Debug.Log($"type = {(int)type}");
         node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[0],
             node.transform.position + towerBaseList[(int)type - 1].TowerBuildOffset, Quaternion.identity);
         node.TowerType = type;

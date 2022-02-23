@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a17b3088c839944f97bb3a7f3ced4f4, type: 3}
   m_Name: IceTower
   m_EditorClassIdentifier: 
-  towerPrefab: []
+  towerPrefab:
+  - {fileID: 1729925625712730, guid: 10681fdf939a8784487cd7aeb35ee8a0, type: 3}
+  - {fileID: 1301670490458978, guid: e56a5dcb34b104b4185b95e94fc91105, type: 3}
+  - {fileID: 1796191513445386, guid: 3f22ed7c120c837429608be0194f1790, type: 3}
   towerBuildOffset: {x: 0, y: 0, z: 0}
   coinCost: 180000000000000000000000
   woodCost: 000000001400000024000000

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a17b3088c839944f97bb3a7f3ced4f4, type: 3}
   m_Name: FireTower
   m_EditorClassIdentifier: 
-  towerPrefab: []
+  towerPrefab:
+  - {fileID: 1087987974285490, guid: 95aea643925295f47b5a32a628512680, type: 3}
+  - {fileID: 1920699108142156, guid: 4bda31330a7720d4eaccfdaa359ec103, type: 3}
+  - {fileID: 7077862183875423176, guid: 874f1192fc13d0d4299a4f83fde1dde9, type: 3}
   towerBuildOffset: {x: 0, y: 0, z: 0}
   coinCost: 100000000000000000000000
   woodCost: 000000001000000020000000

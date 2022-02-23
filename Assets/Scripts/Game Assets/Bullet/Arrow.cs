@@ -18,8 +18,11 @@ public class Arrow : Bullet
     
     protected override void HitTarget()
     {
-        GameObject effectInstance = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectInstance, 2f);
+        if (HitEffect != null)
+        {
+            GameObject effectInstance = (GameObject) Instantiate(HitEffect, transform.position, transform.rotation);
+            Destroy(effectInstance, 2f);
+        }
         
         if (target != null)
         {
