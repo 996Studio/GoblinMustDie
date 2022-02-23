@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a17b3088c839944f97bb3a7f3ced4f4, type: 3}
   m_Name: ArcherTower
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 289886231546967977, guid: fac2e4ff7d63e784ea139c317a3a4553,
-    type: 3}
-  bulletPrefab: {fileID: 2401533949506702978, guid: dbe1ac2d42d29ea42ab36720e875c4a4,
-    type: 3}
+  towerPrefab:
+  - {fileID: 289886231546967977, guid: fac2e4ff7d63e784ea139c317a3a4553, type: 3}
+  - {fileID: 223543887143824650, guid: a1381e9d62def7b4eaa21b32d2001f77, type: 3}
+  - {fileID: 223543887143824650, guid: f92604db417df624c81beaf5b44f5990, type: 3}
   towerBuildOffset: {x: 0, y: 0, z: 0}
   coinCost: 0a0000000000000000000000
   woodCost: 000000000a00000014000000
@@ -23,3 +23,10 @@ MonoBehaviour:
   coinGet: 050000000a00000014000000
   woodGet: 00000000050000000a000000
   rockGet: 00000000050000000a000000
+  constructionTime: []
+  upgradeTime: []
+  bulletPrefab: {fileID: 2401533949506702978, guid: dbe1ac2d42d29ea42ab36720e875c4a4,
+    type: 3}
+  attackInterval: []
+  attackRange: []
+  attackValue: 

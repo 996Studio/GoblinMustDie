@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a17b3088c839944f97bb3a7f3ced4f4, type: 3}
   m_Name: WoodenTower
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 8009992917416068197, guid: adcf2cee8770c134fa24c7b99756a9da,
-    type: 3}
-  bulletPrefab: {fileID: 0}
+  towerPrefab:
+  - {fileID: 8009992917416068197, guid: adcf2cee8770c134fa24c7b99756a9da, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   towerBuildOffset: {x: 0, y: 1, z: 0}
   coinCost: 000000000000000000000000
   woodCost: 000000000000000000000000
@@ -22,3 +23,9 @@ MonoBehaviour:
   coinGet: 000000000000000000000000
   woodGet: 000000000000000000000000
   rockGet: 000000000000000000000000
+  constructionTime: []
+  upgradeTime: []
+  bulletPrefab: {fileID: 0}
+  attackInterval: []
+  attackRange: []
+  attackValue: 
