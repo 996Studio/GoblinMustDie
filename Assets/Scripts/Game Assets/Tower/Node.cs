@@ -35,6 +35,8 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         originColor = rend.material.color;
 
+        CreateTowerEvent.menuCall += OnMouseDown;
+
         if (towerType != TowerType.NULL)
         {
             NodeManager.instance.BuildTower(towerType, this);
