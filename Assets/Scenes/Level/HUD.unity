@@ -6881,7 +6881,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1508054681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2060177391}
+        m_TargetAssemblyTypeName: CreateTowerUI, Assembly-CSharp
+        m_MethodName: buildBasicTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1508054681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7315,6 +7327,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1323173353}
     m_Modifications:
+    - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
+        type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 2060177391}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: nodeType
@@ -9165,6 +9182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listPanel: {fileID: 1295289247}
+  selectNode: {fileID: 0}
 --- !u!114 &2060177392
 MonoBehaviour:
   m_ObjectHideFlags: 0
