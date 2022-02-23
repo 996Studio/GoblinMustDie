@@ -79,6 +79,12 @@ public class NodeManager : MonoBehaviour
             return;
         }
 
+        if (node.TowerType == TowerType.WOODEN || node.TowerType == TowerType.CRYSTAL)
+        {
+            Debug.Log("Resource tower cannot be upgraded");
+            return;
+        }
+
         if (ResourceManager.Instance().Coin < towerBaseList[(int)node.TowerType - 1].CoinCost[level] ||
             ResourceManager.Instance().Wood < towerBaseList[(int)node.TowerType - 1].WoodCost[level] ||
             ResourceManager.Instance().Rock < towerBaseList[(int)node.TowerType - 1].RockCost[level])
@@ -99,14 +105,14 @@ public class NodeManager : MonoBehaviour
         SetTowerData(node);
     }
 
-    public void SellTower(Node node, int level)
+    public void SellTower(Node node)
     {
         Debug.Log("Sell " + node.TowerType);
 
+        int level = node.Tower.GetComponent<BaseTower>().Level;
         ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level - 1],
             -towerBaseList[(int)node.TowerType - 1].WoodCost[level - 1],
             -towerBaseList[(int)node.TowerType - 1].RockCost[level - 1]);
-        
         HUDManager.instance.UpdateResourceText(ResourceType.ALL);
         
         Destroy(node.Tower);
@@ -134,7 +140,7 @@ public class NodeManager : MonoBehaviour
             node.TowerType = TowerType.NULL;
         }
 
-        node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[0],
+        node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[level - 1],
             node.transform.position + towerBaseList[(int)type - 1].TowerBuildOffset, Quaternion.identity);
         node.TowerType = type;
         node.Tower.GetComponent<BaseTower>().Level = level;
