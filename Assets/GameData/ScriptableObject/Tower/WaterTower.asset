@@ -13,11 +13,20 @@ MonoBehaviour:
   m_Name: WaterTower
   m_EditorClassIdentifier: 
   towerPrefab: []
-  bulletPrefab: {fileID: 0}
   towerBuildOffset: {x: 0, y: 0, z: 0}
-  coinCost: 
-  woodCost: 
-  rockCost: 
-  coinGet: 
-  woodGet: 
-  rockGet: 
+  coinCost: 100000000000000000000000
+  woodCost: 000000000c00000018000000
+  rockCost: 000000001000000020000000
+  coinGet: 080000000000000000000000
+  woodGet: 000000000800000010000000
+  rockGet: 00000000060000000c000000
+  constructionTime:
+  - 1
+  upgradeTime:
+  - 5
+  bulletPrefab: {fileID: 0}
+  attackInterval:
+  - 1.5
+  attackRange:
+  - 12
+  attackValue: 0d000000

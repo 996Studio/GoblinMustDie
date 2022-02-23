@@ -13,11 +13,20 @@ MonoBehaviour:
   m_Name: IceTower
   m_EditorClassIdentifier: 
   towerPrefab: []
-  bulletPrefab: {fileID: 0}
   towerBuildOffset: {x: 0, y: 0, z: 0}
-  coinCost: 
-  woodCost: 
-  rockCost: 
-  coinGet: 
-  woodGet: 
-  rockGet: 
+  coinCost: 180000000000000000000000
+  woodCost: 000000001400000024000000
+  rockCost: 000000001400000024000000
+  coinGet: 0c0000000000000000000000
+  woodGet: 000000000a00000012000000
+  rockGet: 000000000a00000012000000
+  constructionTime:
+  - 1
+  upgradeTime:
+  - 5
+  bulletPrefab: {fileID: 0}
+  attackInterval:
+  - 2
+  attackRange:
+  - 18
+  attackValue: 06000000

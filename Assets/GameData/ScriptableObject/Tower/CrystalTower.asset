@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: CrystalTower
   m_EditorClassIdentifier: 
   towerPrefab: []
-  bulletPrefab: {fileID: 0}
   towerBuildOffset: {x: 0, y: 0, z: 0}
-  coinCost: 
-  woodCost: 
-  rockCost: 
-  coinGet: 
-  woodGet: 
-  rockGet: 
+  coinCost: 060000001800000024000000
+  woodCost: 000000000000000000000000
+  rockCost: 000000000000000000000000
+  coinGet: 000000000000000000000000
+  woodGet: 000000000000000000000000
+  rockGet: 000000000000000000000000
+  constructionTime:
+  - 1
+  upgradeTime:
+  - 5
+  bulletPrefab: {fileID: 0}
+  attackInterval: []
+  attackRange: []
+  attackValue: 

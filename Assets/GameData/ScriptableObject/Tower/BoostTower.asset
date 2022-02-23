@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: BoostTower
   m_EditorClassIdentifier: 
   towerPrefab: []
-  bulletPrefab: {fileID: 0}
   towerBuildOffset: {x: 0, y: 0, z: 0}
-  coinCost: 
-  woodCost: 
-  rockCost: 
-  coinGet: 
-  woodGet: 
-  rockGet: 
+  coinCost: 080000001000000018000000
+  woodCost: 060000000c00000018000000
+  rockCost: 060000000c00000018000000
+  coinGet: 04000000080000000c000000
+  woodGet: 03000000060000000c000000
+  rockGet: 03000000060000000c000000
+  constructionTime:
+  - 1
+  upgradeTime:
+  - 5
+  bulletPrefab: {fileID: 0}
+  attackInterval: []
+  attackRange: []
+  attackValue: 
