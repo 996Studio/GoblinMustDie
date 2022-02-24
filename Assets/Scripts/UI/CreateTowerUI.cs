@@ -5,16 +5,14 @@ using System;
 
 public class CreateTowerUI : MonoBehaviour
 {
-    public GameObject listPanel;
-
+    
     public static CreateTowerUI instance;
-
+    
+    public GameObject listPanel;
     public Node selectNode;
-
-    private TowerType buttonEnums;
-
-    public enumForUI button;
-
+    //private TowerType buttonEnums;
+    //public enumForUI button;
+    //[SerializeField] ButtonToTower BuildThisType;
 
 
     private void Awake()
@@ -48,16 +46,7 @@ public class CreateTowerUI : MonoBehaviour
     {
         listPanel.SetActive(false);
     }
-
-    //public void buildBasicTower()
-    //{
-    //    print(selectNode);
-        
-    //    NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
-    //    AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
-    //}
-
-
+    
     public void upgradeTower()
     {
         print(selectNode);
@@ -86,27 +75,12 @@ public class CreateTowerUI : MonoBehaviour
         }
     }
 
-    public void AvailableTowerList()
+    public void BuildTower(int type)
     {
-        print(selectNode);
-
-        print(buttonEnums);
-
-        switch (buttonEnums)
-        {
-            case TowerType.ARCHER:
-                NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
-                break;
-            case TowerType.FIRE:
-                NodeManager.instance.BuildTower(TowerType.FIRE, selectNode);
-                break;
-        }
-
-
-        //NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
+        TowerType towerType = (TowerType)type;
+        Debug.Log($"Build {towerType}");
+        NodeManager.instance.BuildTower(towerType, CreateTowerUI.instance.selectNode);
         AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
     }
-
-    
 }
 

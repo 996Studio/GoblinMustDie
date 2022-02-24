@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BoostTower
   m_EditorClassIdentifier: 
   towerPrefab: []
-  towerBuildOffset: {x: 0, y: 0, z: 0}
+  towerBuildOffset: {x: 0, y: 0.5, z: 0}
   coinCost: 080000001000000018000000
   woodCost: 060000000c00000018000000
   rockCost: 060000000c00000018000000

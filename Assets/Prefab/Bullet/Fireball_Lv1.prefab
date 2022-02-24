@@ -9662,7 +9662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953163476362260}
   - component: {fileID: 65237414321043224}
-  - component: {fileID: 8004881078325245652}
+  - component: {fileID: 5728594850002727644}
   m_Layer: 0
   m_Name: Fireball_Lv1
   m_TagString: Bullet
@@ -9699,7 +9699,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8004881078325245652
+--- !u!114 &5728594850002727644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9714,7 +9714,7 @@ MonoBehaviour:
   speed: 10
   SecondsBeforeDestroy: 2
   HitEffect: {fileID: 0}
-  explosionRange: 3
+  explosionRange: 2
   explosionDamage: 10
 --- !u!1 &1756806983938988
 GameObject:

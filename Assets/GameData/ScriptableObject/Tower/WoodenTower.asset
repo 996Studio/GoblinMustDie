@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 8009992917416068197, guid: adcf2cee8770c134fa24c7b99756a9da, type: 3}
   - {fileID: 0}
   - {fileID: 0}
-  towerBuildOffset: {x: 0, y: 1, z: 0}
+  towerBuildOffset: {x: 0, y: 0.5, z: 0}
   coinCost: 060000001800000024000000
   woodCost: 000000000000000000000000
   rockCost: 000000000000000000000000

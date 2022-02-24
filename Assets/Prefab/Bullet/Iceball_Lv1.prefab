@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2821260161404024371}
-  - component: {fileID: 5357788835940121308}
+  - component: {fileID: 3290098860658147165}
   m_Layer: 0
   m_Name: Iceball_Lv1
   m_TagString: Bullet
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5357788835940121308
+--- !u!114 &3290098860658147165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c01fffed914e198650966f707d7166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 5
   SecondsBeforeDestroy: 2
-  HitEffect: {fileID: 0}
+  HitEffect: {fileID: 1691586572612692, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
   freezeDuration: 3
-  freezeTimeScale: 0.1
+  freezeScale: 0.3
 --- !u!1001 &2648375813027917585
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -40,6 +40,7 @@ public class AttackTower : BaseTower
     {
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, fireLocation.position, fireLocation.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.transform.SetParent(this.transform);
         bullet.Attack = this.attack;
         AudioManager.instance.Play(SoundType.SFX,"BowTowerFire");
 
@@ -101,9 +102,10 @@ public class AttackTower : BaseTower
     
     public void SetAttackTowerData(TowerBase towerData, int level)
     {
-        Debug.Log(level);
+        //Debug.Log(level);
         attack = towerData.AttackValue[level - 1];
         attackRange = towerData.AttackRange[level - 1];
         fireRate = towerData.AttackInterval[level - 1];
+        //Debug.Log($"{attack} {attackRange} {fireRate}");
     }
 }

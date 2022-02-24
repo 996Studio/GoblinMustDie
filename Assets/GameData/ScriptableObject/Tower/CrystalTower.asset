@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CrystalTower
   m_EditorClassIdentifier: 
   towerPrefab: []
-  towerBuildOffset: {x: 0, y: 0, z: 0}
+  towerBuildOffset: {x: 0, y: 0.5, z: 0}
   coinCost: 060000001800000024000000
   woodCost: 000000000000000000000000
   rockCost: 000000000000000000000000

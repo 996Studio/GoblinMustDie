@@ -47,6 +47,10 @@ public class NodeManager : MonoBehaviour
 
     public void BuildTower(TowerType type,Node node)
     {
+        if (node.Tower != null)
+        {
+            return;
+        }
         //Debug.Log(type);
         if (ResourceManager.Instance().Coin < towerBaseList[(int)type - 1].CoinCost[0] ||
             ResourceManager.Instance().Wood < towerBaseList[(int)type - 1].WoodCost[0] ||
@@ -65,6 +69,7 @@ public class NodeManager : MonoBehaviour
         ChangeResource(-towerBaseList[(int)type - 1].CoinCost[0], -towerBaseList[(int)type - 1].WoodCost[0],
             -towerBaseList[0].RockCost[(int)type - 1]);
         SetTowerData(node);
+        node.Tower.transform.SetParent(node.transform);
         Debug.Log($"Build {type}");
 
         HUDManager.instance.UpdateResourceText(ResourceType.ALL);
@@ -103,6 +108,7 @@ public class NodeManager : MonoBehaviour
             -towerBaseList[(int)node.TowerType - 1].RockCost[level]);
         Debug.Log("Node level: " + node.Tower.GetComponent<BaseTower>().Level);
         SetTowerData(node);
+        node.Tower.transform.SetParent(node.transform);
     }
 
     public void SellTower(Node node)
@@ -145,6 +151,7 @@ public class NodeManager : MonoBehaviour
         node.TowerType = type;
         node.Tower.GetComponent<BaseTower>().Level = level;
         SetTowerData(node);
+        node.Tower.transform.SetParent(node.transform);
     }
 
     public void ChangeResource(int coin = 0, int wood = 0, int rock = 0)

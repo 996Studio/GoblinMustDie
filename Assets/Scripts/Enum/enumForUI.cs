@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum ButtonToTower
+{
+    Archer=0, 
+    Fire, 
+    Water, 
+    Ice
+}
+
 public class enumForUI : MonoBehaviour
 {
     //[SerializeField] ButtonToTower BuildThisType;
@@ -32,7 +40,3 @@ public class enumForUI : MonoBehaviour
     }
 }
 
-enum ButtonToTower
-{
-    Archer, Fire, Water, Ice
-}

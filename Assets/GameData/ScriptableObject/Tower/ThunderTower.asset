@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ThunderTower
   m_EditorClassIdentifier: 
   towerPrefab: []
-  towerBuildOffset: {x: 0, y: 0, z: 0}
+  towerBuildOffset: {x: 0, y: 0.5, z: 0}
   coinCost: 140000000000000000000000
   woodCost: 000000001200000022000000
   rockCost: 000000001200000022000000
