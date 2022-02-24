@@ -128,14 +128,20 @@ public class NodeManager : MonoBehaviour
 
     public void LoadTower(Node node, TowerType type, int level)
     {
+        if (node.Tower == null)
+        {
+            Debug.Log($"{node.TowerType} type");
+        }
         if (node.TowerType == type)
         {
             if (node.Tower != null && node.Tower.GetComponent<BaseTower>().Level != level)
             {
                 //do nothing
+                Debug.Log("Do nothing load tower");
             }
             else
             {
+                Debug.Log("load tower doesn't need to do anything");
                 return;
             }
         }

@@ -38,7 +38,7 @@ public class Node : MonoBehaviour
 
         if (towerType != TowerType.NULL)
         {
-            NodeManager.instance.LoadTower(this, towerType, 1);
+            NodeManager.instance.BuildTower(towerType, this);
         }
     }
 
