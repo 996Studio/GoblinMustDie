@@ -196,7 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcetoSpawn: 0
   resourceSpawnPoint: {fileID: 0}
-  woodPrefab: {fileID: 2572413215964224612}
+  woodPrefab: {fileID: 751268157832838996, guid: 8360e660a5f8bb04dafc04c87be91e6d,
+    type: 3}
   crytalPrefab: {fileID: 0}
   timeToSpawn: 2
   bResourceIsUp: 0

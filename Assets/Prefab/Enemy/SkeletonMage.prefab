@@ -88,8 +88,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1333184777379030635}
   agent: {fileID: 9210455229876994205}
-  maxHP: 60
-  curHP: 60
+  maxHP: 40
+  curHP: 40
   atk: 0
   moveSpeed: 0
   HPBarForeground: {fileID: 1200980116697538139}
@@ -103,7 +103,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
