@@ -5,13 +5,17 @@ using System;
 
 public class CreateTowerUI : MonoBehaviour
 {
-    public static event Action menuCall;
-
     public GameObject listPanel;
 
     public static CreateTowerUI instance;
 
     public Node selectNode;
+
+    private TowerType buttonEnums;
+
+    public enumForUI button;
+
+
 
     private void Awake()
     {
@@ -32,17 +36,12 @@ public class CreateTowerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            menuCall?.Invoke();
-            
-        }
+
     }
 
     public void showPanel()
     {
         listPanel.SetActive(true);
-        
     }
 
     public void hidePanel()
@@ -50,26 +49,64 @@ public class CreateTowerUI : MonoBehaviour
         listPanel.SetActive(false);
     }
 
-    public void buildBasicTower()
-    {
-        print(selectNode);
+    //public void buildBasicTower()
+    //{
+    //    print(selectNode);
         
-        NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
-        AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
-    }
+    //    NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
+    //    AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
+    //}
+
 
     public void upgradeTower()
     {
         print(selectNode);
 
-        NodeManager.instance.UpgradeTower(selectNode);
+        if (selectNode.TowerType != TowerType.NULL)
+        {
+            NodeManager.instance.UpgradeTower(selectNode);
+        }
+        else
+        {
+            Debug.Log("No tower to upgrade here!");
+        }
     }
 
     public void sellTower()
     {
         print(selectNode);
 
-        NodeManager.instance.SellTower(selectNode);
-
+        if (selectNode.TowerType != TowerType.NULL)
+        {
+            NodeManager.instance.SellTower(selectNode);
+        }
+        else
+        {
+            Debug.Log("No tower to sell here!");
+        }
     }
+
+    public void AvailableTowerList()
+    {
+        print(selectNode);
+
+        print(buttonEnums);
+
+        switch (buttonEnums)
+        {
+            case TowerType.ARCHER:
+                NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
+                break;
+            case TowerType.FIRE:
+                NodeManager.instance.BuildTower(TowerType.FIRE, selectNode);
+                break;
+        }
+
+
+        //NodeManager.instance.BuildTower(TowerType.ARCHER, selectNode);
+        AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
+    }
+
+    
 }
+
