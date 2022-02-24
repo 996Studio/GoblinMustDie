@@ -49,6 +49,23 @@ public class CameraController : MonoBehaviour
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
 
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
+        }
+
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPos.x, maxPos.x), transform.position.y,
             Mathf.Clamp(transform.position.z, minPos.y, maxPos.y));
         
