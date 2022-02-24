@@ -8,7 +8,7 @@ public class Troll : EnemyBase,IHeal
     {
         if (!isDead)
         {
-            curHP += maxHP * 0.2;
+            curHP += maxHP * 0.2f;
         }
     }
 }

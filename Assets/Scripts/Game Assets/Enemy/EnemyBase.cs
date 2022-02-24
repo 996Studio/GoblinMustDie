@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -13,18 +15,26 @@ public class EnemyBase : MonoBehaviour
     protected NavMeshAgent agent;
 
     [SerializeField]
-    protected double maxHP;
+    protected float maxHP;
     
     [SerializeField]
-    protected double curHP;
+    protected float curHP;
     
     [SerializeField]
     protected int atk;
 
-    [SerializeField] protected float moveSpeed;
+    [SerializeField]
+    protected float moveSpeed;
+
+    [SerializeField] 
+    private Image HPBarForeground;
+
+    private float updateSpeedSec = 0.3f;
     
     protected bool isDead = false;
     protected bool canTakeDamage;
+    
+    public event Action<float> OnHealthChanged = delegate(float f) {  };
     
     //Freeze Parameter
     private float freezeCounter;
@@ -43,6 +53,11 @@ public class EnemyBase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+        canTakeDamage = true;
+        //delegate for changing health
+        OnHealthChanged += HandleHealthChange;
+        HPBarForeground.fillAmount = 0.5f;
     }
     
     void Start()
@@ -55,6 +70,11 @@ public class EnemyBase : MonoBehaviour
         FreezeTimer();
     }
 
+    protected void LateUpdate()
+    {
+        
+    }
+
     public virtual void InitInfo()
     {
         atk = 1;
@@ -62,12 +82,23 @@ public class EnemyBase : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        curHP -= dmg;
-
-        if (curHP <= 0)
+        if (canTakeDamage)
         {
-            Death();
+            curHP -= dmg;
+
+            ChangeHealth();
+        
+            if (curHP <= 0)
+            {
+                Death();
+            }
         }
+    }
+
+    public void ChangeHealth()
+    {
+        float curHealthPct = curHP / maxHP;
+        OnHealthChanged(curHealthPct);
     }
 
     public void Death()
@@ -81,11 +112,28 @@ public class EnemyBase : MonoBehaviour
         Destroy(this.gameObject);
     }
     
-    //Placeholder for animation event
-    // public void DeathEvent()
-    // {
-    //     
-    // }
+    private void HandleHealthChange(float pct)
+    {
+        StartCoroutine(ChangeHPBarPct(pct));
+    }
+
+    private IEnumerator ChangeHPBarPct(float pct)
+    {
+        float preChangePct = HPBarForeground.fillAmount;
+        float timeElapsed = 0.0f;
+        canTakeDamage = false;
+
+        while (timeElapsed < updateSpeedSec)
+        {
+            timeElapsed += Time.deltaTime;
+            HPBarForeground.fillAmount = Mathf.Lerp(preChangePct, pct, timeElapsed / updateSpeedSec);
+            
+            yield return null;
+        }
+
+        canTakeDamage = true;
+        HPBarForeground.fillAmount = pct;
+    }
 
     private void FreezeTimer()
     {

@@ -32,7 +32,9 @@ public class Goblin : EnemyBase,IHeal
     {
         if (!isDead && (curHP < maxHP))
         {
-            curHP += maxHP * 0.2;
+            curHP += maxHP * 0.2f;
+            
+            ChangeHealth();
             Debug.Log("Healed:" + maxHP * 0.2);
         }
     }
