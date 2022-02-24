@@ -71,10 +71,12 @@ public class SaveManager : MonoBehaviour
             ResourceManager.Instance().Rock = save.rock;
             HUDManager.instance.UpdateResourceText(ResourceType.ALL);
 
-            for (int i = 0; i < save.nodeNum - 1; i++)
+            //Debug.Log($"save node number {save.nodeNum}");
+            for (int i = 0; i < save.nodeNum; i++)
             {
                 NodeManager.instance.LoadTower(NodeManager.instance.NodeList[i], save.towerTypeList[i],
                     save.levelList[i]);
+                //Debug.Log(i);
             }
 
             //Debug.Log("Load" + ResourceManager.Instance().Coin);

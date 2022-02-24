@@ -45,6 +45,16 @@ public class NodeManager : MonoBehaviour
         
     }
 
+    public void InstantiateTower(Node node,TowerType type,int level)
+    {
+        node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[level - 1],
+            node.transform.position + towerBaseList[(int)type - 1].TowerBuildOffset, Quaternion.identity);
+        node.TowerType = type;
+        node.Tower.GetComponent<BaseTower>().Level = level;
+        SetTowerData(node);
+        node.Tower.transform.SetParent(node.transform);
+    }
+
     public void BuildTower(TowerType type,Node node)
     {
         if (node.Tower != null)
@@ -56,21 +66,16 @@ public class NodeManager : MonoBehaviour
             ResourceManager.Instance().Wood < towerBaseList[(int)type - 1].WoodCost[0] ||
             ResourceManager.Instance().Rock < towerBaseList[(int)type - 1].RockCost[0])
         {
-            Debug.Log("need more coin");
+            //Debug.Log("need more coin");
             return;
         }
 
         //Debug.Log("Build tower");
-        Debug.Log($"type = {(int)type}");
-        node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[0],
-            node.transform.position + towerBaseList[(int)type - 1].TowerBuildOffset, Quaternion.identity);
-        node.TowerType = type;
-        node.Tower.GetComponent<BaseTower>().Level = 1;
+        //Debug.Log($"type = {(int)type}");
+        InstantiateTower(node, type, 1);
         ChangeResource(-towerBaseList[(int)type - 1].CoinCost[0], -towerBaseList[(int)type - 1].WoodCost[0],
             -towerBaseList[(int)type - 1].RockCost[0]);
-        SetTowerData(node);
-        node.Tower.transform.SetParent(node.transform);
-        Debug.Log($"Build {type}");
+        //Debug.Log($"Build {type}");
 
         HUDManager.instance.UpdateResourceText(ResourceType.ALL);
     }
@@ -80,13 +85,13 @@ public class NodeManager : MonoBehaviour
         int level = node.Tower.GetComponent<BaseTower>().Level;
         if (level >= MAXTOWERLEVEL)
         {
-            Debug.Log("Tower reaches max level");
+            //Debug.Log("Tower reaches max level");
             return;
         }
 
         if (node.TowerType == TowerType.WOODEN || node.TowerType == TowerType.CRYSTAL)
         {
-            Debug.Log("Resource tower cannot be upgraded");
+            //Debug.Log("Resource tower cannot be upgraded");
             return;
         }
 
@@ -94,21 +99,16 @@ public class NodeManager : MonoBehaviour
             ResourceManager.Instance().Wood < towerBaseList[(int)node.TowerType - 1].WoodCost[level] ||
             ResourceManager.Instance().Rock < towerBaseList[(int)node.TowerType - 1].RockCost[level])
         {
-            Debug.Log("need more resource");
+            //Debug.Log("need more resource");
             return;
         }
 
-        Debug.Log("Upgrade tower level " + level);
+        //Debug.Log("Upgrade tower level " + level);
         Destroy(node.Tower);
-        node.Tower = Instantiate(towerBaseList[(int)node.TowerType - 1].TowerPrefab[level],
-            node.transform.position + towerBaseList[(int)node.TowerType - 1].TowerBuildOffset, Quaternion.identity);
-        node.Tower.GetComponent<BaseTower>().Level = level + 1;
+        InstantiateTower(node, node.TowerType, level + 1);
         ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level],
             -towerBaseList[(int)node.TowerType - 1].WoodCost[level],
             -towerBaseList[(int)node.TowerType - 1].RockCost[level]);
-        Debug.Log("Node level: " + node.Tower.GetComponent<BaseTower>().Level);
-        SetTowerData(node);
-        node.Tower.transform.SetParent(node.transform);
     }
 
     public void SellTower(Node node)
@@ -128,36 +128,27 @@ public class NodeManager : MonoBehaviour
 
     public void LoadTower(Node node, TowerType type, int level)
     {
-        if (node.Tower == null)
-        {
-            Debug.Log($"{node.TowerType} type");
-        }
         if (node.TowerType == type)
         {
             if (node.Tower != null && node.Tower.GetComponent<BaseTower>().Level != level)
             {
                 //do nothing
-                Debug.Log("Do nothing load tower");
+                //Debug.Log("Do nothing load tower");
             }
             else
             {
-                Debug.Log("load tower doesn't need to do anything");
+                //Debug.Log("load tower doesn't need to do anything");
                 return;
             }
         }
         else if (node.Tower != null)
         {
-            Debug.Log("Destroy tower");
+            //Debug.Log("Destroy tower");
             Destroy(node.Tower);
             node.TowerType = TowerType.NULL;
         }
 
-        node.Tower = Instantiate(towerBaseList[(int)type - 1].TowerPrefab[level - 1],
-            node.transform.position + towerBaseList[(int)type - 1].TowerBuildOffset, Quaternion.identity);
-        node.TowerType = type;
-        node.Tower.GetComponent<BaseTower>().Level = level;
-        SetTowerData(node);
-        node.Tower.transform.SetParent(node.transform);
+        InstantiateTower(node, type, level);
     }
 
     public void ChangeResource(int coin = 0, int wood = 0, int rock = 0)

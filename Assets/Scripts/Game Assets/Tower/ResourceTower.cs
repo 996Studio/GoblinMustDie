@@ -36,7 +36,7 @@ public class ResourceTower : BaseTower
         if (Time.time>initialSpawnTime)
         {
             initialSpawnTime += timeToSpawn;
-            Debug.Log("Spawn Resource");
+            //Debug.Log("Spawn Resource");
             woodPrefab.SetActive(true);
             bResourceIsUp = true;
         }
