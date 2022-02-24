@@ -15,7 +15,7 @@ public class SpawnPoint : MonoBehaviour
     private int curEnemyNum;
 
     public List<EnemyBase> enemySpawnList;
-    public List<EnemyBase> spawnedEnemy;
+    //public List<EnemyBase> spawnedEnemy;
     private int curSpawnID;
 
     public float spawnInterval;
@@ -41,9 +41,15 @@ public class SpawnPoint : MonoBehaviour
 
     private void Update()
     {
-        if (SpawnOver() && !MotherBase.Instance.IsDead && spawnedEnemy.Count == 0)
+        int temp = FindObjectsOfType<EnemyBase>().Length;
+        if (SpawnOver() && !MotherBase.Instance.IsDead && temp == 0)
         {
+            Debug.Log("Win!");
             MotherBase.Instance.IsWin = true;
+        }
+        else
+        {
+            //Debug.Log($"{SpawnOver()} {!MotherBase.Instance.IsDead} {spawnedEnemy.Count} ");
         }
     }
 
@@ -62,7 +68,7 @@ public class SpawnPoint : MonoBehaviour
     private void SpawnEnemy()
     {
         EnemyBase enemy = Instantiate(enemySpawnList[curSpawnID], transform.position, Quaternion.identity);
-        spawnedEnemy.Add(enemy);
+        //spawnedEnemy.Add(enemy);
         enemy.InitInfo();
 
         curEnemyNum--;

@@ -17,5 +17,4 @@ public enum TowerType
     WOODEN,
     CRYSTAL,
     BOOST
-
 }
