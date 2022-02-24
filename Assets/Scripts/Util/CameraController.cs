@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         
-        #if UNITY_EDITOR || UNITY_STANDALONE
+        #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL
         //Move camera
         if (Input.mousePosition.y >= Screen.height - panBorderThickness)
         {

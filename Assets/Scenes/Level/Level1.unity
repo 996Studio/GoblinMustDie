@@ -1269,7 +1269,7 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: towerType
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe6d3a94b0b0dd47b8cb2af7693c508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxWave: 1
+  maxWave: 3
   enemyNumPerWave: 5
   enemySpawnList:
   - {fileID: 5263257154274970367, guid: c481bd50533aa384d868a098fe05b7c1, type: 3}
@@ -2280,7 +2280,7 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: towerType
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -8258,7 +8258,7 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: towerType
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}

@@ -30,6 +30,4 @@ public class OptionsScene : MonoBehaviour
     {
         AudioManager.instance.ChangeVolume(SoundType.SFX, soundVolumeSlider.value);
     }
-
-    
 }
