@@ -1,79 +1,104 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyBase : MonoBehaviour
 {
-    private Animator animator;
-    private NavMeshAgent agent;
+    [SerializeField]
+    protected Animator animator;
+    
+    [SerializeField]
+    protected NavMeshAgent agent;
 
-    private int maxHP;
-    private int curHP;
-    private int atk;
+    [SerializeField]
+    protected float maxHP;
+    
+    [SerializeField]
+    protected float curHP;
+    
+    [SerializeField]
+    protected int atk;
+
+    [SerializeField]
+    protected float moveSpeed;
+
+    [SerializeField] 
+    private Image HPBarForeground;
+
+    private float updateSpeedSec = 0.3f;
+    
+    protected bool isDead = false;
+    protected bool canTakeDamage;
+    
+    public event Action<float> OnHealthChanged = delegate(float f) {  };
     
     //Freeze Parameter
-    private float startTimescale;
-    private float startFixedDeltaTime;
     private float freezeCounter;
     
     public int Atk
     {
         get => atk;
-        set => atk = value;
     }
-
-    public bool isDead = false;
+    
+    public bool IsDead
+    {
+        get => isDead;
+    }
     
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+        canTakeDamage = true;
+        //delegate for changing health
+        OnHealthChanged += HandleHealthChange;
+        HPBarForeground.fillAmount = 0.5f;
     }
     
-    //Init monster Info
-    //to be modified later by Jason data
-    public void InitInfo()
-    {
-        maxHP = 100;
-        curHP = 100;
-        atk = 1;
-        agent.speed = 3.5f;
-        agent.angularSpeed = 120f;
-        agent.acceleration = 8f;
-    }
-
     void Start()
     {
         agent.SetDestination(MotherBase.Instance.transform.position);
-
-        startTimescale = Time.timeScale;
-        startFixedDeltaTime = Time.fixedDeltaTime;
+    }
+    
+    protected virtual void Update()
+    {
+        FreezeTimer();
     }
 
-    private void Update()
+    protected void LateUpdate()
     {
-        if (freezeCounter > 0.0f)
-        {
-            freezeCounter -= Time.deltaTime;
-            if (freezeCounter <= 0)
-            {
-                freezeCounter = 0.0f;
-                StopFreeze();
-            }
-        }
+        
+    }
+
+    public virtual void InitInfo()
+    {
+        atk = 1;
     }
 
     public void TakeDamage(int dmg)
     {
-        curHP -= dmg;
-        //Debug.Log(curHP);
-
-        if (curHP <= 0)
+        if (canTakeDamage)
         {
-            Death();
+            curHP -= dmg;
+
+            ChangeHealth();
+        
+            if (curHP <= 0)
+            {
+                Death();
+            }
         }
+    }
+
+    public void ChangeHealth()
+    {
+        float curHealthPct = curHP / maxHP;
+        OnHealthChanged(curHealthPct);
     }
 
     public void Death()
@@ -87,22 +112,50 @@ public class EnemyBase : MonoBehaviour
         Destroy(this.gameObject);
     }
     
-    public void DeathEvent()
+    private void HandleHealthChange(float pct)
     {
-        
-        //Placeholder for animation event
+        StartCoroutine(ChangeHPBarPct(pct));
     }
 
-    public void StartFreeze(float scale, float duration)
+    private IEnumerator ChangeHPBarPct(float pct)
     {
-        Time.timeScale = scale;
-        Time.fixedDeltaTime = startFixedDeltaTime * scale;
+        float preChangePct = HPBarForeground.fillAmount;
+        float timeElapsed = 0.0f;
+        canTakeDamage = false;
+
+        while (timeElapsed < updateSpeedSec)
+        {
+            timeElapsed += Time.deltaTime;
+            HPBarForeground.fillAmount = Mathf.Lerp(preChangePct, pct, timeElapsed / updateSpeedSec);
+            
+            yield return null;
+        }
+
+        canTakeDamage = true;
+        HPBarForeground.fillAmount = pct;
+    }
+
+    private void FreezeTimer()
+    {
+        if (freezeCounter > 0.0f)
+        {
+            freezeCounter -= Time.deltaTime;
+            if (freezeCounter <= 0)
+            {
+                freezeCounter = 0.0f;
+                StopFreeze();
+            }
+        }
+    }
+
+    public void StartFreeze(float freezeFactor, float duration)
+    {
+        agent.speed *= freezeFactor;
         freezeCounter = duration;
     }
 
     public void StopFreeze()
     {
-        Time.timeScale = startTimescale;
-        Time.fixedDeltaTime = startFixedDeltaTime;
+        agent.speed = moveSpeed;
     }
 }
