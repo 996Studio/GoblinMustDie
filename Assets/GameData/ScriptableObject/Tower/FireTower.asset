@@ -32,4 +32,4 @@ MonoBehaviour:
   - 1.5
   attackRange:
   - 12
-  attackValue: 10000000
+  attackValue: 0c000000
