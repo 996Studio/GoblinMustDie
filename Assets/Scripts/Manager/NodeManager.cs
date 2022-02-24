@@ -67,7 +67,7 @@ public class NodeManager : MonoBehaviour
         node.TowerType = type;
         node.Tower.GetComponent<BaseTower>().Level = 1;
         ChangeResource(-towerBaseList[(int)type - 1].CoinCost[0], -towerBaseList[(int)type - 1].WoodCost[0],
-            -towerBaseList[0].RockCost[(int)type - 1]);
+            -towerBaseList[(int)type - 1].RockCost[0]);
         SetTowerData(node);
         node.Tower.transform.SetParent(node.transform);
         Debug.Log($"Build {type}");

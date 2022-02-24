@@ -36,6 +36,7 @@ public class Iceball : Bullet
         {
             Destroy(gameObject);
         }
+        
 
         EnemyBase enemy = target.GetComponent<EnemyBase>();
         if (enemy != null)

@@ -22,6 +22,7 @@ public class Fireball : Bullet
     protected override void HitTarget()
     {
         Debug.Log("Hit Target");
+        
         if (HitEffect != null)
         {
             GameObject effectInstance = (GameObject) Instantiate(HitEffect, transform.position, transform.rotation);
