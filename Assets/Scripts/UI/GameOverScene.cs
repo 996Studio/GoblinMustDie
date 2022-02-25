@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOverScene : MonoBehaviour
@@ -43,5 +44,10 @@ public class GameOverScene : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void GotoMainMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 }
