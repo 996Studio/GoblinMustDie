@@ -1274,17 +1274,17 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.b
-      value: 1
+      value: 0.99215686
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.g
-      value: 0.12898159
+      value: 0.85490197
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.r
-      value: 0
+      value: 0.6392157
       objectReference: {fileID: 0}
     - target: {fileID: 3130443427448563467, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -1350,6 +1350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457261261725995730, guid: 5ff364ebe3ff59942b339b16e43e4c46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     - target: {fileID: 8015459323237590836, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -2047,17 +2052,17 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.b
-      value: 1
+      value: 0.99215686
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.g
-      value: 0.12898159
+      value: 0.85490197
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.r
-      value: 0
+      value: 0.6392157
       objectReference: {fileID: 0}
     - target: {fileID: 3130443427448563467, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -2123,6 +2128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457261261725995730, guid: 5ff364ebe3ff59942b339b16e43e4c46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     - target: {fileID: 8015459323237590836, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -2285,17 +2295,17 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.b
-      value: 1
+      value: 0.99215686
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.g
-      value: 0.12898159
+      value: 0.85490197
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.r
-      value: 0
+      value: 0.6392157
       objectReference: {fileID: 0}
     - target: {fileID: 3130443427448563467, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -2361,6 +2371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457261261725995730, guid: 5ff364ebe3ff59942b339b16e43e4c46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     - target: {fileID: 8015459323237590836, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -6337,17 +6352,17 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.b
-      value: 1
+      value: 0.99215686
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.g
-      value: 0.12898159
+      value: 0.85490197
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.r
-      value: 0
+      value: 0.6392157
       objectReference: {fileID: 0}
     - target: {fileID: 3130443427448563467, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -6423,6 +6438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457261261725995730, guid: 5ff364ebe3ff59942b339b16e43e4c46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     - target: {fileID: 8015459323237590836, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -8273,17 +8293,17 @@ PrefabInstance:
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.b
-      value: 1
+      value: 0.99215686
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.g
-      value: 0.12898159
+      value: 0.85490197
       objectReference: {fileID: 0}
     - target: {fileID: -8264224311296024516, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
       propertyPath: hoverColor.r
-      value: 0
+      value: 0.6392157
       objectReference: {fileID: 0}
     - target: {fileID: 3130443427448563467, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}
@@ -8349,6 +8369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457261261725995730, guid: 5ff364ebe3ff59942b339b16e43e4c46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     - target: {fileID: 8015459323237590836, guid: 5ff364ebe3ff59942b339b16e43e4c46,
         type: 3}

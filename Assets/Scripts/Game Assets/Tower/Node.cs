@@ -12,9 +12,11 @@ public class Node : MonoBehaviour
 
     public Color hoverColor;
 
-    private Renderer rend;
-    private Color originColor;
+    public Renderer rend;
+    public Color originColor;
     private GameObject tower;
+    public bool isSelect = false;
+    private bool hover = false;
 
     public GameObject Tower
     {
@@ -50,55 +52,27 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (CreateTowerUI.instance.selectNode == this)
+        {
+            rend.material.color = hoverColor;
+        }
+        else if (CreateTowerUI.instance.selectNode == this && !hover)
+        {
+            rend.material.color = originColor;
+        }
     }
 
-    //public void showUI()
-    //{
-    //    print("Menu called");
-    //}
 
     private void OnMouseDown()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            //CreateTowerUI.instance.hidePanel();
-            Debug.Log("Nothing here");
-            return;
-        }
-        
-        Debug.Log("On mouse down");
-        if (nodeType == NodeType.PATH)
-        {
-            CreateTowerUI.instance.hidePanel();
-            Debug.Log("Path return");
-            return;
-        }
-
-        if (tower != null && towerType != TowerType.NULL && towerType != TowerType.WOODEN)
-        {
-            // For now, if a turret exist at this node, remove the turret.
-            //NodeManager.instance.SellTower(this, this.Tower.GetComponent<BaseTower>().Level);
-
-            CreateTowerUI.instance.showPanel();
-            CreateTowerUI.instance.selectNode = this;
-            return;
-        }
-        
-        // Build a turret
-        if (tower == null && towerType == TowerType.NULL)
-        {
-            CreateTowerUI.instance.showPanel();
-            CreateTowerUI.instance.selectNode = this;
-
-            //NodeManager.instance.BuildTower(TowerType.ARCHER, this);
-            //AudioManager.instance.Play(SoundType.SFX,"BowTowerBuild");
-        }
+        CreateTowerUI.instance.showPanel();
+        CreateTowerUI.instance.selectNode = this;
     }
 
     // Keyboard input for testing
     private void OnMouseEnter()
     {
+        hover = true;
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -112,6 +86,7 @@ public class Node : MonoBehaviour
     }
     private void OnMouseExit()
     {
+        hover = false;  
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -120,6 +95,7 @@ public class Node : MonoBehaviour
         {
             return;
         }
+        if (isSelect) return;
         rend.material.color = originColor;
     }
 }

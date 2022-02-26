@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using System;
 
 public class CreateTowerUI : MonoBehaviour
@@ -10,6 +11,7 @@ public class CreateTowerUI : MonoBehaviour
     
     public GameObject listPanel;
     public Node selectNode;
+    public Node lastNode;
     //private TowerType buttonEnums;
     //public enumForUI button;
     //[SerializeField] ButtonToTower BuildThisType;
@@ -34,16 +36,53 @@ public class CreateTowerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            // If click on UI, ignore ray cast hit on objects beyond
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
 
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                // whatever tag you are looking for on your game object
+                if (hit.collider.tag == "Node")
+                {
+                    return;
+                }
+
+                CreateTowerUI.instance.hidePanel();
+            }
+        }
     }
 
     public void showPanel()
     {
         listPanel.SetActive(true);
+        if (CreateTowerUI.instance.selectNode == null)
+        {
+            
+        }
+        else if (CreateTowerUI.instance.selectNode != null)
+        {
+            CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
+        }
+
     }
 
     public void hidePanel()
     {
+        if (CreateTowerUI.instance.selectNode == null)
+        {
+            return;
+        }
+        CreateTowerUI.instance.selectNode.isSelect = false;
+        CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
+        CreateTowerUI.instance.selectNode = null;
         listPanel.SetActive(false);
     }
     
@@ -54,6 +93,7 @@ public class CreateTowerUI : MonoBehaviour
         if (selectNode.TowerType != TowerType.NULL)
         {
             NodeManager.instance.UpgradeTower(selectNode);
+            CreateTowerUI.instance.hidePanel();
         }
         else
         {
@@ -68,6 +108,7 @@ public class CreateTowerUI : MonoBehaviour
         if (selectNode.TowerType != TowerType.NULL)
         {
             NodeManager.instance.SellTower(selectNode);
+            CreateTowerUI.instance.hidePanel();
         }
         else
         {
@@ -81,6 +122,7 @@ public class CreateTowerUI : MonoBehaviour
         Debug.Log($"Build {towerType}");
         NodeManager.instance.BuildTower(towerType, CreateTowerUI.instance.selectNode);
         AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
+        CreateTowerUI.instance.hidePanel();
     }
 }
 
