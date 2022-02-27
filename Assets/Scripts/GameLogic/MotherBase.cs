@@ -54,7 +54,7 @@ public class MotherBase : MonoBehaviour
 
     private void Update()
     {
-        if (killCount == 10 && !isDead)
+        if (killCount == 15 && !isDead)
             isWin = true;
 
         if (isDead)
