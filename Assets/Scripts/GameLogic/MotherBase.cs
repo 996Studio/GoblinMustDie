@@ -33,6 +33,12 @@ public class MotherBase : MonoBehaviour
         get => isWin;
         set => isWin = value;
     }
+
+    public int KillCount
+    {
+        get { return killCount; }
+        set { killCount = value; }
+    }
     
     void Awake()
     {
@@ -53,18 +59,18 @@ public class MotherBase : MonoBehaviour
 
         if (isDead)
         {
-            SceneManager.LoadScene("WinScene 1");
             GameObject.Find("LevelData").GetComponent<LevelData>().isWin = false;
             GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount;
             Debug.Log(
-                $"Mother Win {GameObject.Find("LevelData").GetComponent<LevelData>().isWin}, kill {GameObject.Find("LevelData").GetComponent<LevelData>().killCount}");
+                $"Mother Lose {GameObject.Find("LevelData").GetComponent<LevelData>().isWin}, kill {GameObject.Find("LevelData").GetComponent<LevelData>().killCount}");
             UnityEngine.SceneManagement.SceneManager.LoadScene("WinScene", LoadSceneMode.Single);
         }
         else if (isWin)
         {
-            SceneManager.LoadScene("WinScene 1");
             GameObject.Find("LevelData").GetComponent<LevelData>().isWin = true;
             GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount;
+            Debug.Log(
+                $"Mother Win {GameObject.Find("LevelData").GetComponent<LevelData>().isWin}, kill {GameObject.Find("LevelData").GetComponent<LevelData>().killCount}");
             SceneManager.LoadScene("WinScene");
         }
             

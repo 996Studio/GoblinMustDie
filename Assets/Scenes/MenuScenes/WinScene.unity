@@ -343,9 +343,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2114654182}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 2114654185}
+        m_TargetAssemblyTypeName: GameOverScene, Assembly-CSharp
+        m_MethodName: GotoMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

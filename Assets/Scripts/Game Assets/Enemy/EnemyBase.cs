@@ -105,7 +105,7 @@ public class EnemyBase : MonoBehaviour
     {
         isDead = true;
         agent.isStopped = true;
-        
+        MotherBase.Instance.KillCount++;
         AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
         
         Debug.Log(MotherBase.Instance.killCount);
