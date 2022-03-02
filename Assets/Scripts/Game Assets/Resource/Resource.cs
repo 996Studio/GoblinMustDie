@@ -39,10 +39,10 @@ public class Resource : MonoBehaviour
     }
     public virtual void OnMouseDown()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        /*if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
-        }
+        }*/
         
         Debug.Log("Clicked");
         CollectResource(resourceType, ResourceAmount);
@@ -50,8 +50,9 @@ public class Resource : MonoBehaviour
     
     public void CollectResource(ResourceType type, int amount)
     {
+        
         Debug.Log($"Collect {type} {amount}");
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
         switch (type)
         {
             case ResourceType.WOOD:
@@ -63,11 +64,11 @@ public class Resource : MonoBehaviour
             default:
                 break;
         }
+
+        tower.bResourceIsUp = false;
         
         HUDManager.instance.UpdateResourceText(type);
         AudioManager.instance.Play(SoundType.SFX, "Ding");
-
-        tower.bResourceIsUp = false;
     }
     
     public virtual void OnMouseEnter()
