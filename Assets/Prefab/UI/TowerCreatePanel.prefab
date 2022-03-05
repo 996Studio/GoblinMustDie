@@ -1289,6 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listPanel: {fileID: 4597771709589500903}
   selectNode: {fileID: 0}
+  lastNode: {fileID: 0}
 --- !u!1 &4597771710497719349
 GameObject:
   m_ObjectHideFlags: 0

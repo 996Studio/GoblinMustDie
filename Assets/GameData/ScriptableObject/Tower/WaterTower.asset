@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a17b3088c839944f97bb3a7f3ced4f4, type: 3}
   m_Name: WaterTower
   m_EditorClassIdentifier: 
-  towerPrefab: []
+  towerPrefab:
+  - {fileID: 5194220405221674176, guid: 98eb09d895a519541896c2e34d42b032, type: 3}
+  - {fileID: 5194220405221674176, guid: c7e983fe120947649848ca4a6fd5e0b8, type: 3}
+  - {fileID: 5194220405221674176, guid: 0cc0cc8226e8eb94ea86e27f597e9a4f, type: 3}
   towerBuildOffset: {x: 0, y: 0.5, z: 0}
   coinCost: 100000000000000000000000
   woodCost: 000000000c00000018000000

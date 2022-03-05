@@ -45,6 +45,7 @@ public class Fireball : Bullet
             Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRange);
             foreach (Collider nearbyEnemy in colliders)
             {
+                //Debug.Log(nearbyEnemy);
                 EnemyBase tempEnemy = nearbyEnemy.GetComponent<EnemyBase>();
                 if (tempEnemy != null)
                 {

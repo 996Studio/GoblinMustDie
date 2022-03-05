@@ -27,7 +27,7 @@ public class ArcherTower : AttackTower
         if (fireCounter <= 0)
         {
             ShootBullet();
-            fireCounter = 1f / fireRate;
+            fireCounter = fireInterval;
         }
         fireCounter -= Time.deltaTime;
     }

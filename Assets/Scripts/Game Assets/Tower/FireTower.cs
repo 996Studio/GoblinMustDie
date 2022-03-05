@@ -25,7 +25,7 @@ public class FireTower : AttackTower
         if (fireCounter <= 0)
         {
             ShootBullet();
-            fireCounter = 1f / fireRate;
+            fireCounter = fireInterval;
         }
         fireCounter -= Time.deltaTime;
     }

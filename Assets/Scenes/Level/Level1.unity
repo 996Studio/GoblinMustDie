@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 129261800}
   - component: {fileID: 129261799}
   - component: {fileID: 129261802}
+  - component: {fileID: 129261804}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -629,13 +630,46 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129261798}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 11.2, z: -15}
+  m_LocalPosition: {x: 33.7, y: 11.2, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!114 &129261804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129261798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &131352242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1637,7 +1671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxWave: 3
-  enemyNumPerWave: 5
+  enemyNumPerWave: 1
   enemySpawnList:
   - {fileID: 5263257154274970367, guid: c481bd50533aa384d868a098fe05b7c1, type: 3}
   - {fileID: 6584788868843224280, guid: 262ff4262d91adc4a93452682da4ffec, type: 3}
@@ -6892,6 +6926,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 199378276263522858, guid: b210506fc2a670d409f54f1b863ec558,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b210506fc2a670d409f54f1b863ec558, type: 3}
 --- !u!4 &1733225676 stripped
@@ -8440,7 +8479,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8884,6 +8923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118821996}
   - component: {fileID: 2118821995}
+  - component: {fileID: 2118821997}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -8968,6 +9008,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2118821997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118821994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!224 &1887773293609405644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9106,7 +9166,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -9242,7 +9303,8 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
   m_sharedMaterial: {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761,
     type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -9743,7 +9805,8 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
   m_sharedMaterial: {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761,
     type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -11111,7 +11174,8 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
   m_sharedMaterial: {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761,
     type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -12060,6 +12124,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7472012249190917125, guid: 44b529f6ea7b02245aafd709068b00bf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 7535331714330592614, guid: 44b529f6ea7b02245aafd709068b00bf,
         type: 3}
       propertyPath: m_Mesh

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.AI;
@@ -33,6 +34,13 @@ public class EnemyBase : MonoBehaviour
     
     protected bool isDead = false;
     protected bool canTakeDamage;
+    private float recycleMultiplier;
+
+    public float RecycleMultiplier
+    {
+        get => recycleMultiplier;
+        set => recycleMultiplier = value;
+    }
     
     public event Action<float> OnHealthChanged = delegate(float f) {  };
     
@@ -85,9 +93,10 @@ public class EnemyBase : MonoBehaviour
         if (canTakeDamage)
         {
             curHP -= dmg;
+            //Debug.Log($"{this.gameObject} {curHP}");
 
             ChangeHealth();
-        
+            
             if (curHP <= 0)
             {
                 Death();
@@ -157,5 +166,42 @@ public class EnemyBase : MonoBehaviour
     public void StopFreeze()
     {
         agent.speed = moveSpeed;
+    }
+
+    public List<EnemyBase> GetNearestEnemy(int number, float range)
+    {
+        List<EnemyBase> targetList = new List<EnemyBase>();
+        Collider[] colliders = Physics.OverlapSphere(transform.position, range);
+        List<EnemyBase> tempEnemyList = new List<EnemyBase>();
+        foreach (var collider in colliders)
+        {
+            EnemyBase tempEnemy = collider.GetComponent<EnemyBase>();
+            if (tempEnemy != this && tempEnemy != null)
+            {
+                Debug.Log(tempEnemy);
+                tempEnemyList.Add(tempEnemy);
+            }
+        }
+        
+        //Debug.Log($"unordered {tempEnemyList.Count}");
+        if (tempEnemyList.Count == 0)
+        {
+            return targetList;
+        }
+        
+        var orderedEnemies = tempEnemyList.OrderBy(e => Vector3.Magnitude(e.transform.position - transform.position))
+            .ToList();
+        //Debug.Log($"ordered {orderedEnemies.Count()}");
+
+        foreach (var nearbyEnemy in orderedEnemies)
+        {
+            targetList.Add(nearbyEnemy);
+            if (targetList.Count >= number)
+            {
+                return targetList;
+            }
+        }
+        
+        return targetList;
     }
 }

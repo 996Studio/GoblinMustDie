@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a17b3088c839944f97bb3a7f3ced4f4, type: 3}
+  m_Name: RecyclingTower
+  m_EditorClassIdentifier: 
+  towerPrefab:
+  - {fileID: 9213330367963396172, guid: 184bf043a842d0848aaac5d0e71b4886, type: 3}
+  - {fileID: 9213330367963396172, guid: 9885ce0484f3c8b4785c2aa24eba82c2, type: 3}
+  - {fileID: 9213330367963396172, guid: c2246d16acc73f749ac658ff4a10d872, type: 3}
+  towerBuildOffset: {x: 0, y: 0.5, z: 0}
+  coinCost: 080000001000000018000000
+  woodCost: 060000000c00000018000000
+  rockCost: 060000000c00000018000000
+  coinGet: 04000000080000000c000000
+  woodGet: 03000000060000000c000000
+  rockGet: 03000000060000000c000000
+  constructionTime:
+  - 1
+  upgradeTime:
+  - 5
+  bulletPrefab: {fileID: 0}
+  attackInterval: []
+  attackRange: []
+  attackValue: 

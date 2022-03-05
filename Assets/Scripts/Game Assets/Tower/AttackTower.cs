@@ -9,7 +9,7 @@ public class AttackTower : BaseTower
     protected float attackRange = 10.0f;
     protected int attack;
     protected float defence;
-    protected float fireRate = 1.0f;
+    protected float fireInterval = 1.0f;
     protected float turnSpeed = 10.0f;
     [SerializeField] protected GameObject bulletPrefab;
     [SerializeField] protected Transform fireLocation;
@@ -105,7 +105,7 @@ public class AttackTower : BaseTower
         //Debug.Log(level);
         attack = towerData.AttackValue[level - 1];
         attackRange = towerData.AttackRange[level - 1];
-        fireRate = towerData.AttackInterval[level - 1];
+        fireInterval = towerData.AttackInterval[level - 1];
         //Debug.Log($"{attack} {attackRange} {fireRate}");
     }
 }
