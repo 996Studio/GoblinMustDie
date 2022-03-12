@@ -8,6 +8,7 @@ public class CreateTowerUI : MonoBehaviour
 {
     
     public static CreateTowerUI instance;
+    public Animator anim;
     
     public GameObject listPanel;
     public Node selectNode;
@@ -31,6 +32,7 @@ public class CreateTowerUI : MonoBehaviour
     void Start()
     {
         listPanel.SetActive(false);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class CreateTowerUI : MonoBehaviour
         {
             CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
         }
-
+        anim.SetBool("onShowPanel", true);
     }
 
     public void hidePanel()
@@ -83,7 +85,8 @@ public class CreateTowerUI : MonoBehaviour
         CreateTowerUI.instance.selectNode.isSelect = false;
         CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
         CreateTowerUI.instance.selectNode = null;
-        listPanel.SetActive(false);
+        anim.SetBool("onShowPanel", false);
+        //listPanel.SetActive(false);
     }
     
     public void upgradeTower()

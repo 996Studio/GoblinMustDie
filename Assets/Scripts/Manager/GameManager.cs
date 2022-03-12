@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public PauseMenu PauseMenu;
     private ResourceManager resourceManager;
 
+    [SerializeField]
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0.0f;
         PauseMenu.ShowPauseMenu();
+        anim.SetBool("onShowPause", true);
     }
 
     public void UnpauseGame()
@@ -32,5 +36,6 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1.0f;
         PauseMenu.DestroyPauseMenu();
+        anim.SetBool("onShowPause", false);
     }
 }
