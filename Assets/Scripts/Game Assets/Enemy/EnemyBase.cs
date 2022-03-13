@@ -30,6 +30,9 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] 
     private Image HPBarForeground;
 
+    [SerializeField] 
+    private GameObject motherbase;
+    
     private float updateSpeedSec = 0.3f;
     
     protected bool isDead = false;
@@ -110,14 +113,13 @@ public class EnemyBase : MonoBehaviour
         OnHealthChanged(curHealthPct);
     }
 
-    public void Death()
+    public virtual void Death()
     {
         isDead = true;
         agent.isStopped = true;
         MotherBase.Instance.KillCount++;
         AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
         
-        Debug.Log(MotherBase.Instance.killCount);
         Destroy(this.gameObject);
     }
     
