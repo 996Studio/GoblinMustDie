@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public List<GameObject> spawnedEnemies;
 
+    public Animator pauseAnim;
+
     public int CurHp
     {
         get => curHP;
@@ -99,6 +101,7 @@ public class GameManager : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0.0f;
         PauseMenu.ShowPauseMenu();
+        pauseAnim.SetBool("onShowPause", true);
     }
 
     public void UnpauseGame()
@@ -106,6 +109,7 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1.0f;
         PauseMenu.DestroyPauseMenu();
+        pauseAnim.SetBool("onShowPause", false);
     }
     
     public void TakeDamage(int dmg)
