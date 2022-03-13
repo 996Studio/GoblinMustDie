@@ -1,12 +1,13 @@
-using System.Collections;
+using System.Collections; 
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Troll : EnemyBase,IHeal
 {
-    [SerializeField]
     private double healFactor;
-    
+
+    [SerializeField]
+    private GameObject goblinPre;
     public override void InitInfo()
     {
         base.InitInfo();
@@ -14,7 +15,7 @@ public class Troll : EnemyBase,IHeal
         maxHP = 200;
         curHP = 200;
         atk = 1;
-        moveSpeed = 1.0f;
+        moveSpeed = 0.5f;
         
         agent.speed = moveSpeed;
         agent.angularSpeed = 120f;
@@ -26,12 +27,21 @@ public class Troll : EnemyBase,IHeal
     protected override void Update()
     {
         base.Update();
+        Debug.Log("troll health: " + curHP);
     }
 
     public override void Death()
     {
+        Debug.Log("Troll death");
+        isDead = true;
+        agent.isStopped = true;
         
-        base.Death();
+        AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
+        
+        Instantiate(goblinPre, transform.position, Quaternion.identity, transform);
+        Instantiate(goblinPre, transform.position, Quaternion.identity, transform);
+        
+        Destroy(this.gameObject);
     }
 
     public void heal()

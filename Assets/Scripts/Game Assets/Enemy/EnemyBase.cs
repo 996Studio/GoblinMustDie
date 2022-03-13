@@ -65,7 +65,7 @@ public class EnemyBase : MonoBehaviour
     
     void Start()
     {
-        agent.SetDestination(motherbase.transform.position);
+        agent.SetDestination(MotherBase.Instance.transform.position);
     }
     
     protected virtual void Update()

@@ -2541,8 +2541,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawnerSOs:
   - {fileID: 11400000, guid: ba886372cff6be64bbfbc5adc6144ce6, type: 2}
-  - {fileID: 11400000, guid: b03c782dabe8dbe4b952a7bb5f437b6d, type: 2}
-  - {fileID: 11400000, guid: 03a83376c9986414889af47db6f7aa4e, type: 2}
   waveInterval: 3
 --- !u!1001 &529106884
 PrefabInstance:
@@ -4165,6 +4163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1373062000}
+  spawnedEnemies: []
 --- !u!1 &814039378
 GameObject:
   m_ObjectHideFlags: 0

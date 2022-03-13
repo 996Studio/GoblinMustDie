@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     private EnemySpawnerSO [] enemySpawnerSOs;
 
     [SerializeField] 
-    private float waveInterval = 3;
+    private float waveInterval = 5;
 
     private float waveIntervalCounter;
     
@@ -34,8 +34,7 @@ public class EnemySpawner : MonoBehaviour
         if (waveIntervalCounter <= 0)
         {
             spawnCounter -= Time.deltaTime;
-            Debug.Log("spawn counter: " + spawnCounter);
-            
+
             if (spawnCounter <= 0 && spawnNum < enemySpawnerSOs[currentWave].spawnAmount)
             {
                 GameObject tempGo = Instantiate(enemySpawnerSOs[currentWave].enemy, transform.position, Quaternion.identity, transform);

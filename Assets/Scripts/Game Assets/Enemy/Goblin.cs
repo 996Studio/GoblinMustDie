@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Goblin : EnemyBase,IHeal
 {
-    [SerializeField]
     private double healFactor;
     
     public override void InitInfo()

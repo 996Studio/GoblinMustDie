@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MotherBase : MonoBehaviour
 {
+    public static MotherBase Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
