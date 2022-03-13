@@ -61,24 +61,22 @@ public class EnemyBase : MonoBehaviour
         animator = GetComponent<Animator>();
 
         canTakeDamage = true;
-        
+
         //delegate for changing health
         OnHealthChanged += HandleHealthChange;
         
         HPBarForeground.fillAmount = 0.5f;
+        agent.SetDestination(MotherBase.Instance.transform.position);
     }
     
     protected void Start()
     {
-        agent.SetDestination(MotherBase.Instance.transform.position);
         InitInfo();
     }
     
     protected virtual void Update()
     {
         FreezeTimer();
-        
-        Debug.Log("Cur HP" + curHP);
     }
     
     public virtual void InitInfo()
