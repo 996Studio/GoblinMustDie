@@ -14,6 +14,7 @@ public class Goblin : EnemyBase,IHeal
         curHP = 100;
         atk = 1;
         moveSpeed = 2.5f;
+        coinValue = 200;
         
         agent.speed = moveSpeed;
         agent.angularSpeed = 120f;
@@ -34,7 +35,6 @@ public class Goblin : EnemyBase,IHeal
             curHP += maxHP * 0.2f;
             
             ChangeHealth();
-            Debug.Log("Healed:" + maxHP * 0.2);
         }
     }
 }

@@ -16,6 +16,7 @@ public class Troll : EnemyBase,IHeal
         curHP = 200;
         atk = 1;
         moveSpeed = 0.5f;
+        coinValue = 500;
         
         agent.speed = moveSpeed;
         agent.angularSpeed = 120f;

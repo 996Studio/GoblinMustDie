@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private int killCount;
-    
+
     private int curHP;
     private int maxHP;
 
@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour
     {
         get => isWin;
         set => isWin = value;
+    }
+    
+    public int KillCount
+    {
+        get => killCount;
+        set => killCount = value;
     }
     
     public bool IsSpawnEnd

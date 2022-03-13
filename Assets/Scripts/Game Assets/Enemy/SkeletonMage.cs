@@ -24,6 +24,7 @@ public class SkeletonMage : EnemyBase
         curHP = 60;
         atk = 1;
         moveSpeed = 3.5f;
+        coinValue = 350;
         
         agent.speed = moveSpeed;
         agent.angularSpeed = 120f;
