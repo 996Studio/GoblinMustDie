@@ -60,7 +60,5 @@ public class EnemySpawner : MonoBehaviour
                 isSpawnEnd = true;
             }
         }
-        
-        Debug.Log("isSpawnEnd: " + isSpawnEnd);
     }
 }

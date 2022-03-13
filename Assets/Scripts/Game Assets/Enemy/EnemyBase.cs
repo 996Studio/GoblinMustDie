@@ -14,25 +14,20 @@ public class EnemyBase : MonoBehaviour
     
     [SerializeField]
     protected NavMeshAgent agent;
-
-    [SerializeField]
+    
     protected float maxHP;
     
-    [SerializeField]
     protected float curHP;
     
-    [SerializeField]
     protected int atk;
-
-    [SerializeField]
+    
     protected float moveSpeed;
 
+    protected int coinValue;
+    
     [SerializeField] 
     private Image HPBarForeground;
 
-    [SerializeField] 
-    private GameObject motherbase;
-    
     private float updateSpeedSec = 0.3f;
     
     protected bool isDead = false;
@@ -117,8 +112,11 @@ public class EnemyBase : MonoBehaviour
     {
         isDead = true;
         agent.isStopped = true;
-        MotherBase.Instance.KillCount++;
         AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
+
+        GameManager.Instance.KillCount++;
+        
+        ResourceManager.Instance().ChangeCoin(coinValue);
         
         Destroy(this.gameObject);
     }
