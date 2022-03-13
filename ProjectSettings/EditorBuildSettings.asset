@@ -8,24 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScenes/MenuScene.unity
     guid: 75b8699b574dfe4409ea4f608c6914e9
-  - enabled: 1
-    path: Assets/Scenes/MenuScenes/IntroductionScene.unity
-    guid: b6d7c16b79ed4064fa88f523410b9103
-  - enabled: 1
-    path: Assets/Scenes/MenuScenes/OptionsScene.unity
-    guid: 4205be5470afc9b42a154be5a842095e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level/Level1.unity
     guid: 69946b94a5f2a6f40ad7240f80fd619a
   - enabled: 1
     path: Assets/Scenes/MenuScenes/WinScene.unity
     guid: 3fc85e40a07b9e545b030631586f2a7b
-  - enabled: 1
-    path: Assets/Scenes/MenuScenes/LoseScene.unity
-    guid: 2cf3654d0b0c4c84094ee2b801866ab0
-  - enabled: 1
-    path: Assets/Scenes/MenuScenes/WinScene 1.unity
-    guid: 8058b58e2aa6e5843b21d24680680796
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 13cabedfdf9529a43884a40c9b404f62,
       type: 2}
