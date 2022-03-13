@@ -3,7 +3,12 @@ guid: 97302db1f505e384385aa87da099b27d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - agent: {instanceID: 0}
+  - HPBarForeground: {instanceID: 0}
+  - motherbase: {fileID: 8818595453988918886, guid: 240dd85e2e3c66149913d5548c028aed,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

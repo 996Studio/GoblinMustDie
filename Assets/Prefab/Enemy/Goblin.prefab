@@ -630,6 +630,8 @@ MonoBehaviour:
   atk: 1
   moveSpeed: 0
   HPBarForeground: {fileID: 6364757966297900229}
+  motherbase: {fileID: 8818595453988918886, guid: 240dd85e2e3c66149913d5548c028aed,
+    type: 3}
   healFactor: 0
 --- !u!1 &9032661635374320617
 GameObject:

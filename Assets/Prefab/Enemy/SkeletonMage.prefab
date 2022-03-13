@@ -143,6 +143,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95554572239054564, guid: 263e6481d832ad54f81358597ed691e7,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b472999391c3b674e816ea5f9608efe7, type: 2}
     m_RemovedComponents:
     - {fileID: 114122170074856910, guid: 263e6481d832ad54f81358597ed691e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 263e6481d832ad54f81358597ed691e7, type: 3}
@@ -177,6 +182,8 @@ MonoBehaviour:
   atk: 0
   moveSpeed: 0
   HPBarForeground: {fileID: 1200980116697538139}
+  motherbase: {fileID: 8818595453988918886, guid: 240dd85e2e3c66149913d5548c028aed,
+    type: 3}
 --- !u!195 &9210455229876994205
 NavMeshAgent:
   m_ObjectHideFlags: 0

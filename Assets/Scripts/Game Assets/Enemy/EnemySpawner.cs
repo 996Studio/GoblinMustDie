@@ -19,11 +19,12 @@ public class EnemySpawner : MonoBehaviour
     float spawnInverval = 0;
     float spawnCounter = 0;
 
+    private bool isSpawnEnd = false;
+    
     private void Start()
     {
         waveIntervalCounter = waveInterval;
-        spawnInverval = enemySpawnerSOs[currentWave].spawnInterval;
-        spawnCounter = spawnInverval;
+        spawnCounter = enemySpawnerSOs[currentWave].spawnInterval;
     }
 
     private void Update()
@@ -33,10 +34,12 @@ public class EnemySpawner : MonoBehaviour
         if (waveIntervalCounter <= 0)
         {
             spawnCounter -= Time.deltaTime;
+            Debug.Log("spawn counter: " + spawnCounter);
             
             if (spawnCounter <= 0 && spawnNum < enemySpawnerSOs[currentWave].spawnAmount)
             {
-                Instantiate(enemySpawnerSOs[currentWave].enemy, transform.position, Quaternion.identity, transform);
+                GameObject tempGo = Instantiate(enemySpawnerSOs[currentWave].enemy, transform.position, Quaternion.identity, transform);
+                GameManager.Instance.spawnedEnemies.Add(tempGo);
                 spawnNum++;
 
                 spawnCounter = spawnInverval;
@@ -52,11 +55,13 @@ public class EnemySpawner : MonoBehaviour
 
                 waveIntervalCounter = waveInterval;
             }
+
+            if (spawnNum >= enemySpawnerSOs[currentWave].spawnAmount && currentWave + 1 >= enemySpawnerSOs.Length)
+            {
+                isSpawnEnd = true;
+            }
         }
         
-        
-        
-        
-        
+        Debug.Log("isSpawnEnd: " + isSpawnEnd);
     }
 }
