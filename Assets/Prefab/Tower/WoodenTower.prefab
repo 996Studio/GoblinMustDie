@@ -279,15 +279,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739eb141081e3d4a965ee9f5b1e985d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcetoSpawn: 0
-  resourceSpawnPoint: {fileID: 0}
-  woodPrefab: {fileID: 751268157832838996, guid: 8360e660a5f8bb04dafc04c87be91e6d,
-    type: 3}
+  resourcetoSpawn: 2
+  woodPrefab: {fileID: 2572413215964224612}
   crytalPrefab: {fileID: 0}
   timeToSpawn: 2
   bResourceIsUp: 0
   initialSpawnTime: 1
-  resourceOffset: {x: 0, y: 2, z: 0}
 --- !u!1 &8010042036392212297
 GameObject:
   m_ObjectHideFlags: 0
