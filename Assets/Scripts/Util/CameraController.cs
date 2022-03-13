@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         
-        #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL
+        #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL || UNITY_ANDROID
         //Move camera
         if (Input.mousePosition.y >= Screen.height - panBorderThickness)
         {
@@ -81,7 +81,7 @@ public class CameraController : MonoBehaviour
         }
         #endif
 
-        #if UNITY_IOS || UNITY_ANDROID
+        #if UNITY_IOS 
         if (Input.GetMouseButtonDown(0))
         {
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
