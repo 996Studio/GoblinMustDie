@@ -31,7 +31,7 @@ public class CreateTowerUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        listPanel.SetActive(false);
+        //listPanel.SetActive(false);
         anim = GetComponent<Animator>();
     }
 
@@ -64,7 +64,7 @@ public class CreateTowerUI : MonoBehaviour
 
     public void showPanel()
     {
-        listPanel.SetActive(true);
+        //listPanel.SetActive(true);
         if (CreateTowerUI.instance.selectNode == null)
         {
             
@@ -123,6 +123,7 @@ public class CreateTowerUI : MonoBehaviour
     {
         TowerType towerType = (TowerType)type;
         Debug.Log($"Build {towerType}");
+        print(towerType + " " + CreateTowerUI.instance.selectNode);
         NodeManager.instance.BuildTower(towerType, CreateTowerUI.instance.selectNode);
         AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
         CreateTowerUI.instance.hidePanel();
