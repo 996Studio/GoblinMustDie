@@ -1714,7 +1714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488944127}
-  - component: {fileID: 488944126}
+  - component: {fileID: 488944128}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -1722,18 +1722,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &488944126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488944125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fe6d3a94b0b0dd47b8cb2af7693c508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &488944127
 Transform:
   m_ObjectHideFlags: 0
@@ -1751,6 +1739,23 @@ Transform:
   m_Father: {fileID: 2063082285}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &488944128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488944125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76940c22b8ad04348ae6a77b7120fca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawnerSOs:
+  - {fileID: 11400000, guid: ba886372cff6be64bbfbc5adc6144ce6, type: 2}
+  - {fileID: 11400000, guid: b03c782dabe8dbe4b952a7bb5f437b6d, type: 2}
+  - {fileID: 11400000, guid: 03a83376c9986414889af47db6f7aa4e, type: 2}
+  waveInterval: 5
 --- !u!1001 &490533419
 PrefabInstance:
   m_ObjectHideFlags: 0

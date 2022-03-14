@@ -80,8 +80,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Spawn num: " + spawnNum);
-        
         if (isSpawnEnd & spawnNum == 0 && !isDead)
         {
             isWin = true;

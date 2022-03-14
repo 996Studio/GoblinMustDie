@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e3a9b0d0b871346a06de722463b3e8, type: 3}
   m_Name: TrollWave
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2411734417244877039, guid: a9ca44415ad13d242bfb03ce44d3357d, type: 3}
+  enemy: {fileID: 1811249188721339397, guid: dbf7464de1707a24eb80fe1c0c2744a4, type: 3}
   spawnAmount: 2
   spawnInterval: 5
