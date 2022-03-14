@@ -54,7 +54,6 @@ public class ThunderTower : AttackTower
             Vector3 tempDir = nearbyEnemy.transform.position - target.position;
             Instantiate(bulletPrefab, nearbyEnemy.transform.position, Quaternion.LookRotation(dir));
             nearbyEnemy.TakeDamage(attack);
-            //Debug.Log($"收衣服拉{nearbyEnemy}");
         }
     }
 }
