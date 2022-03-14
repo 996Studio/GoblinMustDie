@@ -682,7 +682,7 @@ MonoBehaviour:
   scrollSpeed: 5
   minYPos: 10
   maxYPos: 100
-  minPos: {x: 0, y: -15}
+  minPos: {x: 0, y: -18}
   maxPos: {x: 35, y: -10}
   zoomOutMin: 0
   zoomOutMax: 0
@@ -3112,7 +3112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1373062000}
-  spawnedEnemies: []
   pauseAnim: {fileID: 106813172}
 --- !u!114 &812929976
 MonoBehaviour:
