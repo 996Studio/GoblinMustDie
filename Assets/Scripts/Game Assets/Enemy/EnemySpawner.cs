@@ -18,8 +18,6 @@ public class EnemySpawner : MonoBehaviour
     int spawnNum = 0;    
     float spawnInverval = 0;
     float spawnCounter = 0;
-
-    private bool isSpawnEnd = false;
     
     private void Start()
     {
@@ -38,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
             if (spawnCounter <= 0 && spawnNum < enemySpawnerSOs[currentWave].spawnAmount)
             {
                 GameObject tempGo = Instantiate(enemySpawnerSOs[currentWave].enemy, transform.position, Quaternion.identity, transform);
-                GameManager.Instance.spawnedEnemies.Add(tempGo);
+                GameManager.Instance.SpawnNum++;
                 spawnNum++;
 
                 spawnCounter = spawnInverval;
@@ -57,7 +55,7 @@ public class EnemySpawner : MonoBehaviour
 
             if (spawnNum >= enemySpawnerSOs[currentWave].spawnAmount && currentWave + 1 >= enemySpawnerSOs.Length)
             {
-                isSpawnEnd = true;
+                GameManager.Instance.IsSpawnEnd = true;
             }
         }
     }

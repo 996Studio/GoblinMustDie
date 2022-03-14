@@ -15,7 +15,7 @@ public class Troll : EnemyBase,IHeal
         maxHP = 200;
         curHP = 200;
         atk = 1;
-        moveSpeed = 0.5f;
+        moveSpeed = 0.8f;
         coinValue = 500;
         
         agent.speed = moveSpeed;
@@ -28,21 +28,22 @@ public class Troll : EnemyBase,IHeal
     protected override void Update()
     {
         base.Update();
-        Debug.Log("troll health: " + curHP);
     }
 
     public override void Death()
     {
-        Debug.Log("Troll death");
-        isDead = true;
-        agent.isStopped = true;
+        Instantiate(goblinPre, transform.position, Quaternion.identity);
+        GameManager.Instance.SpawnNum++;
         
-        AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
+        Instantiate(goblinPre, transform.position, Quaternion.identity);
+        GameManager.Instance.SpawnNum++;
         
-        Instantiate(goblinPre, transform.position, Quaternion.identity, transform);
-        Instantiate(goblinPre, transform.position, Quaternion.identity, transform);
-        
-        Destroy(this.gameObject);
+        Invoke("DeathEvent", 0.5f);
+    }
+
+    private void DeathEvent()
+    {
+        base.Death();
     }
 
     public void heal()

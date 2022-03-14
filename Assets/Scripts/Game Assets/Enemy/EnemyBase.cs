@@ -61,26 +61,24 @@ public class EnemyBase : MonoBehaviour
         animator = GetComponent<Animator>();
 
         canTakeDamage = true;
+
         //delegate for changing health
         OnHealthChanged += HandleHealthChange;
+        
         HPBarForeground.fillAmount = 0.5f;
+        agent.SetDestination(MotherBase.Instance.transform.position);
     }
     
-    void Start()
+    protected void Start()
     {
-        agent.SetDestination(MotherBase.Instance.transform.position);
+        InitInfo();
     }
     
     protected virtual void Update()
     {
         FreezeTimer();
     }
-
-    protected void LateUpdate()
-    {
-        
-    }
-
+    
     public virtual void InitInfo()
     {
         atk = 1;
@@ -91,8 +89,7 @@ public class EnemyBase : MonoBehaviour
         if (canTakeDamage)
         {
             curHP -= dmg;
-            //Debug.Log($"{this.gameObject} {curHP}");
-
+            
             ChangeHealth();
             
             if (curHP <= 0)
@@ -115,6 +112,7 @@ public class EnemyBase : MonoBehaviour
         AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
 
         GameManager.Instance.KillCount++;
+        GameManager.Instance.SpawnNum--;
         
         ResourceManager.Instance().ChangeCoin(coinValue);
         

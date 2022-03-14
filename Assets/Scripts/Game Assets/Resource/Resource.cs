@@ -51,7 +51,6 @@ public class Resource : MonoBehaviour
     public void CollectResource(ResourceType type, int amount)
     {
         Debug.Log($"Collect {type} {amount}");
-        this.gameObject.SetActive(false);
         switch (type)
         {
             case ResourceType.WOOD:
@@ -63,11 +62,12 @@ public class Resource : MonoBehaviour
             default:
                 break;
         }
+        tower.bResourceIsUp = false;
         
         HUDManager.instance.UpdateResourceText(type);
         AudioManager.instance.Play(SoundType.SFX, "Ding");
 
-        tower.bResourceIsUp = false;
+        gameObject.SetActive(false);
     }
     
     public virtual void OnMouseEnter()

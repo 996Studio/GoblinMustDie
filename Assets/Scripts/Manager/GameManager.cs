@@ -12,16 +12,18 @@ public class GameManager : MonoBehaviour
 
     private bool isDead = false;
     private bool isWin = false;
-
-    private bool isSpawnEnd;
     
     private bool isPaused;
     
     public PauseMenu PauseMenu;
     private ResourceManager resourceManager;
-    
+
     public static GameManager Instance;
-    public List<GameObject> spawnedEnemies;
+    
+    private bool isSpawnEnd;
+    private int spawnNum;
+    
+    //public List<GameObject> spawnedEnemies;
 
     public Animator pauseAnim;
 
@@ -55,13 +57,19 @@ public class GameManager : MonoBehaviour
         set => isSpawnEnd = value;
     }
     
+    public int SpawnNum
+    {
+        get => spawnNum;
+        set => spawnNum = value;
+    }
+    
     void Awake()
     {
         Instance = this;
         curHP = 10;
         maxHP = 10;
         isSpawnEnd = false;
-        spawnedEnemies = new List<GameObject>();
+        spawnNum = 0;
     }
 
     private void Start()
@@ -72,26 +80,26 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isSpawnEnd && !isDead)
-        { 
-            if (spawnedEnemies.Count == 0)
-                isWin = true;
+        Debug.Log("Spawn num: " + spawnNum);
+        
+        if (isSpawnEnd & spawnNum == 0 && !isDead)
+        {
+            isWin = true;
         }
 
         if (isDead)
         {
-            SceneManager.LoadScene("WinScene 1");
             GameObject.Find("LevelData").GetComponent<LevelData>().isWin = false;
-            GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount;
+            GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount * 10000;
             Debug.Log(
                 $"Mother Win {GameObject.Find("LevelData").GetComponent<LevelData>().isWin}, kill {GameObject.Find("LevelData").GetComponent<LevelData>().killCount}");
             UnityEngine.SceneManagement.SceneManager.LoadScene("WinScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("WinScene");
         }
         else if (isWin)
         {
-            SceneManager.LoadScene("WinScene 1");
             GameObject.Find("LevelData").GetComponent<LevelData>().isWin = true;
-            GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount;
+            GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount * 10000;
             SceneManager.LoadScene("WinScene");
         }
     }

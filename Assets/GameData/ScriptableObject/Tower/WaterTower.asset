@@ -30,6 +30,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   attackInterval:
   - 1.5
+  - 1.5
+  - 1.5
   attackRange:
   - 12
-  attackValue: 0d000000
+  - 12
+  - 12
+  attackValue: 0d0000001100000015000000
