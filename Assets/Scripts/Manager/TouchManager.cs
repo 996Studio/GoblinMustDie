@@ -32,17 +32,30 @@ public class TouchManager : MonoBehaviour
                 Ray mouseRay = GenerateMouseRay(Input.GetTouch(0).position);
                 RaycastHit hit;
 
-                if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
+                if (EventSystem.current.IsPointerOverGameObject())    // is the touch on the GUI
                 {
-                    touchedObject = hit.transform.gameObject;
-
-                    if (touchedObject.CompareTag("Node"))
+                    // GUI Action
+                    print("Raycast on UI");
+                    return;
+                }
+                else
+                {
+                    print("Raycast on GameObject");
+                    if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
                     {
-                        touchedNode = touchedObject.GetComponent<Node>();
-                        CreateTowerUI.instance.showPanel();
-                        CreateTowerUI.instance.selectNode = touchedNode;
+                        print(hit.collider);
+                        touchedObject = hit.transform.gameObject;
+
+                        if (touchedObject.CompareTag("Node"))
+                        {
+                            touchedNode = touchedObject.GetComponent<Node>();
+                            CreateTowerUI.instance.selectNode = touchedNode;
+                            CreateTowerUI.instance.lastNode = touchedNode;
+                            CreateTowerUI.instance.showPanel();
+                        }
                     }
                 }
+                
             }
         }
     }

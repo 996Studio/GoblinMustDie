@@ -13,6 +13,9 @@ public class CreateTowerUI : MonoBehaviour
     public GameObject listPanel;
     public Node selectNode;
     public Node lastNode;
+
+    public Color originalColor;
+    public Color highlightColor;
     //private TowerType buttonEnums;
     //public enumForUI button;
     //[SerializeField] ButtonToTower BuildThisType;
@@ -67,13 +70,15 @@ public class CreateTowerUI : MonoBehaviour
         //listPanel.SetActive(true);
         if (CreateTowerUI.instance.selectNode == null)
         {
-            
+            print("Variable selectNode is NULL!");
         }
         else if (CreateTowerUI.instance.selectNode != null)
         {
-            CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
+            CreateTowerUI.instance.selectNode.rend.material.color = highlightColor;
+            //CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
+            anim.SetBool("onShowPanel", true);
         }
-        anim.SetBool("onShowPanel", true);
+        
     }
 
     public void hidePanel()
@@ -83,7 +88,8 @@ public class CreateTowerUI : MonoBehaviour
             return;
         }
         CreateTowerUI.instance.selectNode.isSelect = false;
-        CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
+        CreateTowerUI.instance.selectNode.rend.material.color = originalColor;
+        //CreateTowerUI.instance.selectNode.rend.material.color = CreateTowerUI.instance.selectNode.originColor;
         CreateTowerUI.instance.selectNode = null;
         anim.SetBool("onShowPanel", false);
         //listPanel.SetActive(false);
@@ -124,7 +130,17 @@ public class CreateTowerUI : MonoBehaviour
         TowerType towerType = (TowerType)type;
         Debug.Log($"Build {towerType}");
         print(towerType + " " + CreateTowerUI.instance.selectNode);
-        NodeManager.instance.BuildTower(towerType, CreateTowerUI.instance.selectNode);
+
+        /*   NEED FIX LATER: Raycast will still hit through UI, if a node exist behind UI button, it will build on that node instead.  */
+        // So how to only Raycasthit on UI?
+        if (CreateTowerUI.instance.selectNode != null)
+        {
+            NodeManager.instance.BuildTower(towerType, CreateTowerUI.instance.selectNode);
+        }
+        else
+        {
+            NodeManager.instance.BuildTower(towerType, CreateTowerUI.instance.lastNode);
+        }
         AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
         CreateTowerUI.instance.hidePanel();
     }

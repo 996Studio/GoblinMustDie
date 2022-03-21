@@ -47,14 +47,14 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CreateTowerUI.instance.selectNode == this)
-        {
-            rend.material.color = hoverColor;
-        }
-        else if (CreateTowerUI.instance.selectNode == this && !hover)
-        {
-            rend.material.color = originColor;
-        }
+        //if (CreateTowerUI.instance.selectNode == this)
+        //{
+        //    rend.material.color = hoverColor;
+        //}
+        //else if (CreateTowerUI.instance.selectNode == this && !hover)
+        //{
+        //    rend.material.color = originColor;
+        //}
     }
 
 
