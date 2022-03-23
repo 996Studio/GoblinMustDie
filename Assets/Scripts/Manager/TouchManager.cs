@@ -10,6 +10,20 @@ public class TouchManager : MonoBehaviour
 
     public Node touchedNode;
 
+    public static TouchManager instance;
+
+    public GameObject debugCube;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            print("Hello???");
+        }
+
+        instance = this;
+    }
+
     Ray GenerateMouseRay(Vector3 touchPos)
     {
         Vector3 mousePosFar = new Vector3(touchPos.x, touchPos.y, Camera.main.farClipPlane);
@@ -31,7 +45,6 @@ public class TouchManager : MonoBehaviour
             {
                 Ray mouseRay = GenerateMouseRay(Input.GetTouch(0).position);
                 RaycastHit hit;
-
                 if (EventSystem.current.IsPointerOverGameObject())    // is the touch on the GUI
                 {
                     // GUI Action
@@ -40,10 +53,25 @@ public class TouchManager : MonoBehaviour
                 }
                 else
                 {
-                    print("Raycast on GameObject");
+                    /*  Old Botton UI Panel  */
+                    //                     if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
+                    //                     {
+                    //                         print("Raycast on GameObject(collider): " + hit.collider); 
+                    //                         touchedObject = hit.transform.gameObject;
+                    // 
+                    //                         if (touchedObject.CompareTag("Node"))
+                    //                         {
+                    //                             touchedNode = touchedObject.GetComponent<Node>();
+                    //                             CreateTowerUI.instance.selectNode = touchedNode;
+                    //                             CreateTowerUI.instance.lastNode = touchedNode;
+                    //                             CreateTowerUI.instance.showPanel();
+                    //                         }
+                    //                     }
+
+                    // New Circle UI
                     if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
                     {
-                        print(hit.collider);
+                        print("Raycast on GameObject(collider): " + hit.collider);
                         touchedObject = hit.transform.gameObject;
 
                         if (touchedObject.CompareTag("Node"))
@@ -51,8 +79,17 @@ public class TouchManager : MonoBehaviour
                             touchedNode = touchedObject.GetComponent<Node>();
                             CreateTowerUI.instance.selectNode = touchedNode;
                             CreateTowerUI.instance.lastNode = touchedNode;
+
+                            FollowMenu.instance.SelectedNode = touchedNode;
+                            FollowMenu.instance.lastNode = touchedNode;
+
                             CreateTowerUI.instance.showPanel();
                         }
+                        else
+                        {
+                            FollowMenu.instance.HideMenu();
+                        }
+
                     }
                 }
                 
