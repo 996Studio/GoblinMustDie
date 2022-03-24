@@ -53,20 +53,6 @@ public class TouchManager : MonoBehaviour
                 }
                 else
                 {
-                    /*  Old Botton UI Panel  */
-                    //                     if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
-                    //                     {
-                    //                         print("Raycast on GameObject(collider): " + hit.collider); 
-                    //                         touchedObject = hit.transform.gameObject;
-                    // 
-                    //                         if (touchedObject.CompareTag("Node"))
-                    //                         {
-                    //                             touchedNode = touchedObject.GetComponent<Node>();
-                    //                             CreateTowerUI.instance.selectNode = touchedNode;
-                    //                             CreateTowerUI.instance.lastNode = touchedNode;
-                    //                             CreateTowerUI.instance.showPanel();
-                    //                         }
-                    //                     }
 
                     // New Circle UI
                     if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
@@ -89,7 +75,6 @@ public class TouchManager : MonoBehaviour
                         {
                             FollowMenu.instance.HideMenu();
                         }
-
                     }
                 }
                 
