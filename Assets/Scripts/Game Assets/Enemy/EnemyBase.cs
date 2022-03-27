@@ -34,6 +34,12 @@ public class EnemyBase : MonoBehaviour
     protected bool canTakeDamage;
     private float recycleMultiplier;
 
+    [Header("Hit Effect")] 
+    public ParticleSystem overloadeffect;
+    public ParticleSystem electricityeffect;
+    public ParticleSystem freezeeffect;
+    private HitEffect hitEffect;
+
     public float RecycleMultiplier
     {
         get => recycleMultiplier;
@@ -202,4 +208,50 @@ public class EnemyBase : MonoBehaviour
         
         return targetList;
     }
+
+    public void PlayHitEffect(HitEffect effect)
+    {
+        switch((int)effect) 
+        {
+            case 1:
+                electricityeffect.Play();
+                break;
+            case 2:
+                overloadeffect.Play();
+                break;
+            case 3:
+                freezeeffect.Play();
+                break;
+            default:
+                break;
+        }
+    }
+    
+    public void StopHitEffect(HitEffect effect)
+    {
+        switch((int)effect) 
+        {
+            case 1:
+                electricityeffect.Stop();
+                break;
+            case 2:
+                overloadeffect.Stop();
+                break;
+            case 3:
+                freezeeffect.Stop();
+                break;
+            default:
+                break;
+        }
+    }
+    
+ 
+}
+
+
+public enum HitEffect
+{
+    DIANJI = 1,
+    CHAOZI = 2,
+    BINGDONG = 3
 }

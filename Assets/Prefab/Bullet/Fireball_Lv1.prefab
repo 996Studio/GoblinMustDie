@@ -9713,7 +9713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   SecondsBeforeDestroy: 2
-  HitEffect: {fileID: 0}
+  HitEffect: {fileID: 1892078723244562, guid: 8b7c0261839280f44ba5d8756bbb8252, type: 3}
   explosionRange: 2
   explosionDamage: 10
 --- !u!1 &1756806983938988

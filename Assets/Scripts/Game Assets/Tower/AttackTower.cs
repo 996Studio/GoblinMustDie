@@ -17,6 +17,7 @@ public class AttackTower : BaseTower
     [SerializeField] protected Transform Rotator;
     
     [Header("AttackRange")] public GameObject AttackRangeCircle;
+    public ParticleSystem attackrange;
     public bool isToggled;
     
     protected float fireCounter;
@@ -125,4 +126,17 @@ public class AttackTower : BaseTower
             AttackRangeCircle.SetActive(false);
         }
     }
+
+    //call these function when selected node has a tower with attackrange
+    public void PlayParticleEffect()
+    {
+        attackrange.Play();
+    }
+
+    public void StopPlayParticleEffect()
+    {
+        attackrange.Stop();
+    }
 }
+
+
