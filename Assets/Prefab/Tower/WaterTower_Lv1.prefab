@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 4634686317222008843}
+  elementAmount: 20
+  elementPower: 3
 --- !u!1 &5194220405221674176
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +146,7 @@ MonoBehaviour:
   fireLocation: {fileID: 0}
   Rotator: {fileID: 0}
   AttackRangeCircle: {fileID: 9103542417621896425}
+  attackrange: {fileID: 0}
   isToggled: 0
   attackCollider: {fileID: 2771333731789129275}
   spreadTime: 2
