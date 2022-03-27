@@ -52,6 +52,8 @@ MonoBehaviour:
     type: 3}
   fireLocation: {fileID: 3529970074860755739}
   Rotator: {fileID: 5093381593355933027}
+  AttackRangeCircle: {fileID: 846985226598377700}
+  isToggled: 0
 --- !u!1 &289886231546967979
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +610,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d475bd702203d9d4080e6d5f4be525cb, type: 3}
+--- !u!1 &846985226598377700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8680514251434077626, guid: d475bd702203d9d4080e6d5f4be525cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8337984986000377182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &846985226598377701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8680514251434077627, guid: d475bd702203d9d4080e6d5f4be525cb,

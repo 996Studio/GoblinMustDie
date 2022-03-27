@@ -114,6 +114,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 189656, guid: f240e471dfdde4241ba3cbc850ffbf38, type: 3}
   fireLocation: {fileID: 6763593025288188631}
   Rotator: {fileID: 2330782348264706070}
+  AttackRangeCircle: {fileID: 8680514250260085779}
+  isToggled: 0
   chainNumber: 0
   chainRange: 0
 --- !u!1001 &1241928105
@@ -193,6 +195,12 @@ PrefabInstance:
 --- !u!4 &8680514250260085778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8680514251434077627, guid: d475bd702203d9d4080e6d5f4be525cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241928105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8680514250260085779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8680514251434077626, guid: d475bd702203d9d4080e6d5f4be525cb,
     type: 3}
   m_PrefabInstance: {fileID: 1241928105}
   m_PrefabAsset: {fileID: 0}
