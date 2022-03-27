@@ -11,7 +11,6 @@ public class ElementComponent : MonoBehaviour
     [SerializeField] private List<AttachedElement> elementList;
 
     private const float ELEMENT_DECREASE_CONSTANT = 1.0f;
-    private float decreasePara = 1.0f;
     private float electroChargedCD = 0.5f;
     private float electroChargePara = 2.0f;
     private float elementReactionCD = 0.2f;
@@ -47,7 +46,7 @@ public class ElementComponent : MonoBehaviour
             if(element.amount<=0.0f)
                 continue;
 
-            element.amount -= Time.deltaTime * element.decreaseSpeed * decreasePara;
+            element.amount -= Time.deltaTime * element.decreaseSpeed;
             if (element.element == ElementEnum.Frozen)
             {
                 //Decrease speed of frozen element increases by time
