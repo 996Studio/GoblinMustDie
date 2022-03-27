@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AttackTower : BaseTower
 {
+    
     [Header("Attributes")] 
     protected float attackRange = 10.0f;
     protected int attack;
@@ -14,10 +15,14 @@ public class AttackTower : BaseTower
     [SerializeField] protected GameObject bulletPrefab;
     [SerializeField] protected Transform fireLocation;
     [SerializeField] protected Transform Rotator;
-
+    
+    [Header("AttackRange")] public GameObject AttackRangeCircle;
+    public ParticleSystem attackrange;
+    public bool isToggled;
+    
     protected float fireCounter;
     protected Transform target;
-
+    
     public Transform Target
     {
         get { return target; }
@@ -26,14 +31,15 @@ public class AttackTower : BaseTower
 
     // Start is called before the first frame update
      protected  void Start()
-    {
+     {
+         isToggled = false;
         base.Start();
     }
 
     // Update is called once per frame
     protected void Update()
     {
-        
+        SetAttackRangeCircleVisibility();
     }
 
     protected void ShootBullet()
@@ -108,4 +114,29 @@ public class AttackTower : BaseTower
         fireInterval = towerData.AttackInterval[level - 1];
         //Debug.Log($"{attack} {attackRange} {fireRate}");
     }
+
+    public void SetAttackRangeCircleVisibility()
+    {
+        if (isToggled)
+        {
+            AttackRangeCircle.SetActive(true);
+        }
+        else
+        {
+            AttackRangeCircle.SetActive(false);
+        }
+    }
+
+    //call these function when selected node has a tower with attackrange
+    public void PlayParticleEffect()
+    {
+        attackrange.Play();
+    }
+
+    public void StopPlayParticleEffect()
+    {
+        attackrange.Stop();
+    }
 }
+
+

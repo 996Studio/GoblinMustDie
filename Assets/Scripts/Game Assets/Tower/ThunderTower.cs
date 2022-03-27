@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ThunderTower : AttackTower
 {
+    [Header("Thunder Tower Attributes")]
     public int chainNumber;
     public float chainRange;
 

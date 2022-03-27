@@ -3,34 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
-using Enum;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField]
     protected Animator animator;
+    
     [SerializeField]
     protected NavMeshAgent agent;
-    protected Rigidbody rigidbody;
     
     protected float maxHP;
+    
     protected float curHP;
+    
     protected int atk;
+    
     protected float moveSpeed;
+
     protected int coinValue;
     
     [SerializeField] 
     private Image HPBarForeground;
 
     private float updateSpeedSec = 0.3f;
+    
     protected bool isDead = false;
     protected bool canTakeDamage;
     private float recycleMultiplier;
-    protected ElementComponent elementComponent;
+
+    [Header("Hit Effect")] 
+    public ParticleSystem overloadeffect;
+    public ParticleSystem electricityeffect;
+    public ParticleSystem freezeeffect;
+    private HitEffect hitEffect;
 
     public float RecycleMultiplier
     {
@@ -57,7 +65,6 @@ public class EnemyBase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        rigidbody = GetComponent<Rigidbody>();
 
         canTakeDamage = true;
 
@@ -65,10 +72,7 @@ public class EnemyBase : MonoBehaviour
         OnHealthChanged += HandleHealthChange;
         
         HPBarForeground.fillAmount = 0.5f;
-        //agent.SetDestination(MotherBase.Instance.transform.position);
-
-        elementComponent = GetComponent<ElementComponent>();
-        //elementComponent.Owner = this;
+        agent.SetDestination(MotherBase.Instance.transform.position);
     }
     
     protected void Start()
@@ -79,28 +83,6 @@ public class EnemyBase : MonoBehaviour
     protected virtual void Update()
     {
         FreezeTimer();
-
-        //Test code
-        if (Keyboard.current.aKey.wasPressedThisFrame)
-        {
-            elementComponent.ElementAttack(ElementEnum.Fire, 1.0f, 1, 5);
-            //Debug.Log("Fire attack");
-        }
-        if (Keyboard.current.sKey.wasPressedThisFrame)
-        {
-            elementComponent.ElementAttack(ElementEnum.Water, 10.0f, 1, 5);
-            //Debug.Log("Water attack");
-        }
-        if (Keyboard.current.dKey.wasPressedThisFrame)
-        {
-            elementComponent.ElementAttack(ElementEnum.Ice, 1.0f, 1, 5);
-            //Debug.Log("Ice attack");
-        }
-        if (Keyboard.current.fKey.wasPressedThisFrame)
-        {
-            elementComponent.ElementAttack(ElementEnum.Thunder, 10.0f, 1, 5);
-            //Debug.Log("Thunder attack");
-        }
     }
     
     public virtual void InitInfo()
@@ -113,7 +95,6 @@ public class EnemyBase : MonoBehaviour
         if (canTakeDamage)
         {
             curHP -= dmg;
-            Debug.Log($"damage {dmg} to {curHP}");
             
             ChangeHealth();
             
@@ -122,11 +103,6 @@ public class EnemyBase : MonoBehaviour
                 Death();
             }
         }
-    }
-
-    public void ElementAttack(ElementEnum element, float amount, int power, int damage)
-    {
-        elementComponent.ElementAttack(element, amount, power, damage);
     }
 
     public void ChangeHealth()
@@ -180,18 +156,18 @@ public class EnemyBase : MonoBehaviour
             if (freezeCounter <= 0)
             {
                 freezeCounter = 0.0f;
-                StopSlowDown();
+                StopFreeze();
             }
         }
     }
 
-    public void StartSlowDown(float freezeFactor, float duration)
+    public void StartFreeze(float freezeFactor, float duration)
     {
-        agent.speed = freezeFactor;
+        agent.speed *= freezeFactor;
         freezeCounter = duration;
     }
 
-    public void StopSlowDown()
+    public void StopFreeze()
     {
         agent.speed = moveSpeed;
     }
@@ -233,27 +209,49 @@ public class EnemyBase : MonoBehaviour
         return targetList;
     }
 
-    public void Overload(int damage)
+    public void PlayHitEffect(HitEffect effect)
     {
-        TakeDamage(damage);
-        rigidbody.AddForce(Vector3.back * 100.0f);
+        switch((int)effect) 
+        {
+            case 1:
+                electricityeffect.Play();
+                break;
+            case 2:
+                overloadeffect.Play();
+                break;
+            case 3:
+                freezeeffect.Play();
+                break;
+            default:
+                break;
+        }
     }
+    
+    public void StopHitEffect(HitEffect effect)
+    {
+        switch((int)effect) 
+        {
+            case 1:
+                electricityeffect.Stop();
+                break;
+            case 2:
+                overloadeffect.Stop();
+                break;
+            case 3:
+                freezeeffect.Stop();
+                break;
+            default:
+                break;
+        }
+    }
+    
+ 
+}
 
-    public void ElectroCharged(int damage)
-    {
-        Debug.Log("Electro Charge");
-        TakeDamage(damage);
-    }
 
-    public void Freeze()
-    {
-        Debug.Log("Start freezing");
-        agent.speed = 0;
-    }
-
-    public void Unfreeze()
-    {
-        Debug.Log("Stop freezing");
-        agent.speed = moveSpeed;
-    }
+public enum HitEffect
+{
+    DIANJI = 1,
+    CHAOZI = 2,
+    BINGDONG = 3
 }

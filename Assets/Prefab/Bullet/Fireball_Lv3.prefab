@@ -14537,14 +14537,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   SecondsBeforeDestroy: 2
-  HitEffect: {fileID: 0}
-  elementType: 1
-  elementAmount: 10
-  elementPower: 3
+  HitEffect: {fileID: 1892078723244562, guid: 8b7c0261839280f44ba5d8756bbb8252, type: 3}
   explosionRange: 5
   explosionDamage: 20
-  explosionElementAmount: 3
-  explosionElementPower: 1
 --- !u!1 &1893299419364996
 GameObject:
   m_ObjectHideFlags: 0
