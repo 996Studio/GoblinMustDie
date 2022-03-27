@@ -630,6 +630,7 @@ MonoBehaviour:
   overloadeffect: {fileID: 7006935730239312043}
   electricityeffect: {fileID: 3412911219748216291}
   freezeeffect: {fileID: 0}
+  steameffect: {fileID: 4633845192983062195}
 --- !u!1 &9032661635374320617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,26 +1549,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HitEffect
       objectReference: {fileID: 0}
-    - target: {fileID: 5988509268235855404, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5988509268235855404, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5988509268235855404, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5988509268235855404, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7105277066823297249, guid: bd2f3ccd8ee766b46a18ce4485206543,
         type: 3}
       propertyPath: m_RootOrder
@@ -1634,6 +1615,12 @@ Transform:
 --- !u!198 &3412911219748216291 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5988509268235855406, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 8954965715570179021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4633845192983062195 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4325941061126233470, guid: bd2f3ccd8ee766b46a18ce4485206543,
     type: 3}
   m_PrefabInstance: {fileID: 8954965715570179021}
   m_PrefabAsset: {fileID: 0}

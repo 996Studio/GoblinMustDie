@@ -39,6 +39,7 @@ public class EnemyBase : MonoBehaviour
     public ParticleSystem overloadeffect;
     public ParticleSystem electricityeffect;
     public ParticleSystem freezeeffect;
+    public ParticleSystem steameffect;
     private HitEffect hitEffect;
 
     public float RecycleMultiplier
@@ -277,6 +278,9 @@ public class EnemyBase : MonoBehaviour
             case 3:
                 freezeeffect.Play();
                 break;
+            case 4:
+                steameffect.Play();
+                break;
             default:
                 break;
         }
@@ -295,6 +299,9 @@ public class EnemyBase : MonoBehaviour
             case 3:
                 freezeeffect.Stop();
                 break;
+            case 4:
+                steameffect.Stop();
+                break;
             default:
                 break;
         }
@@ -306,5 +313,6 @@ public enum HitEffect
 {
     DIANJI = 1,
     CHAOZI = 2,
-    BINGDONG = 3
+    BINGDONG = 3,
+    ZHENGFA = 4
 }

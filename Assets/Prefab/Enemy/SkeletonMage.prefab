@@ -309,6 +309,7 @@ MonoBehaviour:
   overloadeffect: {fileID: 0}
   electricityeffect: {fileID: 0}
   freezeeffect: {fileID: 0}
+  steameffect: {fileID: 8429430677245635382}
 --- !u!195 &9210455229876994205
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -557,3 +558,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2f3ccd8ee766b46a18ce4485206543, type: 3}
+--- !u!198 &8429430677245635382 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4325941061126233470, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 5256702366877824584}
+  m_PrefabAsset: {fileID: 0}
