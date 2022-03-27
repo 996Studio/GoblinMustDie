@@ -48,9 +48,9 @@ MonoBehaviour:
   speed: 50
   SecondsBeforeDestroy: 2
   HitEffect: {fileID: 0}
-  elementType: 0
-  elementAmount: 0
-  elementPower: 0
+  elementType: 3
+  elementAmount: 10
+  elementPower: 3
   freezeDuration: 4
   freezeScale: 0
   AOE: 1

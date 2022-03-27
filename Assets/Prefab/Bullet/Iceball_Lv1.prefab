@@ -48,8 +48,15 @@ MonoBehaviour:
   speed: 5
   SecondsBeforeDestroy: 2
   HitEffect: {fileID: 1691586572612692, guid: 7512ee71d98b7084a8235ca18e8e1770, type: 3}
+  elementType: 3
+  elementAmount: 10
+  elementPower: 3
   freezeDuration: 3
   freezeScale: 0.3
+  AOE: 0
+  explosionRange: 0
+  explosionElementAmount: 0
+  explosionElementPower: 0
 --- !u!1001 &2648375813027917585
 PrefabInstance:
   m_ObjectHideFlags: 0

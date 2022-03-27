@@ -48,8 +48,15 @@ MonoBehaviour:
   speed: 50
   SecondsBeforeDestroy: 2
   HitEffect: {fileID: 0}
+  elementType: 3
+  elementAmount: 10
+  elementPower: 3
   freezeDuration: 3
-  freezeTimeScale: 0.4
+  freezeScale: 0
+  AOE: 0
+  explosionRange: 0
+  explosionElementAmount: 0
+  explosionElementPower: 0
 --- !u!1001 &2648375813027917585
 PrefabInstance:
   m_ObjectHideFlags: 0
