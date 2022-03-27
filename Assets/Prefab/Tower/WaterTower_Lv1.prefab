@@ -61,6 +61,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 4634686317222008843}
+  elementAmount: 20
+  elementPower: 3
 --- !u!198 &8017245581045836880
 ParticleSystem:
   m_ObjectHideFlags: 0

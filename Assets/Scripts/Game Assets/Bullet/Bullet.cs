@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enum;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -10,6 +11,10 @@ public class Bullet : MonoBehaviour
     protected int attack;
     [SerializeField]protected GameObject HitEffect;
     protected bool isUsed = false;
+    
+    [SerializeField] protected ElementEnum elementType;
+    [SerializeField] protected float elementAmount;
+    [SerializeField] protected int elementPower;
 
     public int Attack
     {

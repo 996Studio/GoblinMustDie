@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enum;
 using UnityEngine;
 
 public class ThunderTower : AttackTower
 {
     public int chainNumber;
     public float chainRange;
+
+    private ElementEnum elementType = ElementEnum.Thunder;
+    public float elementAmount;
+    public int elementPower;
     
     // Start is called before the first frame update
     void Start()
@@ -40,7 +45,7 @@ public class ThunderTower : AttackTower
         EnemyBase enemy = target.GetComponent<EnemyBase>();
         if (enemy != null)
         {
-            enemy.TakeDamage(attack);
+            enemy.ElementAttack(elementType, elementAmount, elementPower, attack);
         }
 
         List<EnemyBase> enemyList = enemy.GetNearestEnemy(chainNumber, chainRange);
@@ -53,7 +58,7 @@ public class ThunderTower : AttackTower
         {
             Vector3 tempDir = nearbyEnemy.transform.position - target.position;
             Instantiate(bulletPrefab, nearbyEnemy.transform.position, Quaternion.LookRotation(dir));
-            nearbyEnemy.TakeDamage(attack);
+            nearbyEnemy.ElementAttack(elementType, elementAmount, elementPower, attack);
             //Debug.Log($"收衣服拉{nearbyEnemy}");
         }
     }

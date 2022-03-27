@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 8938695865279336289}
   - component: {fileID: 7106098897124961564}
   - component: {fileID: 5263257154274970367}
+  - component: {fileID: 1635906193570640707}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Enemy
@@ -626,6 +627,19 @@ MonoBehaviour:
   animator: {fileID: 8938695865279336289}
   agent: {fileID: 7106098897124961564}
   HPBarForeground: {fileID: 6364757966297900229}
+--- !u!114 &1635906193570640707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032648750986728755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7dd378384640948b452ec786490f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementList: []
 --- !u!1 &9032661635374320617
 GameObject:
   m_ObjectHideFlags: 0

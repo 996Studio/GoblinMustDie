@@ -6,6 +6,10 @@ public class Iceball : Bullet
 {
     public float freezeDuration;
     public float freezeScale;
+    public bool AOE;
+    public float explosionRange;
+    public float explosionElementAmount;
+    public int explosionElementPower;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +45,23 @@ public class Iceball : Bullet
         EnemyBase enemy = target.GetComponent<EnemyBase>();
         if (enemy != null)
         {
-            enemy.TakeDamage(attack);
-            enemy.StartFreeze(freezeScale, freezeDuration);
+            enemy.ElementAttack(elementType, elementAmount, elementPower, attack);
+            enemy.StartSlowDown(freezeScale, freezeDuration);
+
+            if (AOE)
+            {
+                Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRange);
+                foreach (Collider nearbyEnemy in colliders)
+                {
+                    //Debug.Log(nearbyEnemy);
+                    EnemyBase tempEnemy = nearbyEnemy.GetComponent<EnemyBase>();
+                    if (tempEnemy != null)
+                    {
+                        tempEnemy.ElementAttack(elementType, explosionElementAmount, explosionElementPower, 0);
+                        //Debug.Log("AOE to " + target);
+                    }
+                }
+            }
         }
 
         isUsed = true;

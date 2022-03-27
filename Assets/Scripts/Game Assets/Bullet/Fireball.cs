@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enum;
 using UnityEngine;
 
 public class Fireball : Bullet
 {
     public float explosionRange;
     public int explosionDamage;
+    public float explosionElementAmount;
+    public int explosionElementPower;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +43,8 @@ public class Fireball : Bullet
         EnemyBase enemy = target.GetComponent<EnemyBase>();
         if (enemy != null)
         {
-            enemy.TakeDamage(attack);
-            
+            enemy.ElementAttack(elementType, elementAmount, elementPower, attack);
+
             //AOE
             Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRange);
             foreach (Collider nearbyEnemy in colliders)
@@ -49,7 +53,7 @@ public class Fireball : Bullet
                 EnemyBase tempEnemy = nearbyEnemy.GetComponent<EnemyBase>();
                 if (tempEnemy != null)
                 {
-                    tempEnemy.TakeDamage(explosionDamage);
+                    tempEnemy.ElementAttack(elementType, explosionElementAmount, explosionElementPower, explosionDamage);
                     //Debug.Log("AOE to " + target);
                 }
             }

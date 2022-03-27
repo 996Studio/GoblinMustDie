@@ -646,8 +646,9 @@ GameObject:
   - component: {fileID: 1762446509966350567}
   - component: {fileID: 1866204973288595879}
   - component: {fileID: 1784935273336940871}
-  - component: {fileID: -2858658634678188048}
   - component: {fileID: -1436191772063415783}
+  - component: {fileID: -2858658634678188048}
+  - component: {fileID: 8919358534095633099}
   m_Layer: 0
   m_Name: Troll
   m_TagString: Enemy
@@ -724,23 +725,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 1.4, z: 0}
---- !u!114 &-2858658634678188048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811249188721339397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e3fdd0b16397c64b92a637a4b813a13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1762446509966350567}
-  agent: {fileID: -1436191772063415783}
-  HPBarForeground: {fileID: 292210609045539364}
-  goblinPre: {fileID: 9032648750986728755, guid: c481bd50533aa384d868a098fe05b7c1,
-    type: 3}
 --- !u!195 &-1436191772063415783
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -763,6 +747,36 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2858658634678188048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811249188721339397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e3fdd0b16397c64b92a637a4b813a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1762446509966350567}
+  agent: {fileID: -1436191772063415783}
+  HPBarForeground: {fileID: 292210609045539364}
+  goblinPre: {fileID: 9032648750986728755, guid: c481bd50533aa384d868a098fe05b7c1,
+    type: 3}
+--- !u!114 &8919358534095633099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811249188721339397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7dd378384640948b452ec786490f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementList: []
 --- !u!1 &1811384434695953591
 GameObject:
   m_ObjectHideFlags: 0

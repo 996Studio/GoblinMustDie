@@ -82,6 +82,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 189656, guid: f240e471dfdde4241ba3cbc850ffbf38, type: 3}
   fireLocation: {fileID: 6395083012639352404}
   Rotator: {fileID: 2330782348264706070}
+  chainNumber: 4
+  chainRange: 2
+  elementAmount: 20
+  elementPower: 2
 --- !u!1 &5105905622715881771
 GameObject:
   m_ObjectHideFlags: 0

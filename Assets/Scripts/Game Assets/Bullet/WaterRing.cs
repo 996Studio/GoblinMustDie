@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enum;
 using UnityEngine;
 
 public class WaterRing : MonoBehaviour
 {
     public Collider trigger;
     private int damage;
+    public float elementAmount;
+    public int elementPower;
 
     public int Damage
     {
@@ -30,7 +33,7 @@ public class WaterRing : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyBase>().TakeDamage(damage);
+            other.GetComponent<EnemyBase>().ElementAttack(ElementEnum.Water, elementAmount, elementPower, damage);
         }
     }
 }

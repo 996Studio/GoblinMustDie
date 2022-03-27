@@ -83,7 +83,9 @@ MonoBehaviour:
   fireLocation: {fileID: 5918329387347038202}
   Rotator: {fileID: 2330782348264706070}
   chainNumber: 3
-  chainRange: 100
+  chainRange: 2
+  elementAmount: 10
+  elementPower: 2
 --- !u!1 &3996656975144154105
 GameObject:
   m_ObjectHideFlags: 0
