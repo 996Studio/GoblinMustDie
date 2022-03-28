@@ -306,8 +306,8 @@ MonoBehaviour:
   animator: {fileID: 1333184777379030635}
   agent: {fileID: 9210455229876994205}
   HPBarForeground: {fileID: 1200980116697538139}
-  overloadeffect: {fileID: 0}
-  electricityeffect: {fileID: 0}
+  overloadeffect: {fileID: 6163248387157237038}
+  electricityeffect: {fileID: 2011133764568092774}
   freezeeffect: {fileID: 0}
   steameffect: {fileID: 8429430677245635382}
 --- !u!195 &9210455229876994205
@@ -558,6 +558,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2f3ccd8ee766b46a18ce4485206543, type: 3}
+--- !u!198 &2011133764568092774 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5988509268235855406, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 5256702366877824584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6163248387157237038 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2124519468942273382, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 5256702366877824584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &8429430677245635382 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4325941061126233470, guid: bd2f3ccd8ee766b46a18ce4485206543,
