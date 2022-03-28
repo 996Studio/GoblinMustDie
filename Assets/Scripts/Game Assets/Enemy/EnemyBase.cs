@@ -74,7 +74,7 @@ public class EnemyBase : MonoBehaviour
         OnHealthChanged += HandleHealthChange;
         
         HPBarForeground.fillAmount = 0.5f;
-        agent.SetDestination(MotherBase.Instance.transform.position);
+        //agent.SetDestination(MotherBase.Instance.transform.position);
         
         elementComponent = GetComponent<ElementComponent>();
     }
@@ -208,12 +208,14 @@ public class EnemyBase : MonoBehaviour
     {
         TakeDamage(damage);
         rigidbody.AddForce(Vector3.back * 100.0f);
+        PlayHitEffect(HitEffect.Overload);
     }
 
     public void ElectroCharged(int damage)
     {
         Debug.Log("Electro Charge");
         TakeDamage(damage);
+        PlayHitEffect(HitEffect.Electro);
     }
 
     public void Freeze()
@@ -267,18 +269,18 @@ public class EnemyBase : MonoBehaviour
 
     public void PlayHitEffect(HitEffect effect)
     {
-        switch((int)effect) 
+        switch(effect) 
         {
-            case 1:
+            case HitEffect.Electro:
                 electricityeffect.Play();
                 break;
-            case 2:
+            case HitEffect.Overload:
                 overloadeffect.Play();
                 break;
-            case 3:
+            case HitEffect.Freeze:
                 freezeeffect.Play();
                 break;
-            case 4:
+            case HitEffect.Vaporize:
                 steameffect.Play();
                 break;
             default:
@@ -288,18 +290,18 @@ public class EnemyBase : MonoBehaviour
     
     public void StopHitEffect(HitEffect effect)
     {
-        switch((int)effect) 
+        switch(effect) 
         {
-            case 1:
+            case HitEffect.Electro:
                 electricityeffect.Stop();
                 break;
-            case 2:
+            case HitEffect.Overload:
                 overloadeffect.Stop();
                 break;
-            case 3:
+            case HitEffect.Freeze:
                 freezeeffect.Stop();
                 break;
-            case 4:
+            case HitEffect.Vaporize:
                 steameffect.Stop();
                 break;
             default:
@@ -311,8 +313,8 @@ public class EnemyBase : MonoBehaviour
 
 public enum HitEffect
 {
-    DIANJI = 1,
-    CHAOZI = 2,
-    BINGDONG = 3,
-    ZHENGFA = 4
+    Electro = 1,
+    Overload = 2,
+    Freeze = 3,
+    Vaporize = 4
 }

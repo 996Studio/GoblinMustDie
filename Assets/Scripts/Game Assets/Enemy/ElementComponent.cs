@@ -207,6 +207,7 @@ public class ElementComponent : MonoBehaviour
     private void Vaporize(AttachedElement firstElement, AttachedElement secondElement, int damage)
     {
         CalculateElement(firstElement, secondElement);
+        owner.PlayHitEffect(HitEffect.Vaporize);
 
         if (firstElement.element == ElementEnum.Fire)
         {
