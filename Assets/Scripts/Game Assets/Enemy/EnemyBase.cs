@@ -74,7 +74,7 @@ public class EnemyBase : MonoBehaviour
         OnHealthChanged += HandleHealthChange;
         
         HPBarForeground.fillAmount = 0.5f;
-        //agent.SetDestination(MotherBase.Instance.transform.position);
+        agent.SetDestination(MotherBase.Instance.transform.position);
         
         elementComponent = GetComponent<ElementComponent>();
     }
@@ -207,7 +207,7 @@ public class EnemyBase : MonoBehaviour
     public void Overload(int damage)
     {
         TakeDamage(damage);
-        rigidbody.AddForce(Vector3.back * 100.0f);
+        //rigidbody.AddForce(Vector3.back * 100.0f);
         PlayHitEffect(HitEffect.Overload);
     }
 
@@ -273,15 +273,19 @@ public class EnemyBase : MonoBehaviour
         {
             case HitEffect.Electro:
                 electricityeffect.Play();
+                Debug.Log("Electro!");
                 break;
             case HitEffect.Overload:
                 overloadeffect.Play();
+                Debug.Log("Overload!");
                 break;
             case HitEffect.Freeze:
                 freezeeffect.Play();
+                Debug.Log("Freeze!");
                 break;
             case HitEffect.Vaporize:
                 steameffect.Play();
+                Debug.Log("Vaporize!");
                 break;
             default:
                 break;
