@@ -765,7 +765,7 @@ MonoBehaviour:
   HPBarForeground: {fileID: 292210609045539364}
   overloadeffect: {fileID: 9055407596463553637}
   electricityeffect: {fileID: 3732357620497183021}
-  freezeeffect: {fileID: 0}
+  freezeeffect: {fileID: 5457304813746506917}
   steameffect: {fileID: 6690201090053720701}
   goblinPre: {fileID: 9032648750986728755, guid: c481bd50533aa384d868a098fe05b7c1,
     type: 3}
@@ -1545,6 +1545,12 @@ Transform:
 --- !u!198 &3732357620497183021 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5988509268235855406, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 6976227591155996419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5457304813746506917 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3129077980349995942, guid: bd2f3ccd8ee766b46a18ce4485206543,
     type: 3}
   m_PrefabInstance: {fileID: 6976227591155996419}
   m_PrefabAsset: {fileID: 0}

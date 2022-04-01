@@ -313,7 +313,7 @@ MonoBehaviour:
   HPBarForeground: {fileID: 1200980116697538139}
   overloadeffect: {fileID: 6163248387157237038}
   electricityeffect: {fileID: 2011133764568092774}
-  freezeeffect: {fileID: 0}
+  freezeeffect: {fileID: 7178519190699453934}
   steameffect: {fileID: 8429430677245635382}
 --- !u!195 &9210455229876994205
 NavMeshAgent:
@@ -592,6 +592,12 @@ ParticleSystem:
 --- !u!198 &6163248387157237038 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2124519468942273382, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 5256702366877824584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7178519190699453934 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3129077980349995942, guid: bd2f3ccd8ee766b46a18ce4485206543,
     type: 3}
   m_PrefabInstance: {fileID: 5256702366877824584}
   m_PrefabAsset: {fileID: 0}
