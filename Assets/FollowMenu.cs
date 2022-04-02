@@ -44,13 +44,13 @@ public class FollowMenu : MonoBehaviour
     {
         Vector3 pos = new Vector3(-400, -400, 0);
         
-        if (CreateTowerUI.instance.selectNode == null)
+        if (FollowMenu.instance.SelectedNode == null)
         {
             pos = originPosition;
         }
-        else if (CreateTowerUI.instance.selectNode != null)
+        else if (FollowMenu.instance.SelectedNode != null)
         {
-            pos = cam.WorldToScreenPoint(CreateTowerUI.instance.selectNode.transform.position + offset);
+            pos = cam.WorldToScreenPoint(FollowMenu.instance.SelectedNode.transform.position + offset);
         }
 
         if (transform.position != pos)
@@ -117,8 +117,6 @@ public class FollowMenu : MonoBehaviour
         Debug.Log($"Build {towerType}");
         print(towerType + " " + FollowMenu.instance.SelectedNode);
 
-        /*   NEED FIX LATER: Raycast will still hit through UI, if a node exist behind UI button, it will build on that node instead.  */
-        // So how to only Raycasthit on UI?
         if (FollowMenu.instance.SelectedNode != null)
         {
             NodeManager.instance.BuildTower(towerType, FollowMenu.instance.SelectedNode);

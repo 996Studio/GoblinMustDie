@@ -7,7 +7,11 @@ enum ButtonToTower
     Archer=0, 
     Fire, 
     Water, 
-    Ice
+    Ice,
+    Thunder,
+    Wooden,
+    Crystal,
+    Boost
 }
 
 public class enumForUI : MonoBehaviour
