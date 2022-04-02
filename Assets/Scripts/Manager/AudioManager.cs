@@ -83,6 +83,8 @@ public class AudioManager : MonoBehaviour
                 {
                     s.source.volume = s.volume * volume;
                 }
+
+                GameSetting.instance.musicVolume = volume;
                 break;
             }
             case SoundType.SFX:
@@ -91,6 +93,7 @@ public class AudioManager : MonoBehaviour
                 {
                     s.source.volume = s.volume * volume;
                 }
+                GameSetting.instance.soundVolume = volume;
                 break;
             }
             default: break;

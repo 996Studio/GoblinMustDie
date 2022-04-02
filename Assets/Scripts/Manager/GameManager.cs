@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private int killCount;
-
     private int curHP;
     private int maxHP;
 
@@ -22,6 +21,8 @@ public class GameManager : MonoBehaviour
     
     private bool isSpawnEnd;
     private int spawnNum;
+
+    public int levelIndex;
     
     //public List<GameObject> spawnedEnemies;
 
@@ -96,6 +97,10 @@ public class GameManager : MonoBehaviour
         }
         else if (isWin)
         {
+            if (levelIndex > GameSetting.instance.maxUnlockedLevelIndex)
+            {
+                GameSetting.instance.maxUnlockedLevelIndex = levelIndex;
+            }
             GameObject.Find("LevelData").GetComponent<LevelData>().isWin = true;
             GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount * 10000;
             SceneManager.LoadScene("WinScene");

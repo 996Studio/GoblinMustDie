@@ -37,8 +37,6 @@ public class LevelSelect : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        DontDestroyOnLoad(gameObject);
     }
     
     // Start is called before the first frame update
@@ -51,7 +49,17 @@ public class LevelSelect : MonoBehaviour
         
         if (levelList.Count > 0)
         {
-            currentLevelIndex = 1;
+            int maxLevelIndex = 1;
+            foreach (Level level in levelList)
+            {
+                if (level.levelIndex <= GameSetting.instance.maxUnlockedLevelIndex)
+                {
+                    level.isLocked = false;
+                    maxLevelIndex = level.levelIndex;
+                }
+            }
+
+            currentLevelIndex = maxLevelIndex;
             LookAtLevel(levelList[0]);
             UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(levelButtonsContainer.GetChild(0).gameObject);
         }
