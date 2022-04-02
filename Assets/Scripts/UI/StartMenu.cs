@@ -9,6 +9,9 @@ public class StartMenu : MonoBehaviour
     public GameObject startMenu;
     public GameObject introduction;
     public GameObject options;
+    public GameObject credits;
+
+    public Animator animator;
 
     [Header("Options")] 
     public Slider musicVolumeSlider;
@@ -18,6 +21,7 @@ public class StartMenu : MonoBehaviour
     void Start()
     {
         ShowStartMenu();
+        Time.timeScale = 1f;
         AudioManager.instance.Play(SoundType.MUSIC,"BGM");
     }
 
@@ -36,6 +40,7 @@ public class StartMenu : MonoBehaviour
         startMenu.gameObject.SetActive(true);
         introduction.gameObject.SetActive(false);
         options.gameObject.SetActive(false);
+        credits.gameObject.SetActive(false);
     }
 
     public void ShowIntroduction()
@@ -43,6 +48,8 @@ public class StartMenu : MonoBehaviour
         startMenu.gameObject.SetActive(false);
         introduction.gameObject.SetActive(true);
         options.gameObject.SetActive(false);
+        credits.gameObject.SetActive(false);
+
     }
 
     public void ShwoOptions()
@@ -50,8 +57,19 @@ public class StartMenu : MonoBehaviour
         startMenu.gameObject.SetActive(false);
         introduction.gameObject.SetActive(false);
         options.gameObject.SetActive(true);
+        credits.gameObject.SetActive(false);
+
     }
-    
+
+    public void ShowCredits()
+    {
+        startMenu.gameObject.SetActive(false);
+        introduction.gameObject.SetActive(false);
+        options.gameObject.SetActive(false);
+        credits.gameObject.SetActive(true);
+
+    }
+
     public void SetMusicVolume()
     {
         //Debug.Log("Set music volume");

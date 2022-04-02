@@ -1,1 +1,1 @@
-{"coin":10000,"wood":10000,"rock":10000,"nodeNum":5,"towerTypeList":[0,0,0,0,0],"levelList":[0,0,0,0,0]}
+{"coin":9990,"wood":10000,"rock":10000,"nodeNum":5,"towerTypeList":[1,0,0,0,0],"levelList":[1,0,0,0,0]}

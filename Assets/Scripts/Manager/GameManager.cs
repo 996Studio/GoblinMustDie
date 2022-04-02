@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private ResourceManager resourceManager;
 
     public static GameManager Instance;
+    public GameObject minimap;
     
     private bool isSpawnEnd;
     private int spawnNum;
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
     public int levelIndex;
     
     //public List<GameObject> spawnedEnemies;
+
+    public Animator pauseAnim;
+    public GameObject GameOverScreen;
 
     public int CurHp
     {
@@ -79,8 +83,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Spawn num: " + spawnNum);
-        
         if (isSpawnEnd & spawnNum == 0 && !isDead)
         {
             isWin = true;
@@ -92,6 +94,8 @@ public class GameManager : MonoBehaviour
             GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount * 10000;
             Debug.Log(
                 $"Mother Win {GameObject.Find("LevelData").GetComponent<LevelData>().isWin}, kill {GameObject.Find("LevelData").GetComponent<LevelData>().killCount}");
+            //GameOverScreen.SetActive(true);
+            //Time.timeScale = 0f;
             UnityEngine.SceneManagement.SceneManager.LoadScene("WinScene", LoadSceneMode.Single);
             SceneManager.LoadScene("WinScene");
         }
@@ -103,6 +107,10 @@ public class GameManager : MonoBehaviour
             }
             GameObject.Find("LevelData").GetComponent<LevelData>().isWin = true;
             GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount * 10000;
+            
+            //GameOverScreen.SetActive(true);
+            //Time.timeScale = 0f;
+
             SceneManager.LoadScene("WinScene");
         }
     }
@@ -112,13 +120,15 @@ public class GameManager : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0.0f;
         PauseMenu.ShowPauseMenu();
+        pauseAnim.SetBool("onShowPause", true);
     }
 
     public void UnpauseGame()
     {
         isPaused = false;
         Time.timeScale = 1.0f;
-        PauseMenu.DestroyPauseMenu();
+        pauseAnim.SetBool("onShowPause", false);
+        PauseMenu.HidePauseMenu();
     }
     
     public void TakeDamage(int dmg)
@@ -144,4 +154,10 @@ public class GameManager : MonoBehaviour
         //Update UI info later
         HUDManager.instance.UpdateLiveText(this.curHP);
     }
+
+    public void ToggleMinimap()
+    {
+        minimap.SetActive(!minimap.activeInHierarchy);
+    }
+
 }
