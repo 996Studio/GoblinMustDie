@@ -44,30 +44,26 @@ public class Node : MonoBehaviour
         }
     }
 
-    //private void OnDisable()
-    //{
-    //    CreateTowerUI.menuCall -= showUI;
-    //}
-
     // Update is called once per frame
     void Update()
     {
-        if (CreateTowerUI.instance.selectNode == this)
-        {
-            rend.material.color = hoverColor;
-        }
-        else if (CreateTowerUI.instance.selectNode == this && !hover)
-        {
-            rend.material.color = originColor;
-        }
+        //if (CreateTowerUI.instance.selectNode == this)
+        //{
+        //    rend.material.color = hoverColor;
+        //}
+        //else if (CreateTowerUI.instance.selectNode == this && !hover)
+        //{
+        //    rend.material.color = originColor;
+        //}
     }
 
 
-    private void OnMouseDown()
-    {
-        CreateTowerUI.instance.showPanel();
-        CreateTowerUI.instance.selectNode = this;
-    }
+#if UNITY_EDITOR
+    //private void OnMouseDown()
+    //{
+    //    CreateTowerUI.instance.showPanel();
+    //    CreateTowerUI.instance.selectNode = this;
+    //}
 
     // Keyboard input for testing
     private void OnMouseEnter()
@@ -82,11 +78,11 @@ public class Node : MonoBehaviour
             return;
         }
         rend.material.color = hoverColor;
-        
+
     }
     private void OnMouseExit()
     {
-        hover = false;  
+        hover = false;
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -98,4 +94,5 @@ public class Node : MonoBehaviour
         if (isSelect) return;
         rend.material.color = originColor;
     }
+#endif
 }

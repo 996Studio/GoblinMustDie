@@ -67,7 +67,6 @@ public class EnemyBase : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
-
         canTakeDamage = true;
 
         //delegate for changing health

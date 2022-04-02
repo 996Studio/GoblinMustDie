@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.gameObject.SetActive(true);
     }
 
-    public void DestroyPauseMenu()
+    public void HidePauseMenu()
     {
         pauseMenu.gameObject.SetActive(false);
     }
