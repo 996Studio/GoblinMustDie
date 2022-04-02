@@ -765,7 +765,7 @@ MonoBehaviour:
   HPBarForeground: {fileID: 292210609045539364}
   overloadeffect: {fileID: 9055407596463553637}
   electricityeffect: {fileID: 3732357620497183021}
-  freezeeffect: {fileID: 0}
+  freezeeffect: {fileID: 5457304813746506917}
   steameffect: {fileID: 6690201090053720701}
   goblinPre: {fileID: 9032648750986728755, guid: c481bd50533aa384d868a098fe05b7c1,
     type: 3}
@@ -1474,11 +1474,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816882482358164709}
     m_Modifications:
-    - target: {fileID: 4325941061126233470, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4363022230188328368, guid: bd2f3ccd8ee766b46a18ce4485206543,
         type: 3}
       propertyPath: m_Name
@@ -1488,21 +1483,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105277066823297249, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105277066823297249, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105277066823297249, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7105277066823297249, guid: bd2f3ccd8ee766b46a18ce4485206543,
         type: 3}
@@ -1554,11 +1534,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7105277066823297249, guid: bd2f3ccd8ee766b46a18ce4485206543,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2f3ccd8ee766b46a18ce4485206543, type: 3}
 --- !u!4 &165377340419522530 stripped
@@ -1570,6 +1545,12 @@ Transform:
 --- !u!198 &3732357620497183021 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5988509268235855406, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 6976227591155996419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5457304813746506917 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3129077980349995942, guid: bd2f3ccd8ee766b46a18ce4485206543,
     type: 3}
   m_PrefabInstance: {fileID: 6976227591155996419}
   m_PrefabAsset: {fileID: 0}

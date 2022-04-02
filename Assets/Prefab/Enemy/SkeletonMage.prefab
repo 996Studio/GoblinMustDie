@@ -313,7 +313,7 @@ MonoBehaviour:
   HPBarForeground: {fileID: 1200980116697538139}
   overloadeffect: {fileID: 6163248387157237038}
   electricityeffect: {fileID: 2011133764568092774}
-  freezeeffect: {fileID: 0}
+  freezeeffect: {fileID: 7178519190699453934}
   steameffect: {fileID: 8429430677245635382}
 --- !u!195 &9210455229876994205
 NavMeshAgent:
@@ -501,6 +501,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1431052605323464823}
     m_Modifications:
+    - target: {fileID: 240919316921320951, guid: bd2f3ccd8ee766b46a18ce4485206543,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129077980349995942, guid: bd2f3ccd8ee766b46a18ce4485206543,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530751846594428598, guid: bd2f3ccd8ee766b46a18ce4485206543,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4363022230188328368, guid: bd2f3ccd8ee766b46a18ce4485206543,
         type: 3}
       propertyPath: m_Name
@@ -561,6 +576,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7664942702899746469, guid: bd2f3ccd8ee766b46a18ce4485206543,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2f3ccd8ee766b46a18ce4485206543, type: 3}
 --- !u!198 &2011133764568092774 stripped
@@ -572,6 +592,12 @@ ParticleSystem:
 --- !u!198 &6163248387157237038 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2124519468942273382, guid: bd2f3ccd8ee766b46a18ce4485206543,
+    type: 3}
+  m_PrefabInstance: {fileID: 5256702366877824584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7178519190699453934 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3129077980349995942, guid: bd2f3ccd8ee766b46a18ce4485206543,
     type: 3}
   m_PrefabInstance: {fileID: 5256702366877824584}
   m_PrefabAsset: {fileID: 0}
