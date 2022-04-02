@@ -63,13 +63,9 @@ public class TouchManager : MonoBehaviour
                         if (touchedObject.CompareTag("Node"))
                         {
                             touchedNode = touchedObject.GetComponent<Node>();
-                            //CreateTowerUI.instance.selectNode = touchedNode;
-                            //CreateTowerUI.instance.lastNode = touchedNode;
 
                             FollowMenu.instance.SelectedNode = touchedNode;
                             FollowMenu.instance.lastNode = touchedNode;
-
-                            //CreateTowerUI.instance.showPanel();
                         }
                         else
                         {
