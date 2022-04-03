@@ -28,6 +28,7 @@ public class ArcherTower : AttackTower
         {
             ShootBullet();
             fireCounter = fireInterval;
+            AudioManager.instance.Play(SoundType.SFX,"ShootArrow");
         }
         fireCounter -= Time.deltaTime;
     }

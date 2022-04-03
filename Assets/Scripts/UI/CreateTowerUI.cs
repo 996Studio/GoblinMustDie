@@ -141,7 +141,6 @@ public class CreateTowerUI : MonoBehaviour
         {
             NodeManager.instance.BuildTower(towerType, CreateTowerUI.instance.lastNode);
         }
-        AudioManager.instance.Play(SoundType.SFX, "BowTowerBuild");
         CreateTowerUI.instance.hidePanel();
     }
 }

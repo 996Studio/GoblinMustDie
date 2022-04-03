@@ -47,6 +47,7 @@ public class Iceball : Bullet
         {
             enemy.ElementAttack(elementType, elementAmount, elementPower, attack);
             enemy.StartSlowDown(freezeScale, freezeDuration);
+            AudioManager.instance.Play(SoundType.SFX,"IceballHit");
 
             if (AOE)
             {

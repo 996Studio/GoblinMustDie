@@ -38,6 +38,8 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -70,6 +72,30 @@ public class AudioManager : MonoBehaviour
         else
         {
             Debug.Log($"Cannot find sound {name}");
+        }
+    }
+
+    public void Stop(SoundType type)
+    {
+        switch (type)
+        {
+            case SoundType.MUSIC:
+            {
+                foreach (Sound s in music)
+                {
+                    s.source.Stop();
+                }
+                break;
+            }
+            case SoundType.SFX:
+            {
+                foreach (Sound s in sounds)
+                {
+                    s.source.Stop();
+                }
+                break;
+            }
+            default: break;
         }
     }
 

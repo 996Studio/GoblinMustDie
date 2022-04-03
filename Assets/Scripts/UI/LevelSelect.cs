@@ -87,10 +87,24 @@ public class LevelSelect : MonoBehaviour
 
         levelButton.transform.GetChild(0).GetComponentInChildren<TMP_Text>().text = l.levelName;
         levelButton.GetComponent<LevelSelectButton>().levelIndex = level.levelIndex;
+
+        if (l.levelIndex > GameSetting.instance.maxUnlockedLevelIndex)
+        {
+            levelButton.GetComponent<LevelSelectButton>().isUnlocked = false;
+        }
+        else
+        {
+            levelButton.GetComponent<LevelSelectButton>().isUnlocked = true;
+        }
     }
 
     public void LookAtLevel(Level l)
     {
+        if (l.levelIndex > GameSetting.instance.maxUnlockedLevelIndex)
+        {
+            return;
+        }
+        
         Transform cameraParent = Camera.main.transform.parent;
         Transform cameraPivot = cameraParent.parent;
 
@@ -100,7 +114,8 @@ public class LevelSelect : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(levelList[currentLevelIndex].levelName);
+        SceneManager.LoadScene(levelList[currentLevelIndex - 1].levelName);
+        AudioManager.instance.Stop(SoundType.MUSIC);
     }
     
     private void OnDrawGizmos()

@@ -22,7 +22,10 @@ public class StartMenu : MonoBehaviour
     {
         ShowStartMenu();
         Time.timeScale = 1f;
-        AudioManager.instance.Play(SoundType.MUSIC,"BGM");
+        AudioManager.instance.Play(SoundType.MUSIC,"Menu");
+        
+        musicVolumeSlider.value = GameSetting.instance.musicVolume;
+        soundVolumeSlider.value = GameSetting.instance.soundVolume;
     }
 
     // Update is called once per frame
@@ -49,7 +52,6 @@ public class StartMenu : MonoBehaviour
         introduction.gameObject.SetActive(true);
         options.gameObject.SetActive(false);
         credits.gameObject.SetActive(false);
-
     }
 
     public void ShwoOptions()
@@ -58,7 +60,6 @@ public class StartMenu : MonoBehaviour
         introduction.gameObject.SetActive(false);
         options.gameObject.SetActive(true);
         credits.gameObject.SetActive(false);
-
     }
 
     public void ShowCredits()
@@ -67,7 +68,6 @@ public class StartMenu : MonoBehaviour
         introduction.gameObject.SetActive(false);
         options.gameObject.SetActive(false);
         credits.gameObject.SetActive(true);
-
     }
 
     public void SetMusicVolume()
@@ -83,7 +83,7 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void QuitGame()

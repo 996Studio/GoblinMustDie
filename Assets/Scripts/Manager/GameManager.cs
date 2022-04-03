@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         HUDManager.instance.UpdateLiveText(this.curHP);
-        AudioManager.instance.Play(SoundType.MUSIC,"BGM");
+        AudioManager.instance.Play(SoundType.MUSIC,SceneManager.GetActiveScene().name);
     }
 
     private void Update()

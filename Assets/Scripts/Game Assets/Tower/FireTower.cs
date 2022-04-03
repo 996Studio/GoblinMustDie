@@ -26,6 +26,7 @@ public class FireTower : AttackTower
         {
             ShootBullet();
             fireCounter = fireInterval;
+            AudioManager.instance.Play(SoundType.SFX,"ShootFireball");
         }
         fireCounter -= Time.deltaTime;
     }

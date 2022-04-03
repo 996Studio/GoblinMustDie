@@ -76,6 +76,7 @@ public class NodeManager : MonoBehaviour
         ChangeResource(-towerBaseList[(int)type - 1].CoinCost[0], -towerBaseList[(int)type - 1].WoodCost[0],
             -towerBaseList[(int)type - 1].RockCost[0]);
         //Debug.Log($"Build {type}");
+        AudioManager.instance.Play(SoundType.SFX, "TowerBuild");
 
         HUDManager.instance.UpdateResourceText(ResourceType.ALL);
     }
@@ -106,6 +107,7 @@ public class NodeManager : MonoBehaviour
         //Debug.Log("Upgrade tower level " + level);
         Destroy(node.Tower);
         InstantiateTower(node, node.TowerType, level + 1);
+        AudioManager.instance.Play(SoundType.SFX, "TowerBuild");
         ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level],
             -towerBaseList[(int)node.TowerType - 1].WoodCost[level],
             -towerBaseList[(int)node.TowerType - 1].RockCost[level]);

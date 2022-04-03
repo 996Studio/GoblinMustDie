@@ -11,7 +11,8 @@ public class OptionsScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        musicVolumeSlider.value = GameSetting.instance.musicVolume;
+        soundVolumeSlider.value = GameSetting.instance.soundVolume;
     }
 
     // Update is called once per frame

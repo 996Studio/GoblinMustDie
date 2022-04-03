@@ -50,6 +50,7 @@ public class WaterTower : AttackTower
         attackCollider.SetActive(true);
         attackCollider.transform.localScale=Vector3.zero;
         isAttacking = true;
+        AudioManager.instance.Play(SoundType.SFX,"WaterRing");
     }
 
     private void RingAttackStop()

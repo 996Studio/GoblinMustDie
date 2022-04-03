@@ -217,6 +217,8 @@ public class ElementComponent : MonoBehaviour
         {
             owner.TakeDamage((int)((float)damage*1.5f));
         }
+        
+        AudioManager.instance.Play(SoundType.SFX,"Vaporize");
     }
     
     //超载
@@ -226,6 +228,8 @@ public class ElementComponent : MonoBehaviour
         
         //OverLoad
         owner.Overload(damage);
+        
+        AudioManager.instance.Play(SoundType.SFX,"Overload");
     }
     
     //融化
@@ -241,6 +245,8 @@ public class ElementComponent : MonoBehaviour
         {
             owner.TakeDamage((int)((float)damage*2.0f));
         }
+        
+        AudioManager.instance.Play(SoundType.SFX,"Melt");
     }
 
     private void Freeze(AttachedElement firstElement, AttachedElement secondElement)

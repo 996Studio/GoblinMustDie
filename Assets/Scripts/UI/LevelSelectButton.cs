@@ -16,31 +16,47 @@ public class LevelSelectButton : MonoBehaviour, ISelectHandler, IDeselectHandler
     public Color rectColorMouseOver;
 
     public int levelIndex;
+    public bool isUnlocked;
 
     private void Start()
     {
-        rect.color = Color.clear;
-        text.color = Color.white;
-        circle.color = Color.white;
+        if (isUnlocked)
+        {
+            rect.color = Color.clear;
+            text.color = Color.white;
+            circle.color = Color.white;
+        }
+        else
+        {
+            rect.color = Color.clear;
+            text.color = Color.grey;
+            circle.color = Color.grey;
+        }
     }
 
     public void OnDeselect(BaseEventData eventData)
     {
-        rect.DOColor(Color.clear, .1f);
-        text.DOColor(Color.white, .1f);
-        circle.DOColor(Color.white, .1f);
+        if (isUnlocked)
+        {
+            rect.DOColor(Color.clear, .1f);
+            text.DOColor(Color.white, .1f);
+            circle.DOColor(Color.white, .1f);
+        }
     }
 
     public void OnSelect(BaseEventData eventData)
     {
-        rect.DOColor(Color.white, .1f);
-        text.DOColor(textColorWhenSelected, .1f);
-        circle.DOColor(Color.red, .1f);
+        if (isUnlocked)
+        {
+            rect.DOColor(Color.white, .1f);
+            text.DOColor(Color.black, .1f);
+            circle.DOColor(Color.red, .1f);
 
-        rect.transform.DOComplete();
-        rect.transform.DOPunchScale(Vector3.one / 3, .2f, 20, 1);
+            rect.transform.DOComplete();
+            rect.transform.DOPunchScale(Vector3.one / 3, .2f, 20, 1);
 
-        LevelSelect.instance.currentLevelIndex = levelIndex;
+            LevelSelect.instance.currentLevelIndex = levelIndex;
+        }
     }
 
     public void OnSubmit(BaseEventData eventData)
@@ -50,17 +66,23 @@ public class LevelSelectButton : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (EventSystem.current.currentSelectedGameObject != gameObject)
+        if (isUnlocked)
         {
-            rect.DOColor(rectColorMouseOver, .2f);
+            if (EventSystem.current.currentSelectedGameObject != gameObject)
+            {
+                rect.DOColor(rectColorMouseOver, .2f);
+            }
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (EventSystem.current.currentSelectedGameObject != gameObject)
+        if (isUnlocked)
         {
-            rect.DOColor(Color.clear, .2f);
+            if (EventSystem.current.currentSelectedGameObject != gameObject)
+            {
+                rect.DOColor(Color.clear, .2f);
+            }
         }
     }
 }

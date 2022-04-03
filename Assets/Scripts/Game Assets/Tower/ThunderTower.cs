@@ -40,13 +40,14 @@ public class ThunderTower : AttackTower
 
     private void Lightning()
     {
-        Debug.Log("Lightning!");
+        //Debug.Log("Lightning!");
         Vector3 dir = target.position - fireLocation.position;
         Instantiate(bulletPrefab, fireLocation.position, Quaternion.LookRotation(dir));
         EnemyBase enemy = target.GetComponent<EnemyBase>();
         if (enemy != null)
         {
             enemy.ElementAttack(elementType, elementAmount, elementPower, attack);
+            AudioManager.instance.Play(SoundType.SFX,"ElectricAttack");
         }
 
         List<EnemyBase> enemyList = enemy.GetNearestEnemy(chainNumber, chainRange);

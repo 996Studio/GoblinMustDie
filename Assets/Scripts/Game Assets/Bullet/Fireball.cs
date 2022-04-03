@@ -44,6 +44,7 @@ public class Fireball : Bullet
         if (enemy != null)
         {
             enemy.ElementAttack(elementType, elementAmount, elementPower, attack);
+            AudioManager.instance.Play(SoundType.SFX,"FireballHit");
 
             //AOE
             Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRange);
