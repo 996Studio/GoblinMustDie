@@ -16,13 +16,14 @@ public class EnemySpawner : MonoBehaviour
     
     int currentWave = 0;
     int spawnNum = 0;    
-    float spawnInverval = 0;
+    float spawnInterval = 0;
     float spawnCounter = 0;
     
     private void Start()
     {
         waveIntervalCounter = waveInterval;
-        spawnCounter = enemySpawnerSOs[currentWave].spawnInterval;
+        spawnInterval = enemySpawnerSOs[currentWave].spawnInterval;
+        spawnCounter = spawnInterval;
     }
 
     private void Update()
@@ -38,8 +39,8 @@ public class EnemySpawner : MonoBehaviour
                 GameObject tempGo = Instantiate(enemySpawnerSOs[currentWave].enemy, transform.position, Quaternion.identity, transform);
                 GameManager.Instance.SpawnNum++;
                 spawnNum++;
-
-                spawnCounter = spawnInverval;
+                
+                spawnCounter = spawnInterval;
             }
 
             if (spawnNum >= enemySpawnerSOs[currentWave].spawnAmount && currentWave + 1 < enemySpawnerSOs.Length)
@@ -47,8 +48,8 @@ public class EnemySpawner : MonoBehaviour
                 currentWave++;
                 spawnNum = 0;
                 
-                spawnInverval = enemySpawnerSOs[currentWave].spawnInterval;
-                spawnCounter = spawnInverval;
+                spawnInterval = enemySpawnerSOs[currentWave].spawnInterval;
+                spawnCounter = spawnInterval;
 
                 waveIntervalCounter = waveInterval;
             }
