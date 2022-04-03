@@ -684,8 +684,10 @@ MonoBehaviour:
   maxYPos: 100
   minPos: {x: 0, y: -18}
   maxPos: {x: 35, y: -10}
-  zoomOutMin: 0
-  zoomOutMax: 0
+  zoomOutMin: 1
+  zoomOutMax: 8
+  cam: {fileID: 129261800}
+  groundZ: 0
 --- !u!4 &129261803
 Transform:
   m_ObjectHideFlags: 0
@@ -9343,7 +9345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 421, y: -62.7}
+  m_AnchoredPosition: {x: 421, y: -62.69995}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1887773293609405647
@@ -10221,7 +10223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: -29}
+  m_AnchoredPosition: {x: 75.000244, y: -29}
   m_SizeDelta: {x: 200, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1887773294422478104
