@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: deb0e3c3c3afc6f48b3c9b1c44c2e782, type: 2}
 --- !u!1001 &3395789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (150)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -215,6 +219,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (118)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -543,6 +551,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -898,6 +910,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -1432,6 +1448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (135)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 135
@@ -1737,6 +1757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -1818,6 +1842,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -1982,6 +2010,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (179)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -2387,6 +2419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -2468,6 +2504,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -2633,6 +2673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 46
@@ -2714,6 +2758,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -3154,7 +3202,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4604049511931695570, guid: 55984b376e9a2594a9f0d40183fda827, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55984b376e9a2594a9f0d40183fda827, type: 3}
 --- !u!4 &318302133 stripped
 Transform:
@@ -3172,6 +3221,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -3254,6 +3307,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -3458,6 +3515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (137)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 137
@@ -3624,6 +3685,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 388942331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &395552960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4604049511931695569, guid: 55984b376e9a2594a9f0d40183fda827,
+    type: 3}
+  m_PrefabInstance: {fileID: 1350833058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &400541470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3634,6 +3701,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -4538,6 +4609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -4778,6 +4853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (124)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 124
@@ -4942,6 +5021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -5062,6 +5145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (164)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 164
@@ -5144,6 +5231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -5225,6 +5316,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (175)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -5453,6 +5548,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -5693,6 +5792,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -6012,6 +6115,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -6346,6 +6453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -6479,6 +6590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (168)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 168
@@ -6560,6 +6675,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (131)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -6725,6 +6844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (165)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 165
@@ -6806,6 +6929,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (169)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -6900,6 +7027,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (126)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -7091,6 +7222,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -7599,6 +7734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (136)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 136
@@ -7680,6 +7819,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -7763,6 +7906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (129)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 129
@@ -7845,6 +7992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (160)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 160
@@ -7926,6 +8077,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -8394,6 +8549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -8476,6 +8635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (161)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 161
@@ -8557,6 +8720,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (139)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -8716,6 +8883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 50
@@ -8797,6 +8968,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -8957,6 +9132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -9038,6 +9217,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -9196,6 +9379,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -9466,6 +9653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (151)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 151
@@ -9547,6 +9738,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -9630,6 +9825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -9711,6 +9910,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -9794,6 +9997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 79
@@ -9875,6 +10082,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -10422,6 +10633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 70
@@ -10586,6 +10801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 100
@@ -10667,6 +10886,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (110)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -10831,6 +11054,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -11043,6 +11270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (120)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 120
@@ -11125,6 +11356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -11206,6 +11441,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (154)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -11371,6 +11610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -11535,6 +11778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -11616,6 +11863,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (109)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -11699,6 +11950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 101
@@ -11780,6 +12035,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -11995,7 +12254,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4604049511931695570, guid: 55984b376e9a2594a9f0d40183fda827, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55984b376e9a2594a9f0d40183fda827, type: 3}
 --- !u!4 &1350833059 stripped
 Transform:
@@ -12003,6 +12263,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1350833058}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1350833060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395552960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76940c22b8ad04348ae6a77b7120fca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawnerSOs:
+  - {fileID: 11400000, guid: b03c782dabe8dbe4b952a7bb5f437b6d, type: 2}
+  waveInterval: 5
 --- !u!1001 &1370786251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12013,6 +12288,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -12095,6 +12374,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -12254,6 +12537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -12335,6 +12622,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (167)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -12463,6 +12754,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (125)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -12687,6 +12982,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (176)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -13331,6 +13630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (134)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 134
@@ -13412,6 +13715,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -13495,6 +13802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (170)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 170
@@ -13576,6 +13887,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -13744,6 +14059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -13908,6 +14227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (130)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 130
@@ -13989,6 +14312,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -14527,6 +14854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -14608,6 +14939,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (174)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -15002,6 +15337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 89
@@ -15221,6 +15560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -15302,6 +15645,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (121)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -15529,6 +15876,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -15788,6 +16139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -15869,6 +16224,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (141)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -15952,6 +16311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -16034,6 +16397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (166)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 166
@@ -16115,6 +16482,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (171)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -16377,6 +16748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (128)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 128
@@ -16603,6 +16978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (138)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 138
@@ -16684,6 +17063,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (145)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -16839,6 +17222,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (177)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -17128,6 +17515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17209,6 +17600,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -17374,6 +17769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -17455,6 +17854,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -17538,6 +17941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (140)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 140
@@ -17619,6 +18026,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (178)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -17866,6 +18277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 111
@@ -18100,6 +18515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 99
@@ -18263,6 +18682,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (119)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -18595,6 +19018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (127)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 127
@@ -18677,6 +19104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 98
@@ -18758,6 +19189,10 @@ PrefabInstance:
     - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_Name
       value: GB_Sand_1 (144)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
@@ -18917,6 +19352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GB_Sand_1 (155)
       objectReference: {fileID: 0}
+    - target: {fileID: 1070511757657826, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4624089688686298, guid: b02fe83975e0e194f8ccdc72eebfbec1, type: 3}
       propertyPath: m_RootOrder
       value: 155
@@ -18988,3 +19427,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8240961, y: 1.8240957, z: 1.8241023}
   m_Center: {x: 0.9120473, y: 0.91204786, z: -0.91205114}
+--- !u!1 &2132745601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4604049511931695569, guid: 55984b376e9a2594a9f0d40183fda827,
+    type: 3}
+  m_PrefabInstance: {fileID: 318302132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132745602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132745601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76940c22b8ad04348ae6a77b7120fca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawnerSOs:
+  - {fileID: 11400000, guid: 03a83376c9986414889af47db6f7aa4e, type: 2}
+  waveInterval: 5
