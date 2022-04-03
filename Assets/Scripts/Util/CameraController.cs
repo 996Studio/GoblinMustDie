@@ -82,7 +82,7 @@ public class CameraController : MonoBehaviour
             Mathf.Clamp(transform.position.z, minPos.y, maxPos.y));
 #endif
 
-        #if UNITY_EDITOR || UNITY_IOS  || UNITY_ANDROID 
+#if UNITY_EDITOR || UNITY_IOS  || UNITY_ANDROID 
         if (Input.GetMouseButtonDown(0))
         {
             //touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -111,7 +111,7 @@ public class CameraController : MonoBehaviour
             Vector3 direction = touchStart - GetWorldPosition(groundZ);
             Camera.main.transform.position += direction;
         }
-        #endif
+#endif
         
        
     }
