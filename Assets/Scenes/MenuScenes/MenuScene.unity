@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolume: 0.5
   soundVolume: 0.5
-  maxUnlockedLevelIndex: 2
+  maxUnlockedLevelIndex: 3
 --- !u!4 &566640861
 Transform:
   m_ObjectHideFlags: 0
