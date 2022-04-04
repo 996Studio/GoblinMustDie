@@ -41,11 +41,20 @@ public class AttackTower : BaseTower
     {
         SetAttackRangeCircleVisibility();
 
+
+        if (FollowMenu.instance.SelectedNode == null)
+        {
+            isToggled = false;
+            return;
+        }
+        
         if (FollowMenu.instance.SelectedNode.GetComponentInChildren<AttackTower>() == this)
         {
             isToggled = true;
         }
         else isToggled = false;
+       
+       
     }
 
     protected void ShootBullet()
