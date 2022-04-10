@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.11884108, g: 0.18339348, b: 0.32976314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -686,6 +686,8 @@ MonoBehaviour:
   maxPos: {x: 35, y: -10}
   zoomOutMin: 0
   zoomOutMax: 0
+  cam: {fileID: 0}
+  groundZ: 0
 --- !u!4 &129261803
 Transform:
   m_ObjectHideFlags: 0
@@ -3185,6 +3187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1373062000}
+  minimap: {fileID: 0}
+  levelIndex: 0
+  pauseAnim: {fileID: 0}
+  GameOverScreen: {fileID: 0}
 --- !u!1 &814039378
 GameObject:
   m_ObjectHideFlags: 0

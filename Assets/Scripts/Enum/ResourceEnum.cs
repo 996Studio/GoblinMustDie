@@ -7,5 +7,5 @@ public enum ResourceType
     ALL,
     COIN,
     WOOD,
-    ROCK
+    CRYSTAL
 }

@@ -6,8 +6,7 @@ public class ResourceTower : BaseTower
 {
     [Header("Resource Tower")]
     public ResourceType resourcetoSpawn;
-    public GameObject woodPrefab;
-    public GameObject crytalPrefab;
+    public GameObject resource;
     public int timeToSpawn;
     public bool bResourceIsUp;
     public float initialSpawnTime = 1.0f;
@@ -17,7 +16,7 @@ public class ResourceTower : BaseTower
     {
         base.Start();
         bResourceIsUp = false;
-        woodPrefab.SetActive(false);
+        resource.SetActive(false);
         InvokeRepeating("spawnResouce",1,5);
     }
 
@@ -32,7 +31,7 @@ public class ResourceTower : BaseTower
     {
         if (bResourceIsUp) return;
         //Debug.Log("Spawn Resource");
-        woodPrefab.SetActive(true);
+        resource.SetActive(true);
         bResourceIsUp = true;
     }
 }

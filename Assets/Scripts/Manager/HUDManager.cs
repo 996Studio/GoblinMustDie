@@ -31,7 +31,7 @@ public class HUDManager : MonoBehaviour
     {
         UpdateCoinText(ResourceManager.Instance().Coin);
         UpdateCrystalText(ResourceManager.Instance().Wood);
-        UpdateDiamondText(ResourceManager.Instance().Rock);
+        UpdateDiamondText(ResourceManager.Instance().Crystal);
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class HUDManager : MonoBehaviour
             {
                 coinText.text = ResourceManager.Instance().Coin.ToString();
                 crystalText.text = ResourceManager.Instance().Wood.ToString();
-                diamondText.text = ResourceManager.Instance().Rock.ToString();
+                diamondText.text = ResourceManager.Instance().Crystal.ToString();
                 break;
             }
             case ResourceType.COIN:
@@ -68,9 +68,9 @@ public class HUDManager : MonoBehaviour
                 crystalText.text = ResourceManager.Instance().Wood.ToString();
                 break;
             }
-            case ResourceType.ROCK:
+            case ResourceType.CRYSTAL:
             {
-                diamondText.text = ResourceManager.Instance().Rock.ToString();
+                diamondText.text = ResourceManager.Instance().Crystal.ToString();
                 break;
             }
             default: break;

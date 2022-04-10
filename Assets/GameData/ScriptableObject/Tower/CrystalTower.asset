@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a17b3088c839944f97bb3a7f3ced4f4, type: 3}
   m_Name: CrystalTower
   m_EditorClassIdentifier: 
-  towerPrefab: []
+  towerPrefab:
+  - {fileID: 4666367461399743705, guid: e6cd9e380f633df44a453d8a9a9c19a4, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   towerBuildOffset: {x: 0, y: 0.5, z: 0}
   coinCost: 060000001800000024000000
   woodCost: 000000000000000000000000

@@ -115,12 +115,18 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void PauseGame()
+    public void ShowSetting()
     {
         isPaused = true;
         Time.timeScale = 0.0f;
         PauseMenu.ShowPauseMenu();
         pauseAnim.SetBool("onShowPause", true);
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0.0f;
     }
 
     public void UnpauseGame()

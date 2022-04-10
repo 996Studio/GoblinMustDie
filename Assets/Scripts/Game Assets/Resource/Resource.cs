@@ -33,10 +33,11 @@ public class Resource : MonoBehaviour
     {
         
     }
-    void Update()
+    protected void Update()
     {
-        
+        transform.Rotate(RotationSpeed * Time.deltaTime);
     }
+    
     public virtual void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -55,9 +56,10 @@ public class Resource : MonoBehaviour
         {
             case ResourceType.WOOD:
                 ResourceManager.Instance().Wood += ResourceAmount;
-                Debug.Log("Wood: "+ ResourceManager.Instance().Wood);
+                //Debug.Log("Wood: "+ ResourceManager.Instance().Wood);
                 break;
-            case ResourceType.ROCK:
+            case ResourceType.CRYSTAL:
+                ResourceManager.Instance().Crystal += ResourceAmount;
                 break;
             default:
                 break;

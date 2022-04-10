@@ -16,5 +16,5 @@ public enum TowerType
     THUNDER,
     WOODEN,
     CRYSTAL,
-    BOOST
+    RECYCLE
 }

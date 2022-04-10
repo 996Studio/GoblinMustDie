@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Wood : Resource
+public class Crystal : Resource
 {
     // Start is called before the first frame update
     void Start()

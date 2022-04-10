@@ -402,3 +402,4 @@ MonoBehaviour:
   textColorWhenSelected: {r: 0, g: 0, b: 0, a: 0}
   rectColorMouseOver: {r: 1, g: 1, b: 1, a: 0}
   levelIndex: 0
+  isUnlocked: 0

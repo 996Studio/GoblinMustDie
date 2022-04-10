@@ -64,7 +64,7 @@ public class NodeManager : MonoBehaviour
         //Debug.Log(type);
         if (ResourceManager.Instance().Coin < towerBaseList[(int)type - 1].CoinCost[0] ||
             ResourceManager.Instance().Wood < towerBaseList[(int)type - 1].WoodCost[0] ||
-            ResourceManager.Instance().Rock < towerBaseList[(int)type - 1].RockCost[0])
+            ResourceManager.Instance().Crystal < towerBaseList[(int)type - 1].RockCost[0])
         {
             //Debug.Log("need more coin");
             return;
@@ -98,7 +98,7 @@ public class NodeManager : MonoBehaviour
 
         if (ResourceManager.Instance().Coin < towerBaseList[(int)node.TowerType - 1].CoinCost[level] ||
             ResourceManager.Instance().Wood < towerBaseList[(int)node.TowerType - 1].WoodCost[level] ||
-            ResourceManager.Instance().Rock < towerBaseList[(int)node.TowerType - 1].RockCost[level])
+            ResourceManager.Instance().Crystal < towerBaseList[(int)node.TowerType - 1].RockCost[level])
         {
             //Debug.Log("need more resource");
             return;
@@ -157,7 +157,7 @@ public class NodeManager : MonoBehaviour
     {
         ResourceManager.Instance().ChangeCoin(coin);
         ResourceManager.Instance().ChangeWood(wood);
-        ResourceManager.Instance().ChangeRock(rock);
+        ResourceManager.Instance().ChangeCrystal(rock);
     }
 
     private void SetTowerData(Node node)

@@ -1292,6 +1292,8 @@ MonoBehaviour:
   listPanel: {fileID: 4597771709589500903}
   selectNode: {fileID: 0}
   lastNode: {fileID: 0}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!95 &822066943
 Animator:
   serializedVersion: 4

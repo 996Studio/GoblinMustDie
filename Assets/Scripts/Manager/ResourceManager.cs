@@ -9,7 +9,7 @@ public class ResourceManager
 
     private int coin = 10000;
     private int wood=10000;
-    private int rock=10000;
+    private int crystal=10000;
 
     private ResourceManager()
     {
@@ -38,10 +38,10 @@ public class ResourceManager
         set { wood = value; }
     }
 
-    public int Rock
+    public int Crystal
     {
-        get { return rock; }
-        set { rock = value; }
+        get { return crystal; }
+        set { crystal = value; }
     }
 
     public void ChangeCoin(int number)
@@ -54,8 +54,8 @@ public class ResourceManager
         wood += number;
     }
 
-    public void ChangeRock(int number)
+    public void ChangeCrystal(int number)
     {
-        rock += number;
+        crystal += number;
     }
 }

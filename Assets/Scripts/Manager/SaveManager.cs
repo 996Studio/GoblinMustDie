@@ -23,7 +23,7 @@ public class SaveManager : MonoBehaviour
         SaveData save = new SaveData();
         save.coin = ResourceManager.Instance().Coin;
         save.wood = ResourceManager.Instance().Wood;
-        save.rock = ResourceManager.Instance().Rock;
+        save.rock = ResourceManager.Instance().Crystal;
 
         save.towerTypeList = new List<TowerType>();
         save.levelList = new List<int>();
@@ -68,7 +68,7 @@ public class SaveManager : MonoBehaviour
 
             ResourceManager.Instance().Coin = save.coin;
             ResourceManager.Instance().Wood = save.wood;
-            ResourceManager.Instance().Rock = save.rock;
+            ResourceManager.Instance().Crystal = save.rock;
             HUDManager.instance.UpdateResourceText(ResourceType.ALL);
 
             //Debug.Log($"save node number {save.nodeNum}");
