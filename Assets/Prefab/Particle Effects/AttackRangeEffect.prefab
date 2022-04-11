@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8680514250369721529}
   - component: {fileID: 8680514250369721535}
   - component: {fileID: 8680514250369721534}
+  - component: {fileID: 4449917409805955621}
   m_Layer: 0
   m_Name: AttackRangeCircle
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8680514250369721528}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -285,7 +286,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 28
+      scalar: 22
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4812,6 +4813,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4449917409805955621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680514250369721528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f9c0f57f4c2234792ce3e2224615c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8680514250554383942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,6 +4836,7 @@ GameObject:
   - component: {fileID: 8680514250554383943}
   - component: {fileID: 8680514250554383941}
   - component: {fileID: 8680514250554383940}
+  - component: {fileID: 5939787543635830209}
   m_Layer: 0
   m_Name: AttackRangeWave
   m_TagString: Untagged
@@ -4837,7 +4851,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8680514250554383942}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5097,7 +5111,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 33
+      scalar: 25.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9633,6 +9647,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &5939787543635830209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680514250554383942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f9c0f57f4c2234792ce3e2224615c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8680514251434077626
 GameObject:
   m_ObjectHideFlags: 0
