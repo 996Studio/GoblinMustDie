@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcetoSpawn: 2
-  resourcePrefab: {fileID: 2572413215964224612}
+  resource: {fileID: 2572413215964224612}
   timeToSpawn: 2
   bResourceIsUp: 0
   initialSpawnTime: 1

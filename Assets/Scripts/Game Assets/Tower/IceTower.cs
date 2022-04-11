@@ -18,7 +18,6 @@ public class IceTower : AttackTower
     private void Update()
     {
         base.Update();
-        
         if (target == null) return; // No target, do nothing
 
         turretAimActivate();
@@ -30,5 +29,6 @@ public class IceTower : AttackTower
             fireCounter = fireInterval;
         }
         fireCounter -= Time.deltaTime;
+        
     }
 }

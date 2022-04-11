@@ -30,6 +30,7 @@ public class ArcherTower : AttackTower
             fireCounter = fireInterval;
             AudioManager.instance.Play(SoundType.SFX,"ShootArrow");
         }
-        fireCounter -= Time.deltaTime;
+        fireCounter -= Time.deltaTime; 
+        
     }
 }

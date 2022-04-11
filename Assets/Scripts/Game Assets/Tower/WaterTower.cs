@@ -23,7 +23,6 @@ public class WaterTower : AttackTower
     void Update()
     {
         base.Update();
-        
         if (target == null) return; // No target, do nothing
 
         // Rate of fire
@@ -43,6 +42,7 @@ public class WaterTower : AttackTower
                 RingAttackStop();
             }
         }
+        
     }
 
     private void RingAttackStart()

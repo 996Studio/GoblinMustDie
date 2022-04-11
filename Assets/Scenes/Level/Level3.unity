@@ -1220,6 +1220,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 457722084}
   musicVolumeSlider: {fileID: 2125815808}
   soundVolumeSlider: {fileID: 448837854}
+  cameraScript: {fileID: 816858823}
 --- !u!114 &101455781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7854,6 +7855,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7567971f4b6711438d5c10750f63ee0, type: 3}
+--- !u!114 &816858823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8529442677580599370, guid: c7567971f4b6711438d5c10750f63ee0,
+    type: 3}
+  m_PrefabInstance: {fileID: 816858822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95982b1e41510d445a539ebcb2f97dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &818611037
 PrefabInstance:
   m_ObjectHideFlags: 0

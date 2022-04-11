@@ -18,7 +18,6 @@ public class FireTower : AttackTower
     private void Update()
     {
         base.Update();
-        
         if (target == null) return; // No target, do nothing
 
         // Rate of fire

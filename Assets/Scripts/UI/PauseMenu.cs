@@ -12,10 +12,12 @@ public class PauseMenu : MonoBehaviour
     public Slider musicVolumeSlider;
     public Slider soundVolumeSlider;
 
+    public CameraController cameraScript;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        cameraScript.GetComponent<CameraController>();
     }
 
     // Update is called once per frame
@@ -28,11 +30,16 @@ public class PauseMenu : MonoBehaviour
     public void ShowPauseMenu()
     {
         pauseMenu.gameObject.SetActive(true);
+        //disable camera movement when in pauseMenu
+        cameraScript.enabled = false;
+
     }
 
     public void HidePauseMenu()
     {
         pauseMenu.gameObject.SetActive(false);
+        //enable camera movement when in pauseMenu
+        cameraScript.enabled = true;
     }
 
     public void SetMusicVolume()

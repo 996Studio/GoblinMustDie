@@ -24,9 +24,8 @@ public class ThunderTower : AttackTower
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         base.Update();
-        
         if (target == null) return; // No target, do nothing
 
         // Rate of fire
@@ -36,6 +35,7 @@ public class ThunderTower : AttackTower
             fireCounter = fireInterval;
         }
         fireCounter -= Time.deltaTime;
+       
     }
 
     private void Lightning()
