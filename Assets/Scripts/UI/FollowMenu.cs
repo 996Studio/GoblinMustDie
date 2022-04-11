@@ -19,6 +19,16 @@ public class FollowMenu : MonoBehaviour
     public Color originalColor;
     public Color highlightColor;
 
+    [Header("Buttons")]
+    public GameObject ArcherTowerButton;
+    public GameObject FireTowerButton;
+    public GameObject IceTowerButton;
+    public GameObject ThunderTowerButton;
+    public GameObject WaterTowerButton;
+    public GameObject CrystalTowerButton;
+    public GameObject UpgradeTowerButton;
+    public GameObject SellTowerButton;
+
     private Camera cam;
 
     private void Awake()
@@ -51,6 +61,7 @@ public class FollowMenu : MonoBehaviour
         else if (FollowMenu.instance.SelectedNode != null)
         {
             pos = cam.WorldToScreenPoint(FollowMenu.instance.SelectedNode.transform.position + offset);
+            isNodeEmpty();
         }
 
         if (transform.position != pos)
@@ -63,10 +74,10 @@ public class FollowMenu : MonoBehaviour
         {
             Debug.Log("No node assigned!");
         }
-        else if (FollowMenu.instance.SelectedNode == null && FollowMenu.instance.lastNode != null)  // GameObject exist Behind UI
-        {
-            FollowMenu.instance.lastNode.rend.material.color = highlightColor;
-        }
+        //else if (FollowMenu.instance.SelectedNode == null && FollowMenu.instance.lastNode != null)  // GameObject exist Behind UI
+        //{
+        //    FollowMenu.instance.lastNode.rend.material.color = highlightColor;
+        //}
         else if (FollowMenu.instance.SelectedNode != null)
         {
             FollowMenu.instance.SelectedNode.rend.material.color = highlightColor;
@@ -82,7 +93,7 @@ public class FollowMenu : MonoBehaviour
 
         transform.position = originPosition;
         FollowMenu.instance.SelectedNode.rend.material.color = originalColor;
-        FollowMenu.instance.SelectedNode = lastNode = null;
+        FollowMenu.instance.SelectedNode = FollowMenu.instance.lastNode = null;
     }
 
     public void UpgradeTower()
@@ -126,5 +137,31 @@ public class FollowMenu : MonoBehaviour
             NodeManager.instance.BuildTower(towerType, FollowMenu.instance.lastNode);
         }
         HideMenu();
+    }
+
+    private void isNodeEmpty()
+    {
+        if (FollowMenu.instance.SelectedNode.GetComponentInChildren<AttackTower>() == null)
+        {
+            ArcherTowerButton.SetActive(true);
+            FireTowerButton.SetActive(true);
+            IceTowerButton.SetActive(true);
+            ThunderTowerButton.SetActive(true);
+            WaterTowerButton.SetActive(true);
+            CrystalTowerButton.SetActive(true);
+            UpgradeTowerButton.SetActive(false);
+            SellTowerButton.SetActive(false);
+        }
+        else if (FollowMenu.instance.SelectedNode.GetComponentInChildren<AttackTower>() != null)
+        {
+            ArcherTowerButton.SetActive(false);
+            FireTowerButton.SetActive(false);
+            IceTowerButton.SetActive(false);
+            ThunderTowerButton.SetActive(false);
+            WaterTowerButton.SetActive(false);
+            CrystalTowerButton.SetActive(false);
+            UpgradeTowerButton.SetActive(true);
+            SellTowerButton.SetActive(true);
+        }
     }
 }

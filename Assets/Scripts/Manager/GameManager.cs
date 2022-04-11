@@ -125,8 +125,18 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        isPaused = true;
-        Time.timeScale = 0.0f;
+        //isPaused = true;
+        //Time.timeScale = 0.0f;
+
+        isPaused = !isPaused;
+        if (isPaused)
+        {
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 
     public void UnpauseGame()
