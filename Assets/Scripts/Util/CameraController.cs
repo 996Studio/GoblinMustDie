@@ -110,7 +110,11 @@ public class CameraController : MonoBehaviour
             //Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 direction = touchStart - GetWorldPosition(groundZ);
             Camera.main.transform.position += direction;
+           
         }
+        
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPos.x, maxPos.x), transform.position.y,
+            Mathf.Clamp(transform.position.z, minPos.y, maxPos.y));
 #endif
         
        
