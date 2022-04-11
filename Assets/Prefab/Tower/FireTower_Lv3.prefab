@@ -253,6 +253,7 @@ MonoBehaviour:
   fireLocation: {fileID: 5991389472958498341}
   Rotator: {fileID: 3416517080860361721}
   AttackRangeCircle: {fileID: 8680514251078106381}
+  attackrange: {fileID: 0}
   isToggled: 0
 --- !u!1 &8588328224858524935
 GameObject:
@@ -278,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8588328224858524935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

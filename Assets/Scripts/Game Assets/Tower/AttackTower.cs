@@ -7,10 +7,10 @@ public class AttackTower : BaseTower
 {
     
     [Header("Attributes")] 
-    protected float attackRange = 10.0f;
+    protected float attackRange;
     protected int attack;
     protected float defence;
-    protected float fireInterval = 1.0f;
+    protected float fireInterval;
     protected float turnSpeed = 10.0f;
     [SerializeField] protected GameObject bulletPrefab;
     [SerializeField] protected Transform fireLocation;
@@ -66,7 +66,6 @@ public class AttackTower : BaseTower
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         bullet.transform.SetParent(this.transform);
         bullet.Attack = this.attack;
-        AudioManager.instance.Play(SoundType.SFX,"BowTowerFire");
 
         if (bullet != null)
         {

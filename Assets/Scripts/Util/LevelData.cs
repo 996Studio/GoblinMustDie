@@ -15,6 +15,7 @@ public class LevelData : MonoBehaviour
 {
     public bool isWin;
     public int killCount;
+    public int levelIndex;
     
     // Start is called before the first frame update
     void Awake()

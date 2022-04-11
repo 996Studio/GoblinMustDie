@@ -11,6 +11,7 @@ public class GameSetting : MonoBehaviour
     public float soundVolume;
 
     public int maxUnlockedLevelIndex;
+    public int levelNumber;
     
     private void Awake()
     {

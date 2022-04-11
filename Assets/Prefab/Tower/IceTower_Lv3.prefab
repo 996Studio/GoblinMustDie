@@ -408,6 +408,7 @@ MonoBehaviour:
   fireLocation: {fileID: 9162897178310267768}
   Rotator: {fileID: 5227306044444682207}
   AttackRangeCircle: {fileID: 7683964998700320173}
+  attackrange: {fileID: 0}
   isToggled: 0
 --- !u!1 &2899437123648740795
 GameObject:

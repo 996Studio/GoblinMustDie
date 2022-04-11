@@ -178,6 +178,7 @@ public class NodeManager : MonoBehaviour
             }
             case TowerType.WOODEN:
             case TowerType.CRYSTAL:
+            case TowerType.RECYCLE:
             {
                 break;
             }

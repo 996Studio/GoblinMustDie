@@ -23,8 +23,18 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetMusicVolume();
-        SetSoundVolume();
+        musicVolumeSlider.value = GameSetting.instance.musicVolume;
+        soundVolumeSlider.value = GameSetting.instance.soundVolume;
+
+        if (AudioManager.instance != null)
+        {
+            SetMusicVolume();
+            SetSoundVolume();
+        }
+        else
+        {
+            Debug.Log("Audio manager null");
+        }
     }
 
     public void ShowPauseMenu()

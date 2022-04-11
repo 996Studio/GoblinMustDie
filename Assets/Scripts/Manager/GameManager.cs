@@ -101,12 +101,14 @@ public class GameManager : MonoBehaviour
         }
         else if (isWin)
         {
-            if (levelIndex > GameSetting.instance.maxUnlockedLevelIndex)
+            if (levelIndex >= GameSetting.instance.maxUnlockedLevelIndex)
             {
-                GameSetting.instance.maxUnlockedLevelIndex = levelIndex;
+                GameSetting.instance.maxUnlockedLevelIndex = levelIndex + 1;
+                Debug.Log($"Set max level index to {GameSetting.instance.maxUnlockedLevelIndex}");
             }
             GameObject.Find("LevelData").GetComponent<LevelData>().isWin = true;
             GameObject.Find("LevelData").GetComponent<LevelData>().killCount = killCount * 10000;
+            GameObject.Find("LevelData").GetComponent<LevelData>().levelIndex = levelIndex;
             
             //GameOverScreen.SetActive(true);
             //Time.timeScale = 0f;
@@ -176,4 +178,8 @@ public class GameManager : MonoBehaviour
         minimap.SetActive(!minimap.activeInHierarchy);
     }
 
+    public void PlayClickSound()
+    {
+        AudioManager.instance.PlayClickSound();
+    }
 }

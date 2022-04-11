@@ -18,6 +18,9 @@ public class GameOverScene : MonoBehaviour
 {
     public TMP_Text WinText;
     public TMP_Text killCountText;
+    public Button nextLevelButton;
+
+    private int nextLevelIndex;
 
     // Based on Leveldata set text content and BGM
     void Start()
@@ -25,13 +28,20 @@ public class GameOverScene : MonoBehaviour
         Debug.Log(
             $"Over Win {GameObject.Find("LevelData").GetComponent<LevelData>().isWin}, kill {GameObject.Find("LevelData").GetComponent<LevelData>().killCount}");
         bool isWin = GameObject.Find("LevelData").GetComponent<LevelData>().isWin;
+        nextLevelIndex = GameObject.Find("LevelData").GetComponent<LevelData>().levelIndex + 1;
+        
         if (isWin)
         {
             WinText.text = "YOU WIN";
+            if (nextLevelIndex <= GameSetting.instance.levelNumber)
+            {
+                nextLevelButton.gameObject.SetActive(true);
+            }
         }
         else
         {
             WinText.text = "GAME OVER";
+            nextLevelButton.gameObject.SetActive(false);
             AudioManager.instance.Play(SoundType.SFX,"Lost");
         }
 
@@ -49,5 +59,10 @@ public class GameOverScene : MonoBehaviour
     public void GotoMainMenu()
     {
         SceneManager.LoadScene("MenuScene");
+    }
+
+    public void GoToNextLevel()
+    {
+        SceneManager.LoadScene("Level" + nextLevelIndex.ToString());
     }
 }
