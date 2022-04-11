@@ -17,8 +17,9 @@ public class AttackTower : BaseTower
     [SerializeField] protected Transform Rotator;
     
     [Header("AttackRange")] public GameObject AttackRangeCircle;
-    public ParticleSystem attackrange;
+    protected ParticleSystem attackrange;
     public bool isToggled;
+    
     
     protected float fireCounter;
     protected Transform target;
@@ -27,6 +28,12 @@ public class AttackTower : BaseTower
     {
         get { return target; }
         set { target = value; }
+    }
+
+    public float AttackRange
+    {
+        get { return attackRange; }
+        
     }
 
     // Start is called before the first frame update
@@ -154,6 +161,8 @@ public class AttackTower : BaseTower
     {
         attackrange.Stop();
     }
+
+   
 }
 
 
