@@ -27,6 +27,8 @@ public class CameraController : MonoBehaviour
     public Camera cam;
     public float groundZ = 0;
     private Vector3 touchStart;
+
+    public Vector3 LevelComponentOffset = new Vector3(13.9352808f, 0.914803028f, -6.90722942f);
     // Update is called once per frame
     void Update()
     {
@@ -113,8 +115,8 @@ public class CameraController : MonoBehaviour
            
         }
         
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPos.x, maxPos.x), transform.position.y,
-            Mathf.Clamp(transform.position.z, minPos.y, maxPos.y));
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPos.x + LevelComponentOffset.x, maxPos.x + LevelComponentOffset.x), transform.position.y,
+            Mathf.Clamp(transform.position.z, minPos.y + LevelComponentOffset.z , maxPos.y + LevelComponentOffset.z));
 #endif
         
        
