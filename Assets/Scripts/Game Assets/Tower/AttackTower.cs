@@ -31,10 +31,10 @@ public class AttackTower : BaseTower
 
     // Start is called before the first frame update
      protected  void Start()
-     {
+     { 
+         base.Start();
          isToggled = false;
-        base.Start();
-    }
+     }
 
     // Update is called once per frame
     protected void Update()
