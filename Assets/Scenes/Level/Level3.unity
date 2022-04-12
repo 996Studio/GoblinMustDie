@@ -11142,17 +11142,17 @@ PrefabInstance:
     - target: {fileID: 8664024076584286465, guid: 09daa539b35df844abd25fc2a11c5728,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.935281
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8664024076584286465, guid: 09daa539b35df844abd25fc2a11c5728,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.914803
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8664024076584286465, guid: 09daa539b35df844abd25fc2a11c5728,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.9072294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8664024076584286465, guid: 09daa539b35df844abd25fc2a11c5728,
         type: 3}
@@ -11193,6 +11193,41 @@ PrefabInstance:
         type: 3}
       propertyPath: maxPos.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790549353392587476, guid: 09daa539b35df844abd25fc2a11c5728,
+        type: 3}
+      propertyPath: minPos.x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790549353392587476, guid: 09daa539b35df844abd25fc2a11c5728,
+        type: 3}
+      propertyPath: minPos.y
+      value: -22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790549353392587476, guid: 09daa539b35df844abd25fc2a11c5728,
+        type: 3}
+      propertyPath: LevelComponentOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790549353392587476, guid: 09daa539b35df844abd25fc2a11c5728,
+        type: 3}
+      propertyPath: LevelComponentOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790549353392587476, guid: 09daa539b35df844abd25fc2a11c5728,
+        type: 3}
+      propertyPath: LevelComponentOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790549353392587477, guid: 09daa539b35df844abd25fc2a11c5728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790549353392587477, guid: 09daa539b35df844abd25fc2a11c5728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.8
       objectReference: {fileID: 0}
     - target: {fileID: 8790549354143379849, guid: 09daa539b35df844abd25fc2a11c5728,
         type: 3}
