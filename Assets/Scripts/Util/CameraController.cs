@@ -89,6 +89,7 @@ public class CameraController : MonoBehaviour
         {
             //touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             touchStart = GetWorldPosition(groundZ);
+            Debug.Log("Touch");
         }
 
         if (Input.touchCount == 2)
@@ -105,14 +106,12 @@ public class CameraController : MonoBehaviour
 
             zoom(difference);
         }
-        
-       
         else if (Input.GetMouseButton(0))
         {
             //Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 direction = touchStart - GetWorldPosition(groundZ);
             Camera.main.transform.position += direction;
-           
+            Debug.Log($"{Camera.main.transform.position}");
         }
         
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPos.x + LevelComponentOffset.x, maxPos.x + LevelComponentOffset.x), transform.position.y,
