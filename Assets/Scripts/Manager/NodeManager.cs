@@ -111,6 +111,7 @@ public class NodeManager : MonoBehaviour
         ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level],
             -towerBaseList[(int)node.TowerType - 1].WoodCost[level],
             -towerBaseList[(int)node.TowerType - 1].RockCost[level]);
+        HUDManager.instance.UpdateResourceText(ResourceType.ALL);
     }
 
     public void SellTower(Node node)
@@ -118,9 +119,9 @@ public class NodeManager : MonoBehaviour
         Debug.Log("Sell " + node.TowerType);
 
         int level = node.Tower.GetComponent<BaseTower>().Level;
-        ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level - 1],
-            -towerBaseList[(int)node.TowerType - 1].WoodCost[level - 1],
-            -towerBaseList[(int)node.TowerType - 1].RockCost[level - 1]);
+        ChangeResource(towerBaseList[(int)node.TowerType - 1].CoinCost[level - 1],
+            towerBaseList[(int)node.TowerType - 1].WoodCost[level - 1],
+            towerBaseList[(int)node.TowerType - 1].RockCost[level - 1]);
         HUDManager.instance.UpdateResourceText(ResourceType.ALL);
         
         Destroy(node.Tower);

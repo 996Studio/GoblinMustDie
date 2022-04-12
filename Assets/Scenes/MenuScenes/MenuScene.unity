@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolume: 0.5
   soundVolume: 0.5
-  maxUnlockedLevelIndex: 1
+  maxUnlockedLevelIndex: 3
   levelNumber: 3
 --- !u!4 &566640861
 Transform:
