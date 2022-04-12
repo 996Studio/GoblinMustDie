@@ -42,6 +42,9 @@ public class EnemyBase : MonoBehaviour
     public ParticleSystem steameffect;
     private HitEffect hitEffect;
 
+    private List<Transform> wayPoints;
+    private int destinationIndex = 0;
+    
     public float RecycleMultiplier
     {
         get => recycleMultiplier;
@@ -49,8 +52,6 @@ public class EnemyBase : MonoBehaviour
     }
     
     public event Action<float> OnHealthChanged = delegate(float f) {  };
-    
-    
     
     public int Atk
     {
@@ -68,12 +69,13 @@ public class EnemyBase : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         canTakeDamage = true;
-
+        wayPoints = WaypointManager.instance.wayPoints;
+        
         //delegate for changing health
         OnHealthChanged += HandleHealthChange;
         
         HPBarForeground.fillAmount = 0.5f;
-        agent.SetDestination(MotherBase.Instance.transform.position);
+        agent.SetDestination(wayPoints[destinationIndex].position);
         
         elementComponent = GetComponent<ElementComponent>();
     }
@@ -85,6 +87,8 @@ public class EnemyBase : MonoBehaviour
     
     protected virtual void Update()
     {
+        changeWayPointIndex();
+        
         FreezeTimer();
         
         //Test code
@@ -113,6 +117,17 @@ public class EnemyBase : MonoBehaviour
     public virtual void InitInfo()
     {
         atk = 1;
+    }
+
+    protected void changeWayPointIndex()
+    {
+        //if (destinationIndex >= wayPoints.Count - 1) return;
+
+        if (Vector3.Distance(agent.transform.position, wayPoints[destinationIndex].position) <= agent.stoppingDistance)
+        {
+            agent.SetDestination(wayPoints[++destinationIndex].position);
+            Debug.Log("Waypoint Index: " + destinationIndex);
+        }
     }
 
     public void TakeDamage(int dmg)
