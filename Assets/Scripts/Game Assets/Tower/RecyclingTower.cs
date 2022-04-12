@@ -16,10 +16,10 @@ public class RecyclingTower : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // void Update()
+    // {
+    //     
+    // }
 
     private void OnTriggerEnter(Collider other)
     {

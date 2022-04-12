@@ -106,7 +106,7 @@ public class CreateTowerUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("No tower to upgrade here!");
+            //Debug.Log("No tower to upgrade here!");
         }
     }
 
@@ -121,14 +121,14 @@ public class CreateTowerUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("No tower to sell here!");
+            //Debug.Log("No tower to sell here!");
         }
     }
 
     public void BuildTower(int type)
     {
         TowerType towerType = (TowerType)type;
-        Debug.Log($"Build {towerType}");
+        //Debug.Log($"Build {towerType}");
         print(towerType + " " + CreateTowerUI.instance.selectNode);
 
         /*   NEED FIX LATER: Raycast will still hit through UI, if a node exist behind UI button, it will build on that node instead.  */

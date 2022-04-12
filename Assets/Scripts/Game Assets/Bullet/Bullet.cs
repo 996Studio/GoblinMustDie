@@ -54,6 +54,6 @@ public class Bullet : MonoBehaviour
 
     protected virtual void HitTarget()
     {
-        Debug.Log("Base class hit target");
+        //Debug.Log("Base class hit target");
     }
 }

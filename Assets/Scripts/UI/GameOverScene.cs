@@ -41,10 +41,10 @@ public class GameOverScene : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // void Update()
+    // {
+    //     
+    // }
 
     public void GotoMainMenu()
     {

@@ -17,17 +17,17 @@ public class WaterRing : MonoBehaviour
         set => damage = value;
     }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // // Start is called before the first frame update
+    // void Start()
+    // {
+    //     
+    // }
+    //
+    // // Update is called once per frame
+    // void Update()
+    // {
+    //     
+    // }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,3 +37,4 @@ public class WaterRing : MonoBehaviour
         }
     }
 }
+ 

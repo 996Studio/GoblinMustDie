@@ -44,7 +44,7 @@ public class Resource : MonoBehaviour
             return;
         }
         
-        Debug.Log("Clicked");
+        //Debug.Log("Clicked");
         CollectResource(resourceType, ResourceAmount);
     }
     

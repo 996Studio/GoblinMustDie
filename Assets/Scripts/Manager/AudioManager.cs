@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("More than one AudioManager in scene!");
+            //Debug.Log("More than one AudioManager in scene!");
         }
         
         instance = this;
@@ -42,10 +42,10 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {
-        
-    }
+    // void Start()
+    // {
+    //     
+    // }
 
     public void Play(SoundType type,string name)
     {
@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Cannot find sound {name}");
+            //Debug.Log($"Cannot find sound {name}");
         }
     }
 

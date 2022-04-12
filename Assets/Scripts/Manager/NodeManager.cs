@@ -21,7 +21,7 @@ public class NodeManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("More than one NodeManager in scene!");
+            //Debug.Log("More than one NodeManager in scene!");
         }
         
         instance = this;
@@ -40,10 +40,10 @@ public class NodeManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // void Update()
+    // {
+    //     
+    // }
 
     public void InstantiateTower(Node node,TowerType type,int level)
     {
@@ -115,7 +115,7 @@ public class NodeManager : MonoBehaviour
 
     public void SellTower(Node node)
     {
-        Debug.Log("Sell " + node.TowerType);
+        //Debug.Log("Sell " + node.TowerType);
 
         int level = node.Tower.GetComponent<BaseTower>().Level;
         ChangeResource(-towerBaseList[(int)node.TowerType - 1].CoinCost[level - 1],

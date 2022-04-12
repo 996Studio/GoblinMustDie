@@ -119,18 +119,33 @@ public class EnemyBase : MonoBehaviour
     {
         if (canTakeDamage)
         {
+            animator.SetBool("IsHurt", true);
+            SetSpeed();
+            
             curHP -= dmg;
-            Debug.Log($"damage {dmg} to {curHP}");
+            //Debug.Log($"damage {dmg} to {curHP}");
             
             ChangeHealth();
             
             if (curHP <= 0)
             {
-                Death();
+                animator.SetTrigger("Death");
             }
         }
     }
+
+    protected virtual void AnimParaReset()
+    {
+        Debug.Log("Anim Para Reset!");
+        animator.SetBool("IsHurt", false);
+        agent.speed = moveSpeed;
+    }
     
+    protected void SetSpeed()
+    {
+        agent.speed = 0;
+    }
+
     public void ElementAttack(ElementEnum element, float amount, int power, int damage)
     {
         elementComponent.ElementAttack(element, amount, power, damage);
@@ -144,8 +159,12 @@ public class EnemyBase : MonoBehaviour
 
     public virtual void Death()
     {
+        Debug.Log("Death Called!");
+        
         isDead = true;
+        canTakeDamage = false;
         agent.isStopped = true;
+        
         AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
 
         GameManager.Instance.KillCount++;
@@ -212,14 +231,14 @@ public class EnemyBase : MonoBehaviour
 
     public void ElectroCharged(int damage)
     {
-        Debug.Log("Electro Charge");
+        //Debug.Log("Electro Charge");
         TakeDamage(damage);
         PlayHitEffect(HitEffect.Electro);
     }
 
     public void Freeze()
     {
-        Debug.Log("Start freezing");
+        //Debug.Log("Start freezing");
         agent.speed = 0;
     }
 
@@ -272,19 +291,19 @@ public class EnemyBase : MonoBehaviour
         {
             case HitEffect.Electro:
                 electricityeffect.Play();
-                Debug.Log("Electro!");
+               // Debug.Log("Electro!");
                 break;
             case HitEffect.Overload:
                 overloadeffect.Play();
-                Debug.Log("Overload!");
+                //Debug.Log("Overload!");
                 break;
             case HitEffect.Freeze:
                 freezeeffect.Play();
-                Debug.Log("Freeze!");
+                //Debug.Log("Freeze!");
                 break;
             case HitEffect.Vaporize:
                 steameffect.Play();
-                Debug.Log("Vaporize!");
+                //Debug.Log("Vaporize!");
                 break;
             default:
                 break;
