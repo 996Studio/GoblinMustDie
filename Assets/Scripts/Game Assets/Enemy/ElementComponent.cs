@@ -260,8 +260,8 @@ public class ElementComponent : MonoBehaviour
 
     private void CalculateElement(AttachedElement firstElement, AttachedElement secondElement)
     {
-        Debug.Log(
-            $"Before: attached {firstElement.element} {firstElement.amount} {firstElement.power} attaching {secondElement.element} {secondElement.amount} {secondElement.power}");
+        // Debug.Log(
+        //     $"Before: attached {firstElement.element} {firstElement.amount} {firstElement.power} attaching {secondElement.element} {secondElement.amount} {secondElement.power}");
         if (firstElement.amount * firstElement.power <= secondElement.amount * secondElement.power *
             TypeChart.GetReactionPara(firstElement.element, secondElement.element))
         {
@@ -274,8 +274,8 @@ public class ElementComponent : MonoBehaviour
                 secondElement.power *
                 TypeChart.GetReactionPara(firstElement.element, secondElement.element)) / (float)firstElement.power;
         }
-        Debug.Log(
-            $"After: attached {firstElement.element} {firstElement.amount} {firstElement.power} attaching {secondElement.element} {secondElement.amount} {secondElement.power}");
+        // Debug.Log(
+        //     $"After: attached {firstElement.element} {firstElement.amount} {firstElement.power} attaching {secondElement.element} {secondElement.amount} {secondElement.power}");
     }
 
     private bool CauseReaction(ElementEnum element)
@@ -347,7 +347,7 @@ public class ElementComponent : MonoBehaviour
             default: break;    
         }
 
-        Debug.Log("Casue Reaction Error");
+        //Debug.Log("Casue Reaction Error");
         return false;
     }
     

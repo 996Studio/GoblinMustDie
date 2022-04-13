@@ -72,7 +72,7 @@ public class FollowMenu : MonoBehaviour
     {
         if (FollowMenu.instance.SelectedNode == null && FollowMenu.instance.lastNode == null)
         {
-            Debug.Log("No node assigned!");
+            //Debug.Log("No node assigned!");
         }
         //else if (FollowMenu.instance.SelectedNode == null && FollowMenu.instance.lastNode != null)  // GameObject exist Behind UI
         //{
@@ -105,7 +105,7 @@ public class FollowMenu : MonoBehaviour
         }
         else
         {
-            Debug.Log("No tower to upgrade here!");
+            //Debug.Log("No tower to upgrade here!");
         }
     }
 
@@ -118,15 +118,15 @@ public class FollowMenu : MonoBehaviour
         }
         else
         {
-            Debug.Log("No tower to sell here!");
+            //Debug.Log("No tower to sell here!");
         }
     }
 
     public void BuildTowerWithType(int type)
     {
         TowerType towerType = (TowerType)type;
-        Debug.Log($"Build {towerType}");
-        print(towerType + " " + FollowMenu.instance.SelectedNode);
+        //Debug.Log($"Build {towerType}");
+        //print(towerType + " " + FollowMenu.instance.SelectedNode);
 
         if (FollowMenu.instance.SelectedNode != null)
         {

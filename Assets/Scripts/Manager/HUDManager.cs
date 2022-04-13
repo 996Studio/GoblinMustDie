@@ -35,15 +35,15 @@ public class HUDManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnDestroy()
-    {
-        
-    }
+    // void Update()
+    // {
+    //     
+    // }
+    //
+    // private void OnDestroy()
+    // {
+    //     
+    // }
 
     public void UpdateResourceText(ResourceType type)
     {

@@ -66,10 +66,10 @@ public class LevelSelect : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // void Update()
+    // {
+    //     
+    // }
 
     private void SpawnLevelPoint(Level l)
     {

@@ -9,6 +9,14 @@ using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+public enum EnemyType
+{
+    GOBLIN,
+    SKELETON,
+    TROLL,
+    NONE
+}
+
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField]
@@ -42,6 +50,11 @@ public class EnemyBase : MonoBehaviour
     public ParticleSystem steameffect;
     private HitEffect hitEffect;
 
+    //Waypoint Pathfinding Params
+    private List<Transform> wayPoints;
+    private int destinationIndex = 0;
+    protected EnemyType enemyType;
+    
     public float RecycleMultiplier
     {
         get => recycleMultiplier;
@@ -49,8 +62,6 @@ public class EnemyBase : MonoBehaviour
     }
     
     public event Action<float> OnHealthChanged = delegate(float f) {  };
-    
-    
     
     public int Atk
     {
@@ -62,20 +73,20 @@ public class EnemyBase : MonoBehaviour
         get => isDead;
     }
     
-    private void Awake()
+    protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         canTakeDamage = true;
-
+        
         //delegate for changing health
         OnHealthChanged += HandleHealthChange;
-        
         HPBarForeground.fillAmount = 0.5f;
-        agent.SetDestination(MotherBase.Instance.transform.position);
         
         elementComponent = GetComponent<ElementComponent>();
+        
+        SetPath();
     }
     
     protected void Start()
@@ -85,6 +96,8 @@ public class EnemyBase : MonoBehaviour
     
     protected virtual void Update()
     {
+        changeWayPointIndex();
+        
         FreezeTimer();
         
         //Test code
@@ -115,22 +128,65 @@ public class EnemyBase : MonoBehaviour
         atk = 1;
     }
 
+    protected void SetPath()
+    {
+        switch (enemyType)
+        {
+            case EnemyType.GOBLIN:
+                wayPoints = WaypointManager.instance.goblinWayPoints;
+                break;
+            case EnemyType.SKELETON:
+                wayPoints = WaypointManager.instance.skeletonWayPoints;
+                break;
+            case EnemyType.TROLL:
+                wayPoints = WaypointManager.instance.trollWayPoints;
+                break;
+            default:
+                break;
+        }
+
+        agent.SetDestination(wayPoints[destinationIndex].position);
+    }
+
+    protected void changeWayPointIndex()
+    {
+        if (Vector3.Distance(agent.transform.position, wayPoints[destinationIndex].position) <= agent.stoppingDistance)
+        {
+            agent.SetDestination(wayPoints[++destinationIndex].position);
+        }
+    }
+
     public void TakeDamage(int dmg)
     {
         if (canTakeDamage)
         {
+            animator.SetBool("IsHurt", true);
+            SetSpeed();
+            
             curHP -= dmg;
-            Debug.Log($"damage {dmg} to {curHP}");
+            //Debug.Log($"damage {dmg} to {curHP}");
             
             ChangeHealth();
             
             if (curHP <= 0)
             {
-                Death();
+                animator.SetTrigger("Death");
             }
         }
     }
+
+    protected virtual void AnimParaReset()
+    {
+        Debug.Log("Anim Para Reset!");
+        animator.SetBool("IsHurt", false);
+        agent.speed = moveSpeed;
+    }
     
+    protected void SetSpeed()
+    {
+        agent.speed = 0;
+    }
+
     public void ElementAttack(ElementEnum element, float amount, int power, int damage)
     {
         elementComponent.ElementAttack(element, amount, power, damage);
@@ -144,8 +200,12 @@ public class EnemyBase : MonoBehaviour
 
     public virtual void Death()
     {
+        Debug.Log("Death Called!");
+        
         isDead = true;
+        canTakeDamage = false;
         agent.isStopped = true;
+        
         AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
 
         GameManager.Instance.KillCount++;
@@ -212,14 +272,14 @@ public class EnemyBase : MonoBehaviour
 
     public void ElectroCharged(int damage)
     {
-        Debug.Log("Electro Charge");
+        //Debug.Log("Electro Charge");
         TakeDamage(damage);
         PlayHitEffect(HitEffect.Electro);
     }
 
     public void Freeze()
     {
-        Debug.Log("Start freezing");
+        //Debug.Log("Start freezing");
         agent.speed = 0;
     }
 
@@ -272,19 +332,19 @@ public class EnemyBase : MonoBehaviour
         {
             case HitEffect.Electro:
                 electricityeffect.Play();
-                Debug.Log("Electro!");
+               // Debug.Log("Electro!");
                 break;
             case HitEffect.Overload:
                 overloadeffect.Play();
-                Debug.Log("Overload!");
+                //Debug.Log("Overload!");
                 break;
             case HitEffect.Freeze:
                 freezeeffect.Play();
-                Debug.Log("Freeze!");
+                //Debug.Log("Freeze!");
                 break;
             case HitEffect.Vaporize:
                 steameffect.Play();
-                Debug.Log("Vaporize!");
+                //Debug.Log("Vaporize!");
                 break;
             default:
                 break;

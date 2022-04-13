@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class SkeletonMage : EnemyBase
 {
     private double healInterval;
     private double healTimer;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        enemyType = EnemyType.SKELETON;
+    }
 
     protected override void Update()
     {
@@ -34,6 +41,13 @@ public class SkeletonMage : EnemyBase
         healTimer = 0;
     }
 
+    protected override void AnimParaReset()
+    {
+        base.AnimParaReset();
+        animator.SetBool("IsCast", false);
+        canTakeDamage = true;
+    }
+
     private void UpdateHealTimer()
     {
         healTimer += Time.deltaTime;
@@ -47,6 +61,10 @@ public class SkeletonMage : EnemyBase
 
     private void HealAbility()
     {
+        canTakeDamage = false;
+        animator.SetBool("IsCast", true);
+        agent.speed = 0;
+        
         List<IHeal> heals = new List<IHeal>();
 
         var healables = FindObjectsOfType<EnemyBase>().OfType<IHeal>();
