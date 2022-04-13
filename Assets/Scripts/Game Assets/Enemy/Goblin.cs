@@ -6,7 +6,13 @@ using UnityEngine;
 public class Goblin : EnemyBase,IHeal
 {
     private double healFactor;
-    
+
+    protected override void Awake()
+    {
+        base.Awake();
+        enemyType = EnemyType.GOBLIN;
+    }
+
     public override void InitInfo()
     {
         base.InitInfo();

@@ -9,6 +9,12 @@ public class SkeletonMage : EnemyBase
     private double healInterval;
     private double healTimer;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        enemyType = EnemyType.SKELETON;
+    }
+
     protected override void Update()
     {
         base.Update();

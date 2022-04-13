@@ -8,6 +8,13 @@ public class Troll : EnemyBase,IHeal
 
     [SerializeField]
     private GameObject goblinPre;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        enemyType = EnemyType.TROLL;
+    }
+
     public override void InitInfo()
     {
         base.InitInfo();

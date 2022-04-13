@@ -9,6 +9,14 @@ using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+public enum EnemyType
+{
+    GOBLIN,
+    SKELETON,
+    TROLL,
+    NONE
+}
+
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField]
@@ -42,8 +50,10 @@ public class EnemyBase : MonoBehaviour
     public ParticleSystem steameffect;
     private HitEffect hitEffect;
 
+    //Waypoint Pathfinding Params
     private List<Transform> wayPoints;
     private int destinationIndex = 0;
+    protected EnemyType enemyType;
     
     public float RecycleMultiplier
     {
@@ -63,21 +73,20 @@ public class EnemyBase : MonoBehaviour
         get => isDead;
     }
     
-    private void Awake()
+    protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         canTakeDamage = true;
-        wayPoints = WaypointManager.instance.wayPoints;
         
         //delegate for changing health
         OnHealthChanged += HandleHealthChange;
-        
         HPBarForeground.fillAmount = 0.5f;
-        agent.SetDestination(wayPoints[destinationIndex].position);
         
         elementComponent = GetComponent<ElementComponent>();
+        
+        SetPath();
     }
     
     protected void Start()
@@ -119,14 +128,31 @@ public class EnemyBase : MonoBehaviour
         atk = 1;
     }
 
+    protected void SetPath()
+    {
+        switch (enemyType)
+        {
+            case EnemyType.GOBLIN:
+                wayPoints = WaypointManager.instance.goblinWayPoints;
+                break;
+            case EnemyType.SKELETON:
+                wayPoints = WaypointManager.instance.skeletonWayPoints;
+                break;
+            case EnemyType.TROLL:
+                wayPoints = WaypointManager.instance.trollWayPoints;
+                break;
+            default:
+                break;
+        }
+
+        agent.SetDestination(wayPoints[destinationIndex].position);
+    }
+
     protected void changeWayPointIndex()
     {
-        //if (destinationIndex >= wayPoints.Count - 1) return;
-
         if (Vector3.Distance(agent.transform.position, wayPoints[destinationIndex].position) <= agent.stoppingDistance)
         {
             agent.SetDestination(wayPoints[++destinationIndex].position);
-            Debug.Log("Waypoint Index: " + destinationIndex);
         }
     }
 
