@@ -632,6 +632,15 @@ MonoBehaviour:
   electricityeffect: {fileID: 3412911219748216291}
   freezeeffect: {fileID: 6281072355013730411}
   steameffect: {fileID: 4633845192983062195}
+  wayPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1009842522124556862
 MonoBehaviour:
   m_ObjectHideFlags: 0

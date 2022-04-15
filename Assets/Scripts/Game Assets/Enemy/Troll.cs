@@ -22,7 +22,7 @@ public class Troll : EnemyBase,IHeal
         maxHP = 200;
         curHP = 200;
         atk = 1;
-        moveSpeed = 0.8f;
+        moveSpeed = 1.75f;
         coinValue = 500;
         
         agent.speed = moveSpeed;
