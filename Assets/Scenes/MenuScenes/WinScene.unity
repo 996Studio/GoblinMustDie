@@ -401,7 +401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71ab2be6a11b69e4595245244fc8cd26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa96b0fe49f9b414ba505f8e7fd8babb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -705,6 +705,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1841401656}
     m_Modifications:
+    - target: {fileID: 329468500912350864, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468500912350864, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468500912350864, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontColorGradientPreset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6da7dff45f368764bbbc468b33895828,
+        type: 2}
     - target: {fileID: 329468500942102104, guid: 4824eb415ce15a74f86ef03f18387a95,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -715,6 +731,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 329468500942102105, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468500942102105, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8038653950898823980, guid: bf59ce9145cd842ffb1a897977f5200f,
+        type: 3}
+    - target: {fileID: 329468500942102105, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468501053310994, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468501053310994, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontColorGradientPreset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6da7dff45f368764bbbc468b33895828,
+        type: 2}
     - target: {fileID: 329468501572970122, guid: 4824eb415ce15a74f86ef03f18387a95,
         type: 3}
       propertyPath: m_Name
@@ -824,6 +867,84 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468502147309346, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468502147309346, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468502147309346, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468502147309346, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468502147309346, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329468502147309346, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontColorGradientPreset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6da7dff45f368764bbbc468b33895828,
+        type: 2}
+    - target: {fileID: 1151895626564053312, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151895626564053312, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151895626564053312, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151895626564053312, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151895626564053312, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151895626564053312, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_fontColorGradientPreset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6da7dff45f368764bbbc468b33895828,
+        type: 2}
+    - target: {fileID: 3081213811965585071, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081213811965585071, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8038653950898823980, guid: bf59ce9145cd842ffb1a897977f5200f,
+        type: 3}
+    - target: {fileID: 3081213811965585071, guid: 4824eb415ce15a74f86ef03f18387a95,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4148171970801432794, guid: 4824eb415ce15a74f86ef03f18387a95,
         type: 3}

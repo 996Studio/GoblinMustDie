@@ -141,7 +141,7 @@ public class FollowMenu : MonoBehaviour
 
     private void isNodeEmpty()
     {
-        if (FollowMenu.instance.SelectedNode.GetComponentInChildren<AttackTower>() == null)
+        if (FollowMenu.instance.SelectedNode.GetComponentInChildren<AttackTower>() == null && FollowMenu.instance.SelectedNode.TowerType != TowerType.RECYCLE && FollowMenu.instance.SelectedNode.TowerType != TowerType.WOODEN && FollowMenu.instance.SelectedNode.TowerType != TowerType.CRYSTAL)
         {
             ArcherTowerButton.SetActive(true);
             FireTowerButton.SetActive(true);
@@ -152,7 +152,7 @@ public class FollowMenu : MonoBehaviour
             UpgradeTowerButton.SetActive(false);
             SellTowerButton.SetActive(false);
         }
-        else if (FollowMenu.instance.SelectedNode.GetComponentInChildren<AttackTower>() != null)
+        else if (FollowMenu.instance.SelectedNode.GetComponentInChildren<AttackTower>() != null || FollowMenu.instance.SelectedNode.TowerType == TowerType.RECYCLE || FollowMenu.instance.SelectedNode.TowerType == TowerType.WOODEN || FollowMenu.instance.SelectedNode.TowerType == TowerType.CRYSTAL)
         {
             ArcherTowerButton.SetActive(false);
             FireTowerButton.SetActive(false);

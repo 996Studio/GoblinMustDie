@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MenuTextColor
   m_EditorClassIdentifier: 
   colorMode: 3
-  topLeft: {r: 1, g: 0, b: 0.08873367, a: 1}
-  topRight: {r: 1, g: 0.1647156, b: 0.15686274, a: 1}
-  bottomLeft: {r: 1, g: 0.92892253, b: 0, a: 1}
+  topLeft: {r: 1, g: 0, b: 0, a: 1}
+  topRight: {r: 1, g: 0.009302325, b: 0, a: 1}
+  bottomLeft: {r: 1, g: 0.7108608, b: 0, a: 1}
   bottomRight: {r: 1, g: 0.87216246, b: 0, a: 1}
