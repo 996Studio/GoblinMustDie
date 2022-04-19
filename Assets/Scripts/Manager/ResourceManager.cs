@@ -7,9 +7,9 @@ public class ResourceManager
 {
     private static ResourceManager instance;
 
-    private int coin = 10000;
-    private int wood=10000;
-    private int crystal=10000;
+    private int coin = 50;
+    private int wood=0;
+    private int crystal=0;
 
     private ResourceManager()
     {
