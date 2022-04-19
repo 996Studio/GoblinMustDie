@@ -20,10 +20,10 @@ public class Troll : EnemyBase,IHeal
     {
         base.InitInfo();
         
-        maxHP = 200;
-        curHP = 200;
+        maxHP = 150;
+        curHP = 150;
         atk = 1;
-        moveSpeed = 1.75f;
+        moveSpeed = 1.50f;
         coinValue = 500;
         
         agent.speed = moveSpeed;

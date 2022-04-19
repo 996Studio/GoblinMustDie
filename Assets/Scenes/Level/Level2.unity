@@ -8421,7 +8421,7 @@ PrefabInstance:
     - target: {fileID: 1965918337971123519, guid: e6cd9e380f633df44a453d8a9a9c19a4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1965918337971123519, guid: e6cd9e380f633df44a453d8a9a9c19a4,
         type: 3}
@@ -8477,6 +8477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrystalTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264110626132943307, guid: e6cd9e380f633df44a453d8a9a9c19a4,
+        type: 3}
+      propertyPath: ResourceAmount
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6cd9e380f633df44a453d8a9a9c19a4, type: 3}
@@ -8668,7 +8673,7 @@ PrefabInstance:
     - target: {fileID: 8014996421873984901, guid: adcf2cee8770c134fa24c7b99756a9da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.316204
+      value: 42.11
       objectReference: {fileID: 0}
     - target: {fileID: 8014996421873984901, guid: adcf2cee8770c134fa24c7b99756a9da,
         type: 3}
@@ -8678,7 +8683,7 @@ PrefabInstance:
     - target: {fileID: 8014996421873984901, guid: adcf2cee8770c134fa24c7b99756a9da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.841514
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 8014996421873984901, guid: adcf2cee8770c134fa24c7b99756a9da,
         type: 3}
