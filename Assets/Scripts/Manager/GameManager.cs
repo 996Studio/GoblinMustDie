@@ -79,6 +79,11 @@ public class GameManager : MonoBehaviour
     {
         HUDManager.instance.UpdateLiveText(this.curHP);
         AudioManager.instance.Play(SoundType.MUSIC,SceneManager.GetActiveScene().name);
+
+        ResourceManager.Instance().SetResource(50, 0, 0);
+        HUDManager.instance.UpdateCoinText(ResourceManager.Instance().Coin);
+        HUDManager.instance.UpdateCrystalText(ResourceManager.Instance().Wood);
+        HUDManager.instance.UpdateDiamondText(ResourceManager.Instance().Crystal);
     }
 
     private void Update()

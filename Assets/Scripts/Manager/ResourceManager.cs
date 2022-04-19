@@ -7,9 +7,9 @@ public class ResourceManager
 {
     private static ResourceManager instance;
 
-    private int coin = 50;
-    private int wood=0;
-    private int crystal=0;
+    private int coin;
+    private int wood;
+    private int crystal;
 
     private ResourceManager()
     {
@@ -57,5 +57,12 @@ public class ResourceManager
     public void ChangeCrystal(int number)
     {
         crystal += number;
+    }
+
+    public void SetResource(int coin, int wood, int crystal)
+    {
+        this.coin = coin;
+        this.wood = wood;
+        this.crystal = crystal;
     }
 }

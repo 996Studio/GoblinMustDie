@@ -211,6 +211,7 @@ public class EnemyBase : MonoBehaviour
         GameManager.Instance.SpawnNum--;
         
         ResourceManager.Instance().ChangeCoin(coinValue);
+        HUDManager.instance.UpdateCoinText(ResourceManager.Instance().Coin);
         
         Destroy(this.gameObject);
     }
