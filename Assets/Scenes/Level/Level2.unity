@@ -8478,6 +8478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalTower
       objectReference: {fileID: 0}
+    - target: {fileID: 5264110626132943307, guid: e6cd9e380f633df44a453d8a9a9c19a4,
+        type: 3}
+      propertyPath: ResourceAmount
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6cd9e380f633df44a453d8a9a9c19a4, type: 3}
 --- !u!1001 &1137332854
