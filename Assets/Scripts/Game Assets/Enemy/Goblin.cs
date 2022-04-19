@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Goblin : EnemyBase,IHeal
 {
     private double healFactor;
-
+    private int nearestIndex = 0;
     protected override void Awake()
     {
         base.Awake();
@@ -42,6 +43,32 @@ public class Goblin : EnemyBase,IHeal
             curHP += maxHP * 0.2f;
             
             ChangeHealth();
+        }
+    }
+
+    public void SetDestination()
+    {
+        agent.SetDestination(wayPoints[nearestIndex].position);
+    }
+
+    public void GetNearestWaypoint()
+    {
+        //Debug.Log("Nearest index: " + nearestIndex);
+        Debug.Log("Count: " + wayPoints.Count);
+        
+        float minDis = Vector3.Distance(transform.position, wayPoints[0].position);
+        
+        for (int i = 1; i < wayPoints.Count; i++)
+        {
+            float nextDis = Vector3.Distance(transform.position, wayPoints[i].position);
+            
+            if (minDis > nextDis)
+            {
+                minDis = nextDis;
+                nearestIndex = i;
+                
+                
+            }
         }
     }
 }

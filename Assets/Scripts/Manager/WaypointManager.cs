@@ -36,7 +36,8 @@ public class WaypointManager : MonoBehaviour
    {
       for (int i = 0; i < wayPointLists.Count; i++)
       {
-         DrawPath(wayPointLists[i], colors[i]);
+         if (wayPointLists[i].Count > 0)  
+            DrawPath(wayPointLists[i], colors[i]);
       }
    }
 

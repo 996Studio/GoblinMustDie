@@ -5,7 +5,8 @@ using UnityEngine;
 public class Troll : EnemyBase,IHeal
 {
     private double healFactor;
-
+    private int spawnNum = 2;
+    
     [SerializeField]
     private GameObject goblinPre;
 
@@ -44,6 +45,13 @@ public class Troll : EnemyBase,IHeal
         
         Instantiate(goblinPre, transform.position, Quaternion.identity);
         GameManager.Instance.SpawnNum++;
+        
+        // for (int i = 0; i < spawnNum; i++)
+        // {
+        //     GameObject tempGoblin = Instantiate(goblinPre, transform.position, Quaternion.identity);
+        //     tempGoblin.GetComponent<Goblin>().GetNearestWaypoint();
+        //     tempGoblin.GetComponent<Goblin>().SetDestination();
+        // }
         
         Invoke("DeathEvent", 0.5f);
     }

@@ -51,7 +51,7 @@ public class EnemyBase : MonoBehaviour
     private HitEffect hitEffect;
 
     //Waypoint Pathfinding Params
-    private List<Transform> wayPoints;
+    protected List<Transform> wayPoints;
     private int destinationIndex = 0;
     protected EnemyType enemyType;
     
@@ -85,12 +85,11 @@ public class EnemyBase : MonoBehaviour
         HPBarForeground.fillAmount = 0.5f;
         
         elementComponent = GetComponent<ElementComponent>();
-        
-        SetPath();
     }
     
     protected void Start()
     {
+        SetPath();
         InitInfo();
     }
     
