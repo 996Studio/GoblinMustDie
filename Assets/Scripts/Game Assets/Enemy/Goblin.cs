@@ -46,29 +46,31 @@ public class Goblin : EnemyBase,IHeal
         }
     }
 
-    public void SetDestination()
+    public void OverrideDestination()
     {
-        agent.SetDestination(wayPoints[nearestIndex].position);
+        Debug.Log("Count: " + wayPoints.Count);
+        int index = wayPoints.Count - 1;
+        
+        Debug.Log("Index: " + index);
+        agent.SetDestination(wayPoints[index].position);
     }
 
-    public void GetNearestWaypoint()
-    {
-        //Debug.Log("Nearest index: " + nearestIndex);
-        Debug.Log("Count: " + wayPoints.Count);
-        
-        float minDis = Vector3.Distance(transform.position, wayPoints[0].position);
-        
-        for (int i = 1; i < wayPoints.Count; i++)
-        {
-            float nextDis = Vector3.Distance(transform.position, wayPoints[i].position);
-            
-            if (minDis > nextDis)
-            {
-                minDis = nextDis;
-                nearestIndex = i;
-                
-                
-            }
-        }
-    }
+    // public void GetNearestWaypoint()
+    // {
+    //     //Debug.Log("Nearest index: " + nearestIndex);
+    //     Debug.Log("Count: " + wayPoints.Count);
+    //     
+    //     float minDis = Vector3.Distance(transform.position, wayPoints[0].position);
+    //     
+    //     for (int i = 1; i < wayPoints.Count; i++)
+    //     {
+    //         float nextDis = Vector3.Distance(transform.position, wayPoints[i].position);
+    //         
+    //         if (minDis > nextDis)
+    //         {
+    //             minDis = nextDis;
+    //             nearestIndex = i;
+    //         }
+    //     }
+    // }
 }

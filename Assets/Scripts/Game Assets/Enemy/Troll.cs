@@ -6,6 +6,7 @@ public class Troll : EnemyBase,IHeal
 {
     private double healFactor;
     private int spawnNum = 2;
+    private List<GameObject> spawnedGoblins = new List<GameObject>();
     
     [SerializeField]
     private GameObject goblinPre;
@@ -40,24 +41,23 @@ public class Troll : EnemyBase,IHeal
 
     public override void Death()
     {
-        Instantiate(goblinPre, transform.position, Quaternion.identity);
-        GameManager.Instance.SpawnNum++;
-        
-        Instantiate(goblinPre, transform.position, Quaternion.identity);
-        GameManager.Instance.SpawnNum++;
-        
-        // for (int i = 0; i < spawnNum; i++)
-        // {
-        //     GameObject tempGoblin = Instantiate(goblinPre, transform.position, Quaternion.identity);
-        //     tempGoblin.GetComponent<Goblin>().GetNearestWaypoint();
-        //     tempGoblin.GetComponent<Goblin>().SetDestination();
-        // }
+        for (int i = 0; i < spawnNum; i++)
+        {
+            GameObject tempGoblin = Instantiate(goblinPre, transform.position, Quaternion.identity);
+            GameManager.Instance.SpawnNum++;
+            spawnedGoblins.Add(tempGoblin);
+        }
         
         Invoke("DeathEvent", 0.5f);
     }
 
     private void DeathEvent()
     {
+        for (int i = 0; i < spawnedGoblins.Count; i++)
+        {
+            spawnedGoblins[i].GetComponent<Goblin>().OverrideDestination();
+        }
+        
         base.Death();
     }
 
