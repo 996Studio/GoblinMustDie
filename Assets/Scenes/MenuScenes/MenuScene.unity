@@ -1087,8 +1087,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 778, y: -17}
-  m_SizeDelta: {x: 1000, y: 800}
+  m_AnchoredPosition: {x: 1205, y: -17.001}
+  m_SizeDelta: {x: 1795.044, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475288715
 MonoBehaviour:
@@ -1110,10 +1110,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Art / Multimedia Index\r\nMEGA Towers Pack-VSQUAD \n"
+  m_text: "Art / Multimedia Index\r\n\nMEGA Towers Pack-VSQUAD \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
+  m_sharedMaterial: {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1138,10 +1139,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 133.7
+  m_fontSize: 61.08
   m_fontSizeBase: 61.08
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 10
   m_fontSizeMax: 1100
   m_fontStyle: 1
@@ -1174,7 +1175,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 925.38025, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1294,7 +1295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb26dd6b066cee42ab58624f5b20c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0.5
+  musicVolume: 1
   soundVolume: 0.5
   maxUnlockedLevelIndex: 3
   levelNumber: 3
@@ -2562,8 +2563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -736, y: -17}
-  m_SizeDelta: {x: 1000, y: 800}
+  m_AnchoredPosition: {x: -669.901, y: -3.036}
+  m_SizeDelta: {x: 1132.197, y: 772.071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799237919
 MonoBehaviour:
@@ -2601,8 +2602,9 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761, type: 2}
+  m_sharedMaterial: {fileID: -7702907991906051404, guid: 1c3fa0ba4dc4ce34b9bfafbd9690f761,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2627,14 +2629,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 69.75
-  m_fontSizeBase: 61.08
+  m_fontSize: 62.22
+  m_fontSizeBase: 62.22
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 10
   m_fontSizeMax: 1100
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4216,31 +4218,31 @@ MonoBehaviour:
   music:
   - name: Menu
     clip: {fileID: 8300000, guid: 4420fd56940f546499a8cd713c1ebc12, type: 3}
-    volume: 0.1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Level1
     clip: {fileID: 8300000, guid: 6187d57a7b278ff4793ec1c00e74bde5, type: 3}
-    volume: 0.1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Level2
     clip: {fileID: 8300000, guid: 5bb382bc864c311419340446cbe94e15, type: 3}
-    volume: 0.1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Level3
     clip: {fileID: 8300000, guid: 68ae09d402d250f458c03a8413444e61, type: 3}
-    volume: 0.1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: a7652af720eaa5143800694c386705cd, type: 3}
-    volume: 0.1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}

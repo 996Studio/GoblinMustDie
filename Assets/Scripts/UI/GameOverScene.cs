@@ -58,11 +58,13 @@ public class GameOverScene : MonoBehaviour
 
     public void GotoMainMenu()
     {
+        AudioManager.instance.Stop(SoundType.MUSIC);
         SceneManager.LoadScene("MenuScene");
     }
 
     public void GoToNextLevel()
     {
+        AudioManager.instance.Stop(SoundType.MUSIC);
         SceneManager.LoadScene("Level" + nextLevelIndex.ToString());
     }
 }

@@ -102,6 +102,7 @@ public class GameManager : MonoBehaviour
             //GameOverScreen.SetActive(true);
             //Time.timeScale = 0f;
             UnityEngine.SceneManagement.SceneManager.LoadScene("WinScene", LoadSceneMode.Single);
+            AudioManager.instance.Stop(SoundType.MUSIC);
             SceneManager.LoadScene("WinScene");
         }
         else if (isWin)
@@ -118,6 +119,7 @@ public class GameManager : MonoBehaviour
             //GameOverScreen.SetActive(true);
             //Time.timeScale = 0f;
 
+            AudioManager.instance.Stop(SoundType.MUSIC);
             SceneManager.LoadScene("WinScene");
         }
     }

@@ -30,7 +30,7 @@ public class SkeletonMage : EnemyBase
         maxHP = 60;
         curHP = 60;
         atk = 1;
-        moveSpeed = 3.5f;
+        moveSpeed = 2.0f;
         coinValue = 350;
         
         agent.speed = moveSpeed;
