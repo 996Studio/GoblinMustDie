@@ -36,7 +36,7 @@ public class EnemyBase : MonoBehaviour
 
     private float updateSpeedSec = 0.3f;
     protected bool isDead = false;
-    protected bool canTakeDamage;
+    protected bool canTakeDamage = true;
     private float recycleMultiplier;
     protected ElementComponent elementComponent;
     
@@ -159,31 +159,36 @@ public class EnemyBase : MonoBehaviour
     {
         if (canTakeDamage)
         {
-            animator.SetBool("IsHurt", true);
-            SetSpeed();
-            
+            canTakeDamage = false;
             curHP -= dmg;
-            //Debug.Log($"damage {dmg} to {curHP}");
-            
-            ChangeHealth();
             
             if (curHP <= 0)
             {
                 animator.SetTrigger("Death");
+                SetSpeed();
             }
+            else
+            {
+                animator.SetTrigger("Hurt");
+                SetSpeed();
+            }
+            
+            //Debug.Log($"damage {dmg} to {curHP}");
+            //ChangeHealth();
         }
     }
-
+    
     protected virtual void AnimParaReset()
     {
-        Debug.Log("Anim Para Reset!");
-        animator.SetBool("IsHurt", false);
+        //Debug.Log("Anim Para Reset!");
+        canTakeDamage = true;
+        agent.isStopped = false;
         agent.speed = moveSpeed;
     }
     
     protected void SetSpeed()
     {
-        agent.speed = 0;
+        agent.isStopped = true;
     }
 
     public void ElementAttack(ElementEnum element, float amount, int power, int damage)
@@ -202,8 +207,6 @@ public class EnemyBase : MonoBehaviour
         Debug.Log("Death Called!");
         
         isDead = true;
-        canTakeDamage = false;
-        agent.isStopped = true;
         
         AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
 
@@ -215,7 +218,20 @@ public class EnemyBase : MonoBehaviour
         
         Destroy(this.gameObject);
     }
-    
+
+    public void MotherbaseDestroy()
+    {
+        AudioManager.instance.Play(SoundType.SFX, "EnemyDeath");
+
+        GameManager.Instance.KillCount++;
+        GameManager.Instance.SpawnNum--;
+        
+        ResourceManager.Instance().ChangeCoin(coinValue);
+        HUDManager.instance.UpdateCoinText(ResourceManager.Instance().Coin);
+        
+        Destroy(this.gameObject);
+    }
+
     private void HandleHealthChange(float pct)
     {
         StartCoroutine(ChangeHPBarPct(pct));

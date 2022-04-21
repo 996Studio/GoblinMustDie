@@ -18,7 +18,7 @@ public class MotherBase : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             GameManager.Instance.TakeDamage(other.gameObject.GetComponent<EnemyBase>().Atk);
-            other.gameObject.GetComponent<EnemyBase>().Death();
+            other.gameObject.GetComponent<EnemyBase>().MotherbaseDestroy();
         }
     }
 }

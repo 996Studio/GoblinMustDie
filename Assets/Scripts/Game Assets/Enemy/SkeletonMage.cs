@@ -44,7 +44,8 @@ public class SkeletonMage : EnemyBase
     protected override void AnimParaReset()
     {
         base.AnimParaReset();
-        animator.SetBool("IsCast", false);
+        //animator.SetBool("IsCast", false);
+        
         canTakeDamage = true;
     }
 
@@ -62,7 +63,8 @@ public class SkeletonMage : EnemyBase
     private void HealAbility()
     {
         canTakeDamage = false;
-        animator.SetBool("IsCast", true);
+        //animator.SetBool("IsCast", true);
+        animator.SetTrigger("Cast");
         agent.speed = 0;
         
         List<IHeal> heals = new List<IHeal>();
