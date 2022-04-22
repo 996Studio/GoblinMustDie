@@ -23,15 +23,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993521251346410550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2285988212617915414}
   - {fileID: 9103542417621896424}
-  m_Father: {fileID: 7311344409881501785}
-  m_RootOrder: 3
+  m_Father: {fileID: 4811697069830360708}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2771333731789129275
 GameObject:
@@ -62,7 +62,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.923, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 471987133138626065}
   m_Father: {fileID: 7311344409881501785}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +75,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2771333731789129275}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -126,7 +127,6 @@ Transform:
   - {fileID: 5144995340844986887}
   - {fileID: 3051969902026841577}
   - {fileID: 4811697069830360708}
-  - {fileID: 471987133138626065}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,7 +146,6 @@ MonoBehaviour:
   fireLocation: {fileID: 0}
   Rotator: {fileID: 0}
   AttackRangeCircle: {fileID: 9103542417621896425}
-  attackrange: {fileID: 0}
   isToggled: 0
   attackCollider: {fileID: 2771333731789129275}
   spreadTime: 2

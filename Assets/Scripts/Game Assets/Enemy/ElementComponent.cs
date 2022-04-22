@@ -10,7 +10,7 @@ public class ElementComponent : MonoBehaviour
     private EnemyBase owner;
     [SerializeField] private List<AttachedElement> elementList;
 
-    private const float ELEMENT_DECREASE_CONSTANT = 1.0f;
+    private const float ELEMENT_DECREASE_CONSTANT = 2.0f;
     private float electroChargedCD = 0.5f;
     private float electroChargePara = 2.0f;
     private float elementReactionCD = 0.2f;

@@ -17,6 +17,8 @@ public class WaterTower : AttackTower
         // Invoke target function, start from 0s, and repeat every 0.5s.
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         attackCollider.GetComponent<WaterRing>().Damage = attack;
+        
+        attackCollider.SetActive(false);
     }
 
     // Update is called once per frame
